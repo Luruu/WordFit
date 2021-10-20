@@ -11,7 +11,6 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Image("logo")
-                .frame(width: 116.0, height: 116.0)
             Text("Word Fit")
             Text("Wordhhh Fit")
             ContentView2()
