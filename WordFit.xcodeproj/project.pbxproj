@@ -12,6 +12,7 @@
 		88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88436EFB2720579E003DDB78 /* Assets.xcassets */; };
 		88436EFF2720579E003DDB78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88436EFE2720579E003DDB78 /* Preview Assets.xcassets */; };
 		885CA29F27206AE6008037AF /* word.txt in Resources */ = {isa = PBXBuildFile; fileRef = 885CA29E27206AE6008037AF /* word.txt */; };
+		88AD64C1272074E600AC0602 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 88AD64C0272074E600AC0602 /* Images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		88436EFB2720579E003DDB78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88436EFE2720579E003DDB78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		885CA29E27206AE6008037AF /* word.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = word.txt; sourceTree = "<group>"; };
+		88AD64C0272074E600AC0602 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				88436EFB2720579E003DDB78 /* Assets.xcassets */,
 				88436EFD2720579E003DDB78 /* Preview Content */,
 				885CA29E27206AE6008037AF /* word.txt */,
+				88AD64C0272074E600AC0602 /* Images */,
 			);
 			path = WordFit;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AD64C1272074E600AC0602 /* Images in Resources */,
 				88436EFF2720579E003DDB78 /* Preview Assets.xcassets in Resources */,
 				885CA29F27206AE6008037AF /* word.txt in Resources */,
 				88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */,
