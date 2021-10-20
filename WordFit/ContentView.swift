@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Word Fit")
+        VStack{
+            Text("Word Fit")
+            ContentView2()
+        }
+    }
+}
+
+struct ContentView2: View {
+    var body: some View {
+        Text("it's a trail")
     }
 }
 
