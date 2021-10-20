@@ -27,3 +27,64 @@ Reconciliation “reestablishment of a previously deteriorated relationship” 1
 Hyperventilate “increased breathing rate” 14
 Biodegradation “destructive transformation of organic substances” 14
 Disorientation “uncertain which wat to go” 14
+Shazam “An app that recognizes music and songs” 6
+Doctor “Cure diseases” 6
+Tarifa “Spanish city close to Gibraltar” 6
+Herbar “The botanist prepares them” 6
+Crease “They are eliminated by ironing” 6
+Perseo “He cuts off Medusa's head” 6
+Peroni “A renowned Italian beer” 6
+Condor “A vulture from South America” 6
+Karate “A martial art” 6
+Inning “A fraction of the baseball game”
+Anelectric “Which does not conduct electricity” 10
+Babysitter “That person who take care of your children for a fee” 10
+Habitation “Where people live” 10
+Background “You always see it as image  when you turn on the phone” 10
+Earthbound “FAMOUS NINTENDO GAME” 10
+Radiograph “when you take the assessment exams for the doctor” 10
+Vaccinated “YOU ARE PROTECTED FROM COVID” 10
+Chimpanzee “It is a primate of the hominid family” 10
+Autostrade “Designed to facilitate the circulation of large volumes of vehicular traffic at high speed” 10
+Hamburgers “Loved by Americans” 10
+Autocorrecting “Your phone keypad always corrects your words” 14
+Discrimination “judge by skin color” 14
+Trasformation “When The caterpillar becomes a butterfly” 14
+Moltiplication “it is one of the four fundamental operations of the arithmetic” 14
+Identification “When you connect to the computer through a password” 14
+Schweinsteiger “Famous German Football player” 14
+Disappointment “emotion felt by those who have not seen their hopes fulfilled” 14
+Defenestration “Throw something out the window” 14
+Specialization “Specific preparation in a specific field of an activity, of a discipline” 14
+Classification “immobile won last year by goals scored” 14
+shadow “The more or less intense darkness produced in a region of space by an opaque body exposed to light” 6
+Sister “First degree collateral relative as daughter of the same parents” 6
+doctor “nickname for someone who has obtained a degree (especially in Italy)” 6
+monday “the day that most hates Garfield” 6
+doubts “help you make the right decisions” 6
+Colors “A natural or artificial substance of which a layer is applied to dye or paint” 6
+dragon “in China is a symbol of luck and power” 6
+dinner “for the ancient Romans it was the longest and most important meal” 6
+dialog “in political language, comparison of ideas” 6
+disney “published the first animated series in '28” 6
+Whisky “Brandy distilled from fermented musts of malt, wheat, oats and other cereals” 6
+Ferocities “main characteristic of a shark” 10
+Franchisee “must comply with the management and marketing standards and models that are decided by the franchisor” 10
+friendship “Mutual affection” 10
+favoritism “Juve has it continuously by referees” 10
+Locomotive “soccer team’s name in Moscow” 10
+mediocrity “condition of limitation in performing a certain activity” 10
+mechanical “It is a branch of engineering” 10
+meditation “a form of inner prayer” 10
+metabolism “set of chemical reactions that occur in metabolism” 10
+Misogynist “Attitude of generic aversion or revulsion to the woman” 10
+missionary “is committed to spreading a religion in areas where it is not yet widespread” 10
+Electrodynamics “is the branch of physics that deals with the study of electromagnetic fields” 14
+Effervescently ”Lete water is” 14
+panteologist “deals with the analysis and study of animal and plant remains” 14
+psychoanalysis “founded by the Austrian neurologist S. Freud” 14
+nonperformance “when you made a bad performance” 14
+motionlessness “It is a condition characterized by reduced or absent autonomy in movementis the branch of physics that deals with the study of electromagnetic fields” 14
+solidification “physical passage” 14
+somnambulistic “NREM sleep parasomnia” 14
+Nitroglycerine “is used to treat high blood pressure during surgery” 14
