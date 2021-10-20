@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack{
-            Text("Word Fit")
+            Text("Wordhhh Fit")
             ContentView2()
         }
     }
