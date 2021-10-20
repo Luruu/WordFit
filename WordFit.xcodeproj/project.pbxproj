@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		88436EF42720579C003DDB78 /* WordFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88436EF42720579C003DDB78 /* WordFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88436EF72720579C003DDB78 /* WordFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFitApp.swift; sourceTree = "<group>"; };
 		88436EF92720579C003DDB78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88436EFB2720579E003DDB78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		88436EF52720579C003DDB78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				88436EF42720579C003DDB78 /* WordFit.app */,
+				88436EF42720579C003DDB78 /* WordFitApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			);
 			name = WordFit;
 			productName = WordFit;
-			productReference = 88436EF42720579C003DDB78 /* WordFit.app */;
+			productReference = 88436EF42720579C003DDB78 /* WordFitApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -287,7 +287,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.Foundation.Parthenope.WordFit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WordFitApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,7 +316,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.Foundation.Parthenope.WordFit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WordFitApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
