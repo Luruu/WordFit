@@ -1,0 +1,5 @@
+Applicazione da sviluppare:
+Gioco in cui l'obiettivo è quello di indovinare le parole in un certo periodo di tempo a partire da dei suggerimenti. Tra una parola e l'altra l'utente dovrà svolgere un'attività (semplice) per passare alla parola successiva.
+ 
+Ogni parola conferisce dei punteggi che si accumulano saranno nella classifica per punteggio. 
+I giocatori che risponderanno più velocemente saranno nella *classifica per velocità.
