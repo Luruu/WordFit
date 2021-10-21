@@ -35,7 +35,7 @@ struct WelcomePageView: View {
             .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
             .multilineTextAlignment(.center)
 //            Spacer()
-            Button(action: {
+/*            Button(action: {
                 print("Share tapped!")
             }) {
                     Text("Select your nickname")
@@ -46,7 +46,8 @@ struct WelcomePageView: View {
                         .cornerRadius(10)
                 }
             .padding()
-            Spacer()
+ */
+            .padding(20)
             ZStack{
             Button(action: {
                 print("OK Tappet")
