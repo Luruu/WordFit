@@ -19,12 +19,13 @@ struct WelcomePageView: View {
                 .frame(width: 291, height: 92,alignment: .leading)
                 .background(Color.white)
             .padding(.leading, CGFloat(20))
-            Spacer()
+            .padding()
             Text("Welcome to the \n WordFit Game")
                 .font(Font.custom("Mallory",size: 26))
                 .lineSpacing(1.29)
                 .foregroundColor(Color.init(red: 0.87, green: 0.33, blue: 0.4))
                 .multilineTextAlignment(.center)
+                .padding(50)
             VStack(alignment: .trailing){
                 Text("Guess more words, be the fastest and be the best! \n")
                 Text("Play and have fun with your friends with our challenges!")
@@ -34,7 +35,7 @@ struct WelcomePageView: View {
             .lineSpacing(1.3)
             .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
             .multilineTextAlignment(.center)
-//            Spacer()
+//           Spacer()
 /*            Button(action: {
                 print("Share tapped!")
             }) {
