@@ -9,7 +9,7 @@ import Foundation
 
 class wordList{
     private var wordList : Array<Word> = Array.init()
-//  private var lenght : Int = Int.init()
+    private var lenght : Int = Int.init()
     
     init(){}
     
