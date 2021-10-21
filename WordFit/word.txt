@@ -1,90 +1,90 @@
-August “a summer month”
-Latest “preceded by everyone”
-Nearby “the least distant”
-Berlin “the capital of Germany”
-Ugly “a bad view”
-Camera “used for recording”
-Chance “When you have another possibility”
-Coffee “Speed up your metabolism”
-Access “When you log in”
-Budget “Economic resources”
-Friendship “a strong bond with another person”
-VolleyBall “you can play it by only using your hands”
-Watermelon “often eaten in summer”
-Restaurant “where complete meals are consumed”
-Helicopter “it has a large propeller for flight”
-Innovation “introduction to new criteria”
-Accelerate “When you speed up”
-Foundation “common organization for a specific purpose”
-Tournament “a big competion”
-Cheesecake “a dessert made with cheese”
-Discrimination “distinction based on a judgment”
-Identification “needed for recognition”
-Classification “specific order groupings”
-Procrastinator “constantly postpone something"
-Rehabilitation “re-education to normal activity”
-Reconciliation “reestablishment of a previously deteriorated relationship”
-Hyperventilate “increased breathing rate”
-Biodegradation “destructive transformation of organic substances”
-Disorientation “uncertain which wat to go”
-Shazam “An app that recognizes music and songs"
-Doctor “Cure diseases”
-Tarifa “Spanish city close to Gibraltar”
-Herbar “The botanist prepares them”
-Crease “They are eliminated by ironing”
-Perseo “He cuts off Medusa's head”
-Peroni “A renowned Italian beer”
-Condor “A vulture from South America”
-Karate “A martial art”
+August “a summer month” 6
+Latest “preceded by everyone” 6
+Nearby “the least distant” 6
+Berlin “the capital of Germany” 6
+Ugly “a bad view” 6
+Camera “used for recording” 6
+Chance “When you have another possibility” 6
+Coffee “Speed up your metabolism” 6
+Access “When you log in” 6
+Budget “Economic resources” 6
+Friendship “a strong bond with another person” 10
+VolleyBall “you can play it by only using your hands” 10
+Watermelon “often eaten in summer” 10
+Restaurant “where complete meals are consumed” 10
+Helicopter “it has a large propeller for flight” 10
+Innovation “introduction to new criteria” 10
+Accelerate “When you speed up” 10
+Foundation “common organization for a specific purpose” 10
+Tournament “a big competion” 10
+Cheesecake “a dessert made with cheese” 10
+Discrimination “distinction based on a judgment” 14
+Identification “needed for recognition” 14
+Classification “specific order groupings” 14
+Procrastinator “constantly postpone something”  14
+Rehabilitation “re-education to normal activity” 14
+Reconciliation “reestablishment of a previously deteriorated relationship” 14
+Hyperventilate “increased breathing rate” 14
+Biodegradation “destructive transformation of organic substances” 14
+Disorientation “uncertain which wat to go” 14
+Shazam “An app that recognizes music and songs” 6
+Doctor “Cure diseases” 6
+Tarifa “Spanish city close to Gibraltar” 6
+Herbar “The botanist prepares them” 6
+Crease “They are eliminated by ironing” 6
+Perseo “He cuts off Medusa's head” 6
+Peroni “A renowned Italian beer” 6
+Condor “A vulture from South America” 6
+Karate “A martial art” 6
 Inning “A fraction of the baseball game”
-Anelectric “Which does not conduct electricity”
-Babysitter “That person who take care of your children for a fee”
-Habitation “Where people live"
-Background “You always see it as image  when you turn on the phone”
-Earthbound “FAMOUS NINTENDO GAME”
-Radiograph “when you take the assessment exams for the doctor”
-Vaccinated “YOU ARE PROTECTED FROM COVID”
-Chimpanzee “It is a primate of the hominid family”
-Autostrade “Designed to facilitate the circulation of large volumes of vehicular traffic at high speed”
-Hamburgers “Loved by Americans”
-Autocorrecting “Your phone keypad always corrects your words”
-Discrimination “judge by skin color”
-Trasformation “When The caterpillar becomes a butterfly”
-Moltiplication “it is one of the four fundamental operations of the arithmetic”
-Identification “When you connect to the computer through a password”
-Schweinsteiger “Famous German Football player”
-Disappointment “emotion felt by those who have not seen their hopes fulfilled”
-Defenestration “Throw something out the window”
-Specialization “Specific preparation in a specific field of an activity, of a discipline”
-Classification “immobile won last year by goals scored”
-shadow “The more or less intense darkness produced in a region of space by an opaque body exposed to light”
-Sister “First degree collateral relative as daughter of the same parents”
-doctor “nickname for someone who has obtained a degree (especially in Italy)”
-monday “the day that most hates Garfield”
-doubts “help you make the right decisions”
-Colors “A natural or artificial substance of which a layer is applied to dye or paint”
-dragon “in China is a symbol of luck and power”
-dinner “for the ancient Romans it was the longest and most important meal”
-dialog “in political language, comparison of ideas”
-disney “published the first animated series in '28”
+Anelectric “Which does not conduct electricity” 10
+Babysitter “That person who take care of your children for a fee” 10
+Habitation “Where people live” 10
+Background “You always see it as image  when you turn on the phone” 10
+Earthbound “FAMOUS NINTENDO GAME” 10
+Radiograph “when you take the assessment exams for the doctor” 10
+Vaccinated “YOU ARE PROTECTED FROM COVID” 10
+Chimpanzee “It is a primate of the hominid family” 10
+Autostrade “Designed to facilitate the circulation of large volumes of vehicular traffic at high speed” 10
+Hamburgers “Loved by Americans” 10
+Autocorrecting “Your phone keypad always corrects your words” 14
+Discrimination “judge by skin color” 14
+Trasformation “When The caterpillar becomes a butterfly” 14
+Moltiplication “it is one of the four fundamental operations of the arithmetic” 14
+Identification “When you connect to the computer through a password” 14
+Schweinsteiger “Famous German Football player” 14
+Disappointment “emotion felt by those who have not seen their hopes fulfilled” 14
+Defenestration “Throw something out the window” 14
+Specialization “Specific preparation in a specific field of an activity, of a discipline” 14
+Classification “immobile won last year by goals scored” 14
+shadow “The more or less intense darkness produced in a region of space by an opaque body exposed to light” 6
+Sister “First degree collateral relative as daughter of the same parents” 6
+doctor “nickname for someone who has obtained a degree (especially in Italy)” 6
+monday “the day that most hates Garfield” 6
+doubts “help you make the right decisions” 6
+Colors “A natural or artificial substance of which a layer is applied to dye or paint” 6
+dragon “in China is a symbol of luck and power” 6
+dinner “for the ancient Romans it was the longest and most important meal” 6
+dialog “in political language, comparison of ideas” 6
+disney “published the first animated series in '28” 6
 Whisky “Brandy distilled from fermented musts of malt, wheat, oats and other cereals” 6
-Ferocities “main characteristic of a shark”
-Franchisee “must comply with the management and marketing standards and models that are decided by the franchisor”
-friendship “Mutual affection”
-favoritism “Juve has it continuously by referees”
-Locomotive “soccer team’s name in Moscow”
-mediocrity “condition of limitation in performing a certain activity”
-mechanical “It is a branch of engineering”
-meditation “a form of inner prayer”
-metabolism “set of chemical reactions that occur in metabolism”
-Misogynist “Attitude of generic aversion or revulsion to the woman”
-missionary “is committed to spreading a religion in areas where it is not yet widespread”
-Electrodynamics “is the branch of physics that deals with the study of electromagnetic fields”
-Effervescently ”Lete water is”
-panteologist “deals with the analysis and study of animal and plant remains”
-psychoanalysis “founded by the Austrian neurologist S. Freud”
-nonperformance “when you made a bad performance”
-motionlessness “It is a condition characterized by reduced or absent autonomy in movementis the branch of physics that deals with the study of electromagnetic fields”
-solidification “physical passage”
-somnambulistic “NREM sleep parasomnia”
-Nitroglycerine “is used to treat high blood pressure during surgery”
+Ferocities “main characteristic of a shark” 10
+Franchisee “must comply with the management and marketing standards and models that are decided by the franchisor” 10
+friendship “Mutual affection” 10
+favoritism “Juve has it continuously by referees” 10
+Locomotive “soccer team’s name in Moscow” 10
+mediocrity “condition of limitation in performing a certain activity” 10
+mechanical “It is a branch of engineering” 10
+meditation “a form of inner prayer” 10
+metabolism “set of chemical reactions that occur in metabolism” 10
+Misogynist “Attitude of generic aversion or revulsion to the woman” 10
+missionary “is committed to spreading a religion in areas where it is not yet widespread” 10
+Electrodynamics “is the branch of physics that deals with the study of electromagnetic fields” 14
+Effervescently ”Lete water is” 14
+panteologist “deals with the analysis and study of animal and plant remains” 14
+psychoanalysis “founded by the Austrian neurologist S. Freud” 14
+nonperformance “when you made a bad performance” 14
+motionlessness “It is a condition characterized by reduced or absent autonomy in movementis the branch of physics that deals with the study of electromagnetic fields” 14
+solidification “physical passage” 14
+somnambulistic “NREM sleep parasomnia” 14
+Nitroglycerine “is used to treat high blood pressure during surgery” 14
