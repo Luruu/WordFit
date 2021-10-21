@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WelcomePageView: View {
     var body: some View {
         VStack{
             Text("WordFit")
@@ -41,6 +41,8 @@ struct ContentView: View {
                         .foregroundColor(.init(red: 0.51, green: 0.56, blue: 0.65))
                         .frame(width: 357.0, height: 36.0)
                         .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
+                        .cornerRadius(100)
+
                 }
             }
     }
@@ -49,6 +51,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WelcomePageView()
     }
 }
