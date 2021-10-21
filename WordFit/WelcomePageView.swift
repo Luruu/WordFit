@@ -19,6 +19,7 @@ struct WelcomePageView: View {
                 .frame(width: 291, height: 92,alignment: .leading)
                 .background(Color.white)
             .padding(.leading, CGFloat(20))
+            Spacer()
             Text("Welcome to the \n WordFit Game")
                 .font(Font.custom("Mallory",size: 26))
                 .lineSpacing(1.29)
@@ -33,6 +34,7 @@ struct WelcomePageView: View {
             .lineSpacing(1.3)
             .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
             .multilineTextAlignment(.center)
+//            Spacer()
             Button(action: {
                 print("Share tapped!")
             }) {
@@ -41,9 +43,27 @@ struct WelcomePageView: View {
                         .foregroundColor(.init(red: 0.51, green: 0.56, blue: 0.65))
                         .frame(width: 357.0, height: 36.0)
                         .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        .cornerRadius(100)
-
+                        .cornerRadius(10)
                 }
+            .padding()
+            Spacer()
+            ZStack{
+            Button(action: {
+                print("OK Tappet")
+            }) {
+                    Image("circlebutton")
+                    .resizable()
+                    .frame(width: 110, height: 116)
+                }
+                Text("OK")
+                    .font(Font.custom("Mallory",size: 20))
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+            }
+            Spacer()
+            Image("logo")
+                .resizable()
+                .frame(width: 76, height: 75, alignment: .center)
             }
     }
 }
