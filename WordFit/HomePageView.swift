@@ -70,6 +70,7 @@ struct HomePageView: View {
                 Button(action: {
                     print("Games Rules Tapped!")
                 }) {
+                    NavigationLink(destination: GameRulesView()){
                         Text("Games Rules")
                         .font(Font.custom("Roboto",size: 20))
                         .lineSpacing(0.3)
@@ -78,6 +79,7 @@ struct HomePageView: View {
                         .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                         .cornerRadius(4)
                     }
+                }
             }
                 HStack{
                     Button(action: {
