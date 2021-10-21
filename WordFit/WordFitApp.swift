@@ -11,7 +11,8 @@ import SwiftUI
 struct WordFitApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomePageView()
+//            WelcomePageView()
+            HomePageView()
         }
     }
 }

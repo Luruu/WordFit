@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0AA18A2721999B00225C45 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0AA1892721999B00225C45 /* HomePageView.swift */; };
 		88436EF82720579C003DDB78 /* WordFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88436EF72720579C003DDB78 /* WordFitApp.swift */; };
 		88436EFA2720579C003DDB78 /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88436EF92720579C003DDB78 /* WelcomePageView.swift */; };
 		88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88436EFB2720579E003DDB78 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0AA1892721999B00225C45 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		88436EF42720579C003DDB78 /* WordFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88436EF72720579C003DDB78 /* WordFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFitApp.swift; sourceTree = "<group>"; };
 		88436EF92720579C003DDB78 /* WelcomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				88AD64C62720851600AC0602 /* Trophy.swift */,
 				88436EF72720579C003DDB78 /* WordFitApp.swift */,
 				88436EF92720579C003DDB78 /* WelcomePageView.swift */,
+				0E0AA1892721999B00225C45 /* HomePageView.swift */,
 				88AD64C227207B8200AC0602 /* User.swift */,
 				88436EFB2720579E003DDB78 /* Assets.xcassets */,
 				88436EFD2720579E003DDB78 /* Preview Content */,
@@ -155,6 +158,7 @@
 				88AD64C72720851600AC0602 /* Trophy.swift in Sources */,
 				88436EF82720579C003DDB78 /* WordFitApp.swift in Sources */,
 				88AD64C327207B8200AC0602 /* User.swift in Sources */,
+				0E0AA18A2721999B00225C45 /* HomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
