@@ -12,7 +12,8 @@ struct WordFitApp: App {
     var body: some Scene {
         WindowGroup {
 //            WelcomePageView()
-            HomePageView()
+//            HomePageView()
+            RakingView()
         }
     }
 }
