@@ -13,7 +13,8 @@ struct WordFitApp: App {
         WindowGroup {
 //            WelcomePageView()
 //            HomePageView()
-              RakingView()
+//              RakingView()
+            WarningsView()
         }
     }
 }

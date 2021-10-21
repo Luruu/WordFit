@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomePageView: View {
     var body: some View {
+        NavigationView{
         VStack{
             Image("logo")
                 .resizable()
@@ -37,6 +38,7 @@ struct HomePageView: View {
                 .multilineTextAlignment(.center)
                 
             }
+        
             VStack(alignment: .center){
                 Button(action: {
                     print("Play Tapped!")
@@ -51,16 +53,19 @@ struct HomePageView: View {
                     }
                 .padding()
                 HStack{
-                Button(action: {
-                    print("Ranking Tapped!")
-                }) {
-                        Text("Ranking")
-                        .font(Font.custom("Roboto",size: 20))
-                        .lineSpacing(0.3)
-                        .frame(width: 142, height: 58)
-                        .foregroundColor(.white)
-                        .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
-                        .cornerRadius(4)
+                    Button(action: {
+    //                    print("Ranking Tapped!")
+                        
+                    }) {
+                        NavigationLink(destination: RakingView() ){
+                            Text("Ranking")
+                            .font(Font.custom("Roboto",size: 20))
+                            .lineSpacing(0.3)
+                            .frame(width: 142, height: 58)
+                            .foregroundColor(.white)
+                            .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
+                            .cornerRadius(4)
+                        }
                     }
                 Button(action: {
                     print("Games Rules Tapped!")
@@ -101,6 +106,7 @@ struct HomePageView: View {
                 Button(action: {
                     print("Warnings Tapped!")
                 }) {
+                    NavigationLink(destination: WarningsView()){
                         Text("WARNINGS")
                         .font(Font.custom("Lato",size: 18))
                         .lineSpacing(0.3)
@@ -109,17 +115,18 @@ struct HomePageView: View {
                         .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                         .cornerRadius(8)
                     }
+                }
                .padding()
                 }
-                Spacer()
                 Text("WordFit")
                 .foregroundColor(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                 .font(Font.custom("Mallory",size: 33.33333333333336))
                 .lineSpacing(1.3)
+                .padding(110)
             }
         }
+    }
 }
-
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()
