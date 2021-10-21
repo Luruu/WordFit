@@ -7,13 +7,15 @@
 
 import Foundation
 
-class Word{
-    private var value : String
-    private var score : Int
-    private var suggestion : String
+struct Word: Decodable{
+    
+    var value : String
+    var suggestion : String
+//  private var score : Int
+
     
     init(value: String, score : Int, suggestion : String){
-        self.score = score
+//      self.score = score
         self.value = value
         self.suggestion = suggestion
     }
@@ -23,7 +25,8 @@ class Word{
     }
     
     func getScore() -> Int{
-        return self.score
+//        return self.score
+        return 0
     }
     
     func getSuggestion() -> String{
