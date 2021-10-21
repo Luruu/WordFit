@@ -13,7 +13,9 @@ struct WordFitApp: App {
         WindowGroup {
             WelcomePageView()
 //            HomePageView()
-//              RakingView()
+//            RakingView()
+//            WarningsView()
+            GameRulesView()
         }
     }
     var test = WordList()
