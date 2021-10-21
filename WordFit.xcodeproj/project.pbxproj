@@ -12,6 +12,7 @@
 		88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88436EFB2720579E003DDB78 /* Assets.xcassets */; };
 		88436EFF2720579E003DDB78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88436EFE2720579E003DDB78 /* Preview Assets.xcassets */; };
 		885CA29F27206AE6008037AF /* word.txt in Resources */ = {isa = PBXBuildFile; fileRef = 885CA29E27206AE6008037AF /* word.txt */; };
+		889722DF2721977100856B41 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889722DE2721977100856B41 /* Word.swift */; };
 		88AD64C1272074E600AC0602 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 88AD64C0272074E600AC0602 /* Images */; };
 		88AD64C327207B8200AC0602 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C227207B8200AC0602 /* User.swift */; };
 		88AD64C72720851600AC0602 /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C62720851600AC0602 /* Trophy.swift */; };
@@ -24,6 +25,7 @@
 		88436EFB2720579E003DDB78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88436EFE2720579E003DDB78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		885CA29E27206AE6008037AF /* word.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = word.txt; sourceTree = "<group>"; };
+		889722DE2721977100856B41 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		88AD64C0272074E600AC0602 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		88AD64C227207B8200AC0602 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88AD64C62720851600AC0602 /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		88436EF62720579C003DDB78 /* WordFit */ = {
 			isa = PBXGroup;
 			children = (
+				889722DE2721977100856B41 /* Word.swift */,
 				88AD64C62720851600AC0602 /* Trophy.swift */,
 				88436EF72720579C003DDB78 /* WordFitApp.swift */,
 				88436EF92720579C003DDB78 /* WelcomePageView.swift */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889722DF2721977100856B41 /* Word.swift in Sources */,
 				88436EFA2720579C003DDB78 /* WelcomePageView.swift in Sources */,
 				88AD64C72720851600AC0602 /* Trophy.swift in Sources */,
 				88436EF82720579C003DDB78 /* WordFitApp.swift in Sources */,
