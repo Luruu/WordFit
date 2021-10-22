@@ -10,7 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     @State private var showAudio = false
     @State private var showDarkMode = false
-    @State var newNickname = ""
+   @State var newNickname = ""
+//    newNickname variabile da usare ogni vola che un utente inserisce il proprio nome
     var body: some View {
         VStack{
         VStack{
