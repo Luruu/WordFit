@@ -13,17 +13,17 @@ class WordList{
     
     init(){
 //        TMP contiene l'array di word preso dal file json
-        let tmp : [Word] = Decoder.loadJson(fileName: "test2")
+        let tmp : [Word] = Decoder.loadJson(fileName: "word")
 //        mettere ogni obj di tmp in un dict chiavere:valore che rappresenta la nostra lista.
-        
         for i in 0...tmp.count - 1{
-            addElement(key: i, value: tmp[i].self)
-            printList()
+            addElement(key: i, value: tmp[i])
         }
     }
     
     func addElement(key : Int , value : Word){
-        wordList.updateValue(value, forKey: key)
+        var tmp  = value
+        tmp.setUsed(flag: false)
+        wordList.updateValue(tmp, forKey: key)
     }
     
     func getElementsFromWordList(index : Int) -> Word?{
@@ -31,7 +31,10 @@ class WordList{
     }
     
     func printList(){
-        print(wordList)
+        for item in wordList {
+            print(item.key)
+            print(item.value)
+        }
     }
     
 }
