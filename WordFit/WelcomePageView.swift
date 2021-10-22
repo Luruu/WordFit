@@ -53,7 +53,8 @@ struct WelcomePageView: View {
                     ZStack{
                         Button(action: {
                             appPreferences.setBoolPreferences(forKey: "FirstLogin", value: false)
-                            appPreferences.setBoolPreferences(forKey: "Empty", value: false)
+                            appPreferences.setBoolPreferences(forKey: "NotEmpty", value: true)
+                            
                         }) {
                             NavigationLink(destination: HomePageView()){
                                 Image("circlebutton")

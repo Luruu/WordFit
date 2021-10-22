@@ -6,14 +6,14 @@
 
 
 import SwiftUI
-
+import Foundation
 @main
 struct WordFitApp: App {
     var tmp = Initializer()
-    var result : Bool = appPreferences.getBoolPreferences(forKey: "FirstLogin")
+    var IsfirstLogin : Bool = appPreferences.getBoolPreferences(forKey: "FirstLogin")
     var body: some Scene {
         WindowGroup {
-            if result{
+            if IsfirstLogin{
                 WelcomePageView()
             }
             else{

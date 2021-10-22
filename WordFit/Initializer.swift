@@ -10,10 +10,18 @@ import Foundation
 class Initializer{
     init(){
         WordList.getIstance().listInitializer()
-        let result = appPreferences.getBoolPreferences(forKey: "Empty")
-        if result{
-//            it's empty
+        //appPreferences.setBoolPreferences(forKey: "Empty", value: true)
+        let isNotEmpty = appPreferences.getBoolPreferences(forKey: "NotEmpty")
+        
+        print("isNotEmpty: ",isNotEmpty)
+        print("aaaa: ",appPreferences.getBoolPreferences(forKey: "FirstLogin")
+)
+        if (isNotEmpty == false) { //it's empty
+            print("empty, carico i valori di default.")
             appPreferences.loadPreferences()
-        }
+       }
+        
+        //UserDefaults.standard.removeObject(forKey: "NotEmpty")
+        //print("rimosso")
     }
 }

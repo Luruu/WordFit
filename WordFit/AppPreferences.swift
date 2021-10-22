@@ -11,7 +11,7 @@ class appPreferences{
     init(){}
     
     static func loadPreferences(){
-        UserDefaults.standard.set(true, forKey: "Empty")
+        UserDefaults.standard.set(true, forKey: "NotEmpty")
         UserDefaults.standard.set(false, forKey: "DarkMode")
         UserDefaults.standard.set(false, forKey: "Audio")
         UserDefaults.standard.set("", forKey: "NickName")
