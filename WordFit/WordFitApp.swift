@@ -16,11 +16,13 @@ struct WordFitApp: App {
             if "Ciao" == "Ciao"{
                 RakingView()
             }
-              HomePageView()
+//            HomePageView()
 //            RakingView()
 //            WarningsView()
 //            GameRulesView()
 //            SettingsView()
+            MyTrophiesView()
+            
         }
     }
 //    var test = WordList()
