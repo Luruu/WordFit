@@ -11,11 +11,11 @@ import SwiftUI
 struct WordFitApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomePageView()
-//            HomePageView()
+//            WelcomePageView()
+              HomePageView()
 //            RakingView()
 //            WarningsView()
-              GameRulesView()
+//            GameRulesView()
         }
     }
 //    var test = WordList()
