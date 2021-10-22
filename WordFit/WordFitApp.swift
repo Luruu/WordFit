@@ -12,11 +12,12 @@ struct WordFitApp: App {
     var body: some Scene {
         WindowGroup {
 //            WelcomeView()
-//              HomePageView()
+//            HomePageView()
 //            RakingView()
 //            WarningsView()
 //            GameRulesView()
-            SettingsView()
+//            SettingsView()
+            MyTrophiesView()
         }
     }
 //    var test = WordList()

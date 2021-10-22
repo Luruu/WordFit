@@ -98,6 +98,7 @@ struct HomePageView: View {
                     Button(action: {
                         print("My Trophies Tapped!")
                     }) {
+                        NavigationLink(destination: MyTrophiesView()){
                             Text("My Trophies")
                             .font(Font.custom("Roboto",size: 20))
                             .lineSpacing(0.3)
@@ -106,6 +107,7 @@ struct HomePageView: View {
                             .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                             .cornerRadius(4)
                         }
+                    }
                 }
                 Button(action: {
                     print("Warnings Tapped!")
@@ -129,6 +131,7 @@ struct HomePageView: View {
                 .padding(110)
             }
         }
+        .accentColor(Color.init(red: 0.51, green: 0.56, blue: 0.65))
     }
 }
 struct HomePageView_Previews: PreviewProvider {
