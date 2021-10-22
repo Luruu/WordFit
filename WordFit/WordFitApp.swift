@@ -9,18 +9,20 @@ import SwiftUI
 
 @main
 struct WordFitApp: App {
-    
+    var tmp = Initializer()
     var body: some Scene {
         WindowGroup {
 //            WelcomeView()
-//              HomePageView()
+            if "Ciao" == "Ciao"{
+                RakingView()
+            }
+              HomePageView()
 //            RakingView()
 //            WarningsView()
 //            GameRulesView()
-            SettingsView()
+//            SettingsView()
         }
     }
 //    var test = WordList()
-    var tmp = Initializer()
     
 }

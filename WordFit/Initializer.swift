@@ -6,10 +6,10 @@
 //
 
 import Foundation
+
 class Initializer{
     init(){
-        WordList()
+        WordList.getIstance().listInitializer()
         appPreferences.loadPreferences()
-        print(appPreferences.getIntArrayPreferences(forKey: "Trophy"))
     }
 }

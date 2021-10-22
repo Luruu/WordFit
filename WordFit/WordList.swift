@@ -8,18 +8,23 @@
 import Foundation
 
 class WordList{
+    private static var wordList : WordList = WordList()
     private var wordList : [Int: Word] = [:]
     private var lenght : Int = Int.init()
     
-    init(){
-//        TMP contiene l'array di word preso dal file json
+//    Singleton Lazy Implementation
+    static func getIstance()->WordList{
+        return .wordList
+    }
+    
+     func listInitializer(){
         let tmp : [Word] = Decoder.loadJson(fileName: "word")
-//        mettere ogni obj di tmp in un dict chiavere:valore che rappresenta la nostra lista.
         for i in 0...tmp.count - 1{
             addElement(key: i, value: tmp[i])
         }
+
     }
-    
+
     func addElement(key : Int , value : Word){
         var tmp  = value
         tmp.setUsed(flag: false)

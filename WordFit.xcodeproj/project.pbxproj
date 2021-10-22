@@ -22,6 +22,8 @@
 		888460532722E21F00A00B4E /* word.json in Resources */ = {isa = PBXBuildFile; fileRef = 888460522722E21F00A00B4E /* word.json */; };
 		888460552722F9DD00A00B4E /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888460542722F9DD00A00B4E /* Initializer.swift */; };
 		888460572723018900A00B4E /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888460562723018900A00B4E /* AppPreferences.swift */; };
+		8884606627230E5700A00B4E /* ParthenoKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8884606527230E5700A00B4E /* ParthenoKit.xcframework */; };
+		8884606727230E5700A00B4E /* ParthenoKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8884606527230E5700A00B4E /* ParthenoKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		889722DF2721977100856B41 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889722DE2721977100856B41 /* Word.swift */; };
 		88AD64C1272074E600AC0602 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 88AD64C0272074E600AC0602 /* Images */; };
 		88AD64C327207B8200AC0602 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C227207B8200AC0602 /* User.swift */; };
@@ -29,6 +31,20 @@
 		88ECB77A2721ABFB0013E35D /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECB7792721ABFB0013E35D /* WordList.swift */; };
 		88ECB7842721E5110013E35D /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = 88ECB7832721E5110013E35D /* test2.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8884605D27230D6900A00B4E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8884606727230E5700A00B4E /* ParthenoKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E0AA1892721999B00225C45 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
@@ -47,6 +63,7 @@
 		888460522722E21F00A00B4E /* word.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = word.json; sourceTree = "<group>"; };
 		888460542722F9DD00A00B4E /* Initializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
 		888460562723018900A00B4E /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		8884606527230E5700A00B4E /* ParthenoKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ParthenoKit.xcframework; path = ../../../Desktop/ParthenokitDemo/ParthenoKit.xcframework; sourceTree = "<group>"; };
 		889722DE2721977100856B41 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		88AD64C0272074E600AC0602 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		88AD64C227207B8200AC0602 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -60,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8884606627230E5700A00B4E /* ParthenoKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +89,7 @@
 			children = (
 				88436EF62720579C003DDB78 /* WordFit */,
 				88436EF52720579C003DDB78 /* Products */,
+				8884606427230E5700A00B4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +104,7 @@
 		88436EF62720579C003DDB78 /* WordFit */ = {
 			isa = PBXGroup;
 			children = (
+				888460562723018900A00B4E /* AppPreferences.swift */,
 				888460542722F9DD00A00B4E /* Initializer.swift */,
 				88ECB7832721E5110013E35D /* test2.json */,
 				888460522722E21F00A00B4E /* word.json */,
@@ -105,7 +125,6 @@
 				88436EFD2720579E003DDB78 /* Preview Content */,
 				885CA29E27206AE6008037AF /* word.txt */,
 				88AD64C0272074E600AC0602 /* Images */,
-				888460562723018900A00B4E /* AppPreferences.swift */,
 			);
 			path = WordFit;
 			sourceTree = "<group>";
@@ -118,6 +137,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8884606427230E5700A00B4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8884606527230E5700A00B4E /* ParthenoKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,6 +155,7 @@
 				88436EF02720579C003DDB78 /* Sources */,
 				88436EF12720579C003DDB78 /* Frameworks */,
 				88436EF22720579C003DDB78 /* Resources */,
+				8884605D27230D6900A00B4E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
