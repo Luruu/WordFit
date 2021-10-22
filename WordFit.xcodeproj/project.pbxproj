@@ -17,12 +17,12 @@
 		88436EFF2720579E003DDB78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88436EFE2720579E003DDB78 /* Preview Assets.xcassets */; };
 		885CA29F27206AE6008037AF /* word.txt in Resources */ = {isa = PBXBuildFile; fileRef = 885CA29E27206AE6008037AF /* word.txt */; };
 		888460512722C59200A00B4E /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888460502722C59200A00B4E /* Decoder.swift */; };
+		888460532722E21F00A00B4E /* word.json in Resources */ = {isa = PBXBuildFile; fileRef = 888460522722E21F00A00B4E /* word.json */; };
 		889722DF2721977100856B41 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889722DE2721977100856B41 /* Word.swift */; };
 		88AD64C1272074E600AC0602 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 88AD64C0272074E600AC0602 /* Images */; };
 		88AD64C327207B8200AC0602 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C227207B8200AC0602 /* User.swift */; };
 		88AD64C72720851600AC0602 /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C62720851600AC0602 /* Trophy.swift */; };
 		88ECB77A2721ABFB0013E35D /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECB7792721ABFB0013E35D /* WordList.swift */; };
-		88ECB7822721DC730013E35D /* word.json in Resources */ = {isa = PBXBuildFile; fileRef = 88ECB7812721DC730013E35D /* word.json */; };
 		88ECB7842721E5110013E35D /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = 88ECB7832721E5110013E35D /* test2.json */; };
 /* End PBXBuildFile section */
 
@@ -38,12 +38,12 @@
 		88436EFE2720579E003DDB78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		885CA29E27206AE6008037AF /* word.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = word.txt; sourceTree = "<group>"; };
 		888460502722C59200A00B4E /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		888460522722E21F00A00B4E /* word.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = word.json; sourceTree = "<group>"; };
 		889722DE2721977100856B41 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		88AD64C0272074E600AC0602 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		88AD64C227207B8200AC0602 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88AD64C62720851600AC0602 /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
 		88ECB7792721ABFB0013E35D /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
-		88ECB7812721DC730013E35D /* word.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = word.json; path = ../../../../Desktop/word.json; sourceTree = "<group>"; };
 		88ECB7832721E5110013E35D /* test2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test2.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				88ECB7832721E5110013E35D /* test2.json */,
-				88ECB7812721DC730013E35D /* word.json */,
+				888460522722E21F00A00B4E /* word.json */,
 				888460502722C59200A00B4E /* Decoder.swift */,
 				88ECB7792721ABFB0013E35D /* WordList.swift */,
 				889722DE2721977100856B41 /* Word.swift */,
@@ -165,11 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD64C1272074E600AC0602 /* Images in Resources */,
-				88ECB7822721DC730013E35D /* word.json in Resources */,
 				88ECB7842721E5110013E35D /* test2.json in Resources */,
 				88436EFF2720579E003DDB78 /* Preview Assets.xcassets in Resources */,
 				885CA29F27206AE6008037AF /* word.txt in Resources */,
 				88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */,
+				888460532722E21F00A00B4E /* word.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
