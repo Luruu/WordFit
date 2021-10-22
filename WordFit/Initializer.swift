@@ -10,6 +10,10 @@ import Foundation
 class Initializer{
     init(){
         WordList.getIstance().listInitializer()
-        appPreferences.loadPreferences()
+        let result = appPreferences.getBoolPreferences(forKey: "Empty")
+        if result{
+//            it's empty
+            appPreferences.loadPreferences()
+        }
     }
 }

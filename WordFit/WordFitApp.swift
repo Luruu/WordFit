@@ -10,18 +10,22 @@ import SwiftUI
 @main
 struct WordFitApp: App {
     var tmp = Initializer()
+    var result : Bool = appPreferences.getBoolPreferences(forKey: "FirstLogin")
     var body: some Scene {
         WindowGroup {
-//            WelcomeView()
-            if "Ciao" == "Ciao"{
-                RakingView()
+            if result{
+                WelcomePageView()
             }
-//            HomePageView()
+            else{
+                HomePageView()
+            }
+           
 //            RakingView()
 //            WarningsView()
 //            GameRulesView()
 //            SettingsView()
-            MyTrophiesView()
+
+//            MyTrophiesView()
             
         }
     }
