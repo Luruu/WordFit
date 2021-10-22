@@ -85,6 +85,7 @@ struct HomePageView: View {
                     Button(action: {
                         print("Settings Tapped!")
                     }) {
+                        NavigationLink(destination: SettingsView()){
                             Text("Settings")
                             .font(Font.custom("Roboto",size: 20))
                             .lineSpacing(0.3)
@@ -93,6 +94,7 @@ struct HomePageView: View {
                             .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                             .cornerRadius(4)
                         }
+                    }
                     Button(action: {
                         print("My Trophies Tapped!")
                     }) {
