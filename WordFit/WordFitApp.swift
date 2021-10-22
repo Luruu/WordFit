@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct WordFitApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            WelcomePageView()
+//            WelcomePageView()
 //            HomePageView()
 //            RakingView()
 //            WarningsView()
@@ -19,5 +20,6 @@ struct WordFitApp: App {
         }
     }
 //    var test = WordList()
-      var test = WordList()
+    var tmp = Initializer()
+    
 }
