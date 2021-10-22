@@ -18,6 +18,6 @@ struct WordFitApp: App {
               GameRulesView()
         }
     }
-    
 //    var test = WordList()
+      var test = WordList()
 }

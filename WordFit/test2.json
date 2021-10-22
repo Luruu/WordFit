@@ -1,4 +1,13 @@
-{
-            "value": "test",
-            "suggestion": "test2"
-}
+[
+    {
+                "value": "test",
+                "suggestion": "test2"
+    },
+    
+    {
+        "value": "test3",
+        "suggestion": "test2"
+    }
+    
+]
+
