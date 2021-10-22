@@ -8,26 +8,30 @@
 import Foundation
 
 class WordList{
-    private var wordList : Array<Word> = Array.init()
+    private var wordList : [Int: Word] = [:]
     private var lenght : Int = Int.init()
     
     init(){
-        let word : Word = loadJson(fileName: "test2")
-        print(word.value)
-    }
-    
-    func addElement(name : String, points : Int, sugg : String){
-        wordList.append(Word(value: name, score : points, suggestion : sugg ))
-    }
-    
-    func loadJson(fileName : String) -> Word{
-        let decoder = JSONDecoder()
-        guard
-            let url = Bundle.main.url(forResource: fileName, withExtension: "json"), let data = try? Data(contentsOf: url), let persona = try? decoder.decode(Word.self, from: data)
-        else{
-            fatalError("Stampo nill perché guard ha fallito")
+//        TMP contiene l'array di word preso dal file json
+        let tmp : [Word] = Decoder.loadJson(fileName: "test2")
+//        mettere ogni obj di tmp in un dict chiavere:valore che rappresenta la nostra lista.
+        
+        for i in 0...tmp.count - 1{
+            addElement(key: i, value: tmp[i].self)
+            printList()
         }
-        return persona
+    }
+    
+    func addElement(key : Int , value : Word){
+        wordList.updateValue(value, forKey: key)
+    }
+    
+    func getElementsFromWordList(index : Int) -> Word?{
+        return wordList[index]
+    }
+    
+    func printList(){
+        print(wordList)
     }
     
 }
