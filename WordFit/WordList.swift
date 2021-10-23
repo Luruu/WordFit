@@ -42,5 +42,7 @@ class WordList{
         }
     }
     
+    func getSize() -> Int {return wordList.count}
+    
 }
 

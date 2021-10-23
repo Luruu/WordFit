@@ -8,7 +8,7 @@
 import Foundation
 
 class User{
-    private var nickName : String
+    private var nickName : String?
     private var score: Int = Int.init()
     private var id : Int = Int.init()
     private var imageProfile : String?
@@ -22,7 +22,7 @@ class User{
         self.nickName = name
     }
     
-    func getNickName() -> String{
+    func getNickName() -> String?{
         return self.nickName
     }
     
