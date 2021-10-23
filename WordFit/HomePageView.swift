@@ -57,7 +57,8 @@ struct HomePageView: View {
     //                    print("Ranking Tapped!")
                         
                     }) {
-                        NavigationLink(destination: RakingView() ){
+                        NavigationLink(destination: RakingView() )
+                        {
                             Text("Ranking")
                             .font(Font.custom("Roboto",size: 20))
                             .lineSpacing(0.3)
@@ -131,6 +132,7 @@ struct HomePageView: View {
                 .padding(110)
             }
         }
+        .navigationBarHidden(true)
         .accentColor(Color.init(red: 0.51, green: 0.56, blue: 0.65))
     }
 }

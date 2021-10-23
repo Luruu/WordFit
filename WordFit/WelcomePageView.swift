@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WelcomePageView: View {
     var body: some View {
-            NavigationView(){
+        NavigationView{
             VStack{
                 Text("WordFit")
     //                .font(.system(size: 66.67))
@@ -36,31 +36,19 @@ struct WelcomePageView: View {
                 .lineSpacing(1.3)
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .multilineTextAlignment(.center)
-    //           Spacer()
-    /*            Button(action: {
-                    print("Share tapped!")
-                }) {
-                        Text("Select your nickname")
-                            .font(.system(size: 17))
-                            .foregroundColor(.init(red: 0.51, green: 0.56, blue: 0.65))
-                            .frame(width: 357.0, height: 36.0)
-                            .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                            .cornerRadius(10)
-                    }
-                .padding()
-     */
                 .padding(20)
                     ZStack{
                         Button(action: {
-                            appPreferences.setBoolPreferences(forKey: "FirstLogin", value: false)
-                            appPreferences.setBoolPreferences(forKey: "NotEmpty", value: true)
-                            
+                            print("ciao")
                         }) {
                             NavigationLink(destination: HomePageView()){
                                 Image("circlebutton")
                                 .resizable()
                                 .frame(width: 110, height: 116)
                                 }
+                            .simultaneousGesture(TapGesture().onEnded{
+                                appPreferences.setBoolPreferences(forKey: "FirstLogin", value: false)
+                            })
                             }
                             Text("OK")
                                 .font(Font.custom("Mallory",size: 20))

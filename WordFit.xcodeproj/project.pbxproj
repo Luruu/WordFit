@@ -14,9 +14,6 @@
 		0EEA39D12721ADD8006D59BF /* RakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D02721ADD8006D59BF /* RakingView.swift */; };
 		0EEA39D32721C471006D59BF /* WarningsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D22721C471006D59BF /* WarningsView.swift */; };
 		0EEA39D52721CCEC006D59BF /* GameRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D42721CCEC006D59BF /* GameRulesView.swift */; };
-		81DBBCA527233E4700E23AFE /* ParthenokitDemo in Resources */ = {isa = PBXBuildFile; fileRef = 81DBBCA427233E4700E23AFE /* ParthenokitDemo */; };
-		81DBBCA727233E4E00E23AFE /* ParthenoKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DBBCA627233E4E00E23AFE /* ParthenoKit.xcframework */; };
-		81DBBCA827233E4E00E23AFE /* ParthenoKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81DBBCA627233E4E00E23AFE /* ParthenoKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		88436EF82720579C003DDB78 /* WordFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88436EF72720579C003DDB78 /* WordFitApp.swift */; };
 		88436EFA2720579C003DDB78 /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88436EF92720579C003DDB78 /* WelcomePageView.swift */; };
 		88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88436EFB2720579E003DDB78 /* Assets.xcassets */; };
@@ -29,6 +26,8 @@
 		8884606D27231F9A00A00B4E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884606C27231F9A00A00B4E /* Exercise.swift */; };
 		8884606F2723200000A00B4E /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884606E2723200000A00B4E /* GameSession.swift */; };
 		889722DF2721977100856B41 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889722DE2721977100856B41 /* Word.swift */; };
+		88A350692724065800FE1B90 /* ParthenoKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A350682724065800FE1B90 /* ParthenoKit.xcframework */; };
+		88A3506A2724065800FE1B90 /* ParthenoKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88A350682724065800FE1B90 /* ParthenoKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		88AD64C1272074E600AC0602 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 88AD64C0272074E600AC0602 /* Images */; };
 		88AD64C327207B8200AC0602 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C227207B8200AC0602 /* User.swift */; };
 		88AD64C72720851600AC0602 /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C62720851600AC0602 /* Trophy.swift */; };
@@ -43,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				81DBBCA827233E4E00E23AFE /* ParthenoKit.xcframework in Embed Frameworks */,
+				88A3506A2724065800FE1B90 /* ParthenoKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,8 +57,6 @@
 		0EEA39D02721ADD8006D59BF /* RakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakingView.swift; sourceTree = "<group>"; };
 		0EEA39D22721C471006D59BF /* WarningsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningsView.swift; sourceTree = "<group>"; };
 		0EEA39D42721CCEC006D59BF /* GameRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesView.swift; sourceTree = "<group>"; };
-		81DBBCA427233E4700E23AFE /* ParthenokitDemo */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ParthenokitDemo; path = ../../Downloads/ParthenokitDemo; sourceTree = "<group>"; };
-		81DBBCA627233E4E00E23AFE /* ParthenoKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ParthenoKit.xcframework; path = ../../Downloads/ParthenokitDemo/ParthenoKit.xcframework; sourceTree = "<group>"; };
 		88436EF42720579C003DDB78 /* WordFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88436EF72720579C003DDB78 /* WordFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFitApp.swift; sourceTree = "<group>"; };
 		88436EF92720579C003DDB78 /* WelcomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageView.swift; sourceTree = "<group>"; };
@@ -73,6 +70,7 @@
 		8884606C27231F9A00A00B4E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		8884606E2723200000A00B4E /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		889722DE2721977100856B41 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		88A350682724065800FE1B90 /* ParthenoKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ParthenoKit.xcframework; sourceTree = "<group>"; };
 		88AD64C0272074E600AC0602 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		88AD64C227207B8200AC0602 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88AD64C62720851600AC0602 /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
@@ -85,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81DBBCA727233E4E00E23AFE /* ParthenoKit.xcframework in Frameworks */,
+				88A350692724065800FE1B90 /* ParthenoKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +149,7 @@
 		8884606427230E5700A00B4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81DBBCA627233E4E00E23AFE /* ParthenoKit.xcframework */,
-				81DBBCA427233E4700E23AFE /* ParthenokitDemo */,
+				88A350682724065800FE1B90 /* ParthenoKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,7 +218,6 @@
 				88436EFF2720579E003DDB78 /* Preview Assets.xcassets in Resources */,
 				885CA29F27206AE6008037AF /* word.txt in Resources */,
 				0E234FC72722E3460058D376 /* Loading.storyboard in Resources */,
-				81DBBCA527233E4700E23AFE /* ParthenokitDemo in Resources */,
 				88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */,
 				888460532722E21F00A00B4E /* word.json in Resources */,
 			);

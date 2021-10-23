@@ -13,22 +13,12 @@ struct WordFitApp: App {
     var IsfirstLogin : Bool = appPreferences.getBoolPreferences(forKey: "FirstLogin")
     var body: some Scene {
         WindowGroup {
-            if IsfirstLogin{
-                WelcomePageView()
-            }
-            else{
+            if !IsfirstLogin{
                 HomePageView()
             }
-           
-//            RakingView()
-//            WarningsView()
-//            GameRulesView()
-//            SettingsView()
-
-//            MyTrophiesView()
-            
+            else{
+                WelcomePageView()
+            }
         }
     }
-//    var test = WordList()
-    
 }
