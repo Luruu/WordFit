@@ -53,4 +53,8 @@ class appPreferences{
         UserDefaults.standard.set(value, forKey: forKey)
     }
     
+    static func setStringPreferences(forKey : String, value : String){
+        UserDefaults.standard.set(value, forKey: forKey)
+    }
+    
 }

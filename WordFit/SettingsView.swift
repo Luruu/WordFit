@@ -10,7 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     @State private var showAudio = false
     @State private var showDarkMode = false
-   @State var newNickname = ""
+    @State var newNickname = ""
+    @State var placeHolder = "New nickname"
 //    newNickname variabile da usare ogni vola che un utente inserisce il proprio nome
     var body: some View {
         VStack{
@@ -63,11 +64,14 @@ struct SettingsView: View {
                     .lineSpacing(0.55)
                     .padding(5)
                 HStack{
-                    TextField("New Nickname",text: $newNickname,onEditingChanged: {edit in
+                    TextField(placeHolder,text: $newNickname,onEditingChanged: {edit in
                         
                     },onCommit: {
+                        appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
+                        newNickname = ""
                         
                     })
+                        
                         .font(Font.custom("Lato",size: 20))
                         .foregroundColor(Color.black)
                         .frame(width:  UIScreen.main.bounds.size.width - 185, height: 33, alignment: .center)
@@ -76,8 +80,8 @@ struct SettingsView: View {
                         .lineSpacing(0.27)
                         .cornerRadius(1.67)
                     Button(action: {
-                        print("Change Tapped!")
-//                        deve cambiare nome salvato in newNickname
+                        appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
+                        newNickname = ""
                     }) {
                             Text("Change")
                             .font(Font.custom("Roboto",size: 20))
