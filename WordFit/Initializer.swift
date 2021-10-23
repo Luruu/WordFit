@@ -22,8 +22,5 @@ class Initializer{
             print("empty, carico i valori di default.")
             appPreferences.loadPreferences()
        }
-        
-        //UserDefaults.standard.removeObject(forKey: "NotEmpty")
-        //print("rimosso")
     }
 }
