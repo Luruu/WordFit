@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @State var nickName = ""
+    @State var Score = ""
     var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
     var body: some View {
         NavigationView{
@@ -30,14 +32,21 @@ struct HomePageView: View {
                     Button(action: {
                     }) {
                         NavigationLink(destination: SettingsView()){
-                            Text("\(appPreferences.getStringPreferences(forKey: "NickName") ?? "none")")
+                            Text(" \(self.nickName)")
+                                .onAppear {
+                                    nickName = appPreferences.getStringPreferences(forKey: "NickName") ?? "none"
+                                        }
                                 .font(Font.custom("Lato",size: 13.33333333333334))
                                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                                 .lineSpacing(0.55)
                          }
                     }
                     
-                    Text("Score: \(appPreferences.getStringPreferences(forKey: "Score") ?? "none") Trophies: \(tropies.count)" )
+                    Text("Score: \(self.Score) Trophies: \(tropies.count)" )
+                        .onAppear{
+                            Score = appPreferences.getStringPreferences(forKey: "Score") ?? "none"
+                           
+                        }
                     .font(Font.custom("Lato",size: 13.33333333333334))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                     .lineSpacing(0.55)
@@ -144,9 +153,9 @@ struct HomePageView: View {
         .navigationBarHidden(true)
         .accentColor(Color.init(red: 0.51, green: 0.56, blue: 0.65))
     }
-    
-   
 }
+
+
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()

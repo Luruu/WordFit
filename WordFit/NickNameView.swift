@@ -9,28 +9,40 @@ import SwiftUI
 
 struct NickNameView: View {
     @State var newNickname = ""
+    @State var placeHolder = "New Nickname"
     var body: some View {
+        NavigationView{
         VStack{
+            
+            VStack{
             Image("logo")
                 .resizable()
                 .frame(width: 116, height: 116)
-                .padding(60)
-            
+                Text("")
+                    .frame(width: 30, height: 60, alignment: .center)
+          Spacer()
             Text("Choose Your NickName")
                 .font(Font.custom("Lato",size: 33.33333333333336))
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .lineSpacing(0.68)
-            
-            VStack{
+                
+                Text("")
+                    .frame(width: 30, height: 20, alignment: .center)
+                
                 Text("Your NickName is used for the WordFit Rankings system.\n\nThe NickName must be a minimum of 4 and a maximum of 8 in length.  ")
+                    .frame(width: 299, height: 197)
                     .font(Font.custom("Lato",size: 23.33333333333332))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                     .lineSpacing(0.98)
             }
+            Text("")
+                .frame(width: 30, height: 40, alignment: .center)
             VStack{
-                TextField("New Nickname",text: $newNickname,onEditingChanged: {edit in
+                TextField(placeHolder,text: $newNickname,onEditingChanged: {edit in
                     
                 },onCommit: {
+                    appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
+                    newNickname = ""
                     
                 })
                     .font(Font.custom("Lato",size: 20))
@@ -40,9 +52,11 @@ struct NickNameView: View {
                     .multilineTextAlignment(.center)
                     .lineSpacing(1.13)
             }
+            Text("")
+                .frame(width: 30, height: 5, alignment: .center)
             VStack{
                 Button(action: {
-                          //print("Play Tapped!")
+                       print("ciao")
                       }) {
                           NavigationLink(destination: PlayView()){
                               Text("OK")
@@ -52,17 +66,30 @@ struct NickNameView: View {
                               .foregroundColor(.white)
                               .background(Color.init(red: 0.87, green: 0.33, blue: 0.4))
                               .cornerRadius(8)
-                           }
+                           }.simultaneousGesture(TapGesture().onEnded{
+                               appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
+                               newNickname = ""
+                           })
+                           
                       }
+                Text("")
+                    .frame(width: 30, height: 50, alignment: .center)
+                
+                Text("WordFit")
+                .foregroundColor(Color.init(red: 0.8, green: 0.08, blue: 0.41))
+                .font(Font.custom("Mallory",size: 33.33333333333336))
+                .lineSpacing(1.3)
+                .padding()
+                
+                Text("")
+                    .frame(width: 30, height: 60, alignment: .center)
+                
+                Spacer()
             }
-            
-            Text("WordFit")
-            .foregroundColor(Color.init(red: 0.8, green: 0.08, blue: 0.41))
-            .font(Font.custom("Mallory",size: 33.33333333333336))
-            .lineSpacing(1.3)
-            .padding()
         }
     }
+    .navigationBarHidden(true)
+}
 }
 
 struct NickNameView_Previews: PreviewProvider {

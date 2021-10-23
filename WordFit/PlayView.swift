@@ -14,16 +14,21 @@ struct PlayView: View {
             Image("logo")
                 .resizable()
                 .frame(width: 116, height: 116)
-                .padding(60)
+            
+            Text("")
+                .frame(width: 30, height: 30, alignment: .center)
             
             Text("Inserire Suggerimento")
                 .font(Font.custom("Lato",size: 33.33333333333336))
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .lineSpacing(0.68)
             
+            Text("")
+                .frame(width: 30, height: 40, alignment: .center)
+            
             //Inserimento soluzione
             VStack{
-            TextField("New Nickname",text: $Solution, onEditingChanged: {edit in
+            TextField("Solution",text: $Solution, onEditingChanged: {edit in
                 
             },onCommit: {
                 

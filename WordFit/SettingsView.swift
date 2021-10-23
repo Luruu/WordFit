@@ -69,6 +69,7 @@ struct SettingsView: View {
                     },onCommit: {
                         appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
                         newNickname = ""
+                        
                     })
                         
                         .font(Font.custom("Lato",size: 20))
