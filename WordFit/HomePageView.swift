@@ -30,7 +30,17 @@ struct HomePageView: View {
                     .font(Font.custom("Lato",size: 13.33333333333334))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                     .lineSpacing(0.55)
-//                    NavigationLink(destination: SettingsView())
+                    Button(action: {
+                        //print("nickname Tapped!")
+                    }) {
+                        NavigationLink(destination: SettingsView()){
+                            Text("\(appPreferences.getStringPreferences(forKey: "NickName")!)")
+                                .font(Font.custom("Lato",size: 13.33333333333334))
+                                .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
+                                .lineSpacing(0.55)
+                         }
+                    }
+                    
                 Text("Score: ?, Trophies: ?")
                     .font(Font.custom("Lato",size: 13.33333333333334))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
@@ -42,8 +52,9 @@ struct HomePageView: View {
         
             VStack(alignment: .center){
                 Button(action: {
-                    print("Play Tapped!")
+                    //print("Play Tapped!")
                 }) {
+                    NavigationLink(destination: PlayView()){
                         Text("PLAY")
                         .font(Font.custom("Lato",size: 18))
                         .lineSpacing(0.3)
@@ -51,7 +62,8 @@ struct HomePageView: View {
                         .foregroundColor(.white)
                         .background(Color.init(red: 0.87, green: 0.33, blue: 0.4))
                         .cornerRadius(8)
-                    }
+                     }
+                }
                 .padding()
                 HStack{
                     Button(action: {
