@@ -25,7 +25,7 @@ class appPreferences{
         UserDefaults.standard.set(true, forKey: "NotEmpty")
         UserDefaults.standard.set(false, forKey: "DarkMode")
         UserDefaults.standard.set(false, forKey: "Audio")
-        UserDefaults.standard.set("", forKey: "NickName")
+        UserDefaults.standard.set("NickName", forKey: "NickName")
         UserDefaults.standard.set(0, forKey: "Score")
         let Array = [Int]()
         UserDefaults.standard.set(Array, forKey: "Tropies")
