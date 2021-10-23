@@ -26,6 +26,10 @@ struct HomePageView: View {
                     .frame(width: 44, height: 18, alignment: .center)
             }
                 VStack{
+                Text("Nickname")
+                    .font(Font.custom("Lato",size: 13.33333333333334))
+                    .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
+                    .lineSpacing(0.55)
                     Button(action: {
                         //print("nickname Tapped!")
                     }) {
