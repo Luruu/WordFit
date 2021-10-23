@@ -30,7 +30,6 @@
 		889722DF2721977100856B41 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889722DE2721977100856B41 /* Word.swift */; };
 		88A350692724065800FE1B90 /* ParthenoKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A350682724065800FE1B90 /* ParthenoKit.xcframework */; };
 		88A3506A2724065800FE1B90 /* ParthenoKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88A350682724065800FE1B90 /* ParthenoKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		88A3506E27244C2200FE1B90 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3506D27244C2200FE1B90 /* HomeController.swift */; };
 		88AD64C1272074E600AC0602 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 88AD64C0272074E600AC0602 /* Images */; };
 		88AD64C327207B8200AC0602 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C227207B8200AC0602 /* User.swift */; };
 		88AD64C72720851600AC0602 /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C62720851600AC0602 /* Trophy.swift */; };
@@ -76,7 +75,6 @@
 		8884606E2723200000A00B4E /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		889722DE2721977100856B41 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		88A350682724065800FE1B90 /* ParthenoKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ParthenoKit.xcframework; sourceTree = "<group>"; };
-		88A3506D27244C2200FE1B90 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		88AD64C0272074E600AC0602 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		88AD64C227207B8200AC0602 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88AD64C62720851600AC0602 /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				88436EFD2720579E003DDB78 /* Preview Content */,
 				885CA29E27206AE6008037AF /* word.txt */,
 				88AD64C0272074E600AC0602 /* Images */,
-				88A3506D27244C2200FE1B90 /* HomeController.swift */,
 			);
 			path = WordFit;
 			sourceTree = "<group>";
@@ -243,7 +240,6 @@
 				8884606D27231F9A00A00B4E /* Exercise.swift in Sources */,
 				889722DF2721977100856B41 /* Word.swift in Sources */,
 				88ECB77A2721ABFB0013E35D /* WordList.swift in Sources */,
-				88A3506E27244C2200FE1B90 /* HomeController.swift in Sources */,
 				0EEA39D12721ADD8006D59BF /* RakingView.swift in Sources */,
 				88436EFA2720579C003DDB78 /* WelcomePageView.swift in Sources */,
 				27FA344127241FA0001E866C /* PlayView.swift in Sources */,
