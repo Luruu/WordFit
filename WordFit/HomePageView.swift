@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePageView: View {
+    var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
     var body: some View {
         NavigationView{
         VStack{
@@ -27,7 +28,6 @@ struct HomePageView: View {
             }
                 VStack{
                     Button(action: {
-                        //print("nickname Tapped!")
                     }) {
                         NavigationLink(destination: SettingsView()){
                             Text("\(appPreferences.getStringPreferences(forKey: "NickName") ?? "none")")
@@ -37,7 +37,7 @@ struct HomePageView: View {
                          }
                     }
                     
-                Text("Score: ?, Trophies: ?")
+                    Text("Score: \(appPreferences.getStringPreferences(forKey: "Score") ?? "none") Trophies: \(tropies.count)" )
                     .font(Font.custom("Lato",size: 13.33333333333334))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                     .lineSpacing(0.55)

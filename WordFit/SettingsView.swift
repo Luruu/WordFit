@@ -12,7 +12,7 @@ struct SettingsView: View {
     @State private var showDarkMode = false
     @State var newNickname = ""
     @State var placeHolder = "New nickname"
-//    newNickname variabile da usare ogni vola che un utente inserisce il proprio nome
+    
     var body: some View {
         VStack{
         VStack{
@@ -69,7 +69,6 @@ struct SettingsView: View {
                     },onCommit: {
                         appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
                         newNickname = ""
-                        
                     })
                         
                         .font(Font.custom("Lato",size: 20))

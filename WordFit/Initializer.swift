@@ -22,5 +22,8 @@ class Initializer{
             print("empty, carico i valori di default.")
             appPreferences.loadPreferences()
        }
+        
+        let arr : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int] as! [Int]
+        print(arr.count)
     }
 }
