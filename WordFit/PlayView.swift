@@ -22,7 +22,7 @@ struct PlayView: View {
                 .lineSpacing(0.68)
             
             //Inserimento soluzione
-            
+            VStack{
             TextField("New Nickname",text: $Solution, onEditingChanged: {edit in
                 
             },onCommit: {
@@ -35,6 +35,10 @@ struct PlayView: View {
                 .multilineTextAlignment(.center)
                 .lineSpacing(0.27)
                 .cornerRadius(1.67)
+            }
+            
+            
+            
             
         }
         .navigationBarHidden(true)
