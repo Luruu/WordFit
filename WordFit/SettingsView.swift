@@ -11,7 +11,7 @@ struct SettingsView: View {
     @State private var showAudio = false
     @State private var showDarkMode = false
     @State var newNickname = ""
-    @State var placeHolder = "New nickname"
+    @State var placeHolder = "New Nickname"
     
     var body: some View {
         VStack{
