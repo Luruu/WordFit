@@ -16,15 +16,16 @@ struct PlayView: View {
                 .frame(width: 116, height: 116)
             
             Text("")
-                .frame(width: 30, height: 30, alignment: .center)
+                .frame(width: 30, height: 10, alignment: .center)
             
-            Text("Inserire Suggerimento")
+            Text("Inserire Suggeirmento")
                 .font(Font.custom("Lato",size: 33.33333333333336))
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .lineSpacing(0.68)
+                .frame(width: 350, height: 200)
+                .multilineTextAlignment(.center)
             
-            Text("")
-                .frame(width: 30, height: 40, alignment: .center)
+           
             
             //Inserimento soluzione
             VStack{
@@ -35,12 +36,16 @@ struct PlayView: View {
             })
                 .font(Font.custom("Lato",size: 20))
                 .foregroundColor(Color.black)
-                .frame(width:  UIScreen.main.bounds.size.width - 185, height: 33, alignment: .center)
+                .frame(width: 300, height: 50, alignment: .center)
                 .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
                 .multilineTextAlignment(.center)
                 .lineSpacing(0.27)
                 .cornerRadius(1.67)
             }
+            
+            Text("")
+                .frame(width: 30, height: 15, alignment: .center)
+            
             VStack{
             Button(action: {
                       //print("Play Tapped!")
@@ -55,6 +60,10 @@ struct PlayView: View {
                           .cornerRadius(8)
                        }
                   }
+                
+                Text("")
+                    .frame(width: 30, height: 20, alignment: .center)
+                
                 HStack{
                     Button(action: {
                         //print("Share Tapped!")
@@ -84,6 +93,9 @@ struct PlayView: View {
                     }
                 }
                 
+                Text("")
+                    .frame(width: 30, height: 15, alignment: .center)
+                
                 // Sostituire N con il punteggio dell'utente e k con il punteggio dell'attuale livello
                 Text("Actual Points : N + K")
                     .font(Font.custom("Lato",size: 20))
@@ -92,11 +104,14 @@ struct PlayView: View {
             
             }
             
+            Text("")
+                .frame(width: 30, height: 30, alignment: .center)
+            
             Text("WordFit")
             .foregroundColor(Color.init(red: 0.8, green: 0.08, blue: 0.41))
             .font(Font.custom("Mallory",size: 33.33333333333336))
             .lineSpacing(1.3)
-            .padding()
+            .padding(2)
             
             
             
