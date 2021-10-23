@@ -41,7 +41,7 @@ struct GameActivityView: View {
                .frame(width: 377, height: 500)
                .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
         }
-            //N è il numero di ripetizioni fatte dall'utente mentre Z è il numero totale di rep
+            //N è il numero di ripetizioni fatte dall'utente mentre Z è il numero totale di reps
         Text("N/Z")
                 .frame(width: 381, height: 50)
                 .font(Font.custom("Lato",size: 58.4))
