@@ -144,6 +144,8 @@ struct HomePageView: View {
         .navigationBarHidden(true)
         .accentColor(Color.init(red: 0.51, green: 0.56, blue: 0.65))
     }
+    
+   
 }
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {

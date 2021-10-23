@@ -19,11 +19,7 @@ class Initializer{
 //        appPreferences.clearList()
         let isNotEmpty = appPreferences.getBoolPreferences(forKey: "NotEmpty")
         if (isNotEmpty == false) { //it's empty
-            print("empty, carico i valori di default.")
             appPreferences.loadPreferences()
        }
-        
-        let arr : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int] as! [Int]
-        print(arr.count)
     }
 }
