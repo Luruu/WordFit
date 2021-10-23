@@ -9,6 +9,17 @@ import SwiftUI
 
 struct PlayView: View {
     @State var Solution = ""
+    @State var suggestion = ""
+    var session : gameSession
+    
+    init(){
+        let person : User = User(name: appPreferences.getStringPreferences(forKey: "NickName") ?? "NickName")
+        session = gameSession(player : person)
+        suggestion = (session.getWord()?.getSuggestion())!
+        Solution = (session.getWord()?.getValue())!
+        print("solution ", Solution)
+        print("suggestion ",suggestion)
+    }
     var body: some View {
         VStack{
             Image("logo")
@@ -18,7 +29,7 @@ struct PlayView: View {
             Text("")
                 .frame(width: 30, height: 10, alignment: .center)
             
-            Text("Inserire Suggeirmento")
+            Text(suggestion)
                 .font(Font.custom("Lato",size: 33.33333333333336))
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .lineSpacing(0.68)

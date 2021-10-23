@@ -21,6 +21,5 @@ class Initializer{
         if (isNotEmpty == false) { //it's empty
             appPreferences.loadPreferences()
        }
-        var gameSession = gameSession(player: User(name: nil))
     }
 }

@@ -22,7 +22,6 @@ class WordList{
         for i in 0...tmp.count - 1{
             addElement(key: i, value: tmp[i])
         }
-
     }
 
     func addElement(key : Int , value : Word){

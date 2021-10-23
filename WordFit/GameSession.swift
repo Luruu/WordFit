@@ -20,7 +20,7 @@ class gameSession{
         self.player = player
     }
     
-    func startGame() -> Word?{
+    func getWord() -> Word?{
         var flag = true
         var i : Int = Int.random(in: 0...wordList.getSize() - 1)
         var proposed_word = wordList.getElementsFromWordList(index: i)
@@ -33,6 +33,7 @@ class gameSession{
             proposed_word = wordList.getElementsFromWordList(index: i)
         }
         proposed_word?.setUsed(flag: true)
+        print("Word is: \(proposed_word)")
         return proposed_word
         
     }
