@@ -32,9 +32,8 @@ class gameSession{
     func getWord() -> Word?{
         var proposed_word = findUnusedWord()
         proposed_word?.setUsed(flag: true)
-        print("Word is: \(proposed_word ?? nil)") //se è null, allora sarà mostrato nil penso.
+        print("WordFit35: Word is: \(proposed_word ?? <#default value#>)") //dobbiamo gestire il caso in cui findUnsuedWord ritorna nil, ovvero se non è stata trovata alcuna parola inutilizzata.*/
         return proposed_word
-        
     }
     
 }

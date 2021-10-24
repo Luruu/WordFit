@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PlayView: View {
-    @State var Solution = ""
-    @State var suggestion = ""
+    @State var Solution = String()
+    @State var suggestion = String()
     var session : gameSession
     
     init(){
@@ -17,8 +17,8 @@ struct PlayView: View {
         session = gameSession(player : person)
         suggestion = (session.getWord()?.getSuggestion())!
         Solution = (session.getWord()?.getValue())!
-        print("solution ", Solution)
-        print("suggestion ",suggestion)
+        print("PlayView20: solution ", Solution)
+        print("PlayView21: suggestion ",suggestion)
     }
     var body: some View {
         VStack{

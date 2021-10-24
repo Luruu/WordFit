@@ -17,7 +17,6 @@ class Decoder{
         var result : [Word]?
         url = Bundle.main.url(forResource: fileName, withExtension: "json")
         
-        
         guard let data =  try? Data(contentsOf: url!) else{
             fatalError("There are problems with Data buffering ")
         }
