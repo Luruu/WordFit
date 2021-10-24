@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NickNameView: View {
-    @State var newNickname = ""
+    @State var newNickname = String.init()
     @State var placeHolder = "New Nickname"
     var body: some View {
         NavigationView{
@@ -21,7 +21,7 @@ struct NickNameView: View {
                 Text("")
                     .frame(width: 30, height: 60, alignment: .center)
           Spacer()
-            Text("Choose Your NickName")
+            Text("Choose Your Nickname")
                 .font(Font.custom("Lato",size: 33.33333333333336))
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .lineSpacing(0.68)
@@ -29,7 +29,7 @@ struct NickNameView: View {
                 Text("")
                     .frame(width: 30, height: 20, alignment: .center)
                 
-                Text("Your NickName is used for the WordFit Rankings system.\n\nThe NickName must be a minimum of 4 and a maximum of 8 in length.  ")
+                Text("Your NickName is used for the WordFit Rankings System.\n\nUse at least 4 characters and maximum 8 characters.")
                     .frame(width: 299, height: 197)
                     .font(Font.custom("Lato",size: 23.33333333333332))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))

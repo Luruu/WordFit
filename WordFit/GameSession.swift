@@ -15,25 +15,24 @@ class gameSession{
         self.sessionScore+=score
     }
 
-    
     init(player : User){
         self.player = player
     }
     
-    func getWord() -> Word?{
-        var flag = true
-        var i : Int = Int.random(in: 0...wordList.getSize() - 1)
-        var proposed_word = wordList.getElementsFromWordList(index: i)
-        
-        while(flag){
-            if !(proposed_word?.getUsed())! { //not used yet
-                flag = false
-            }
-            i = Int.random(in: 0...wordList.getSize() - 1)
-            proposed_word = wordList.getElementsFromWordList(index: i)
+    private func findUnusedWord() -> Word?{
+        var a_word = wordList.getElementsFromWordList(index: 0)
+        var randIndex : Int
+        while((a_word?.getUsed())!){
+            randIndex = Int.random(in: 1...wordList.getSize() - 1)
+            a_word = wordList.getElementsFromWordList(index: randIndex)
         }
+        return a_word
+    }
+    
+    func getWord() -> Word?{
+        var proposed_word = findUnusedWord()
         proposed_word?.setUsed(flag: true)
-        print("Word is: \(proposed_word)")
+        print("Word is: \(proposed_word ?? nil)") //se è null, allora sarà mostrato nil penso.
         return proposed_word
         
     }

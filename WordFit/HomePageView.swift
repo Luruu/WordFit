@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @State var nickName = ""
-    @State var Score = ""
+    @State var nickName = String.init()
+    @State var Score = String.init()
     var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
     var body: some View {
         NavigationView{
