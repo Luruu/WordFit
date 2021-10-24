@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @State private var showAudio = false
     @State private var showDarkMode = false
-    @State var newNickname = ""
+    @State var newNickname = String()
     @State var placeHolder = "New Nickname"
     
     var body: some View {

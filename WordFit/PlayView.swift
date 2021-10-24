@@ -11,12 +11,12 @@ struct PlayView: View {
     @State var Solution = String()
     @State var suggestion = String()
     var session : gameSession
-    
     init(){
         let person : User = User(name: appPreferences.getStringPreferences(forKey: "NickName") ?? "NickName")
         session = gameSession(player : person)
-        suggestion = (session.getWord()?.getSuggestion())!
-        Solution = (session.getWord()?.getValue())!
+        let question = session.getWord()
+        suggestion = (question?.getSuggestion())!
+        Solution = (question?.getValue())!
         print("PlayView20: solution ", Solution)
         print("PlayView21: suggestion ",suggestion)
     }

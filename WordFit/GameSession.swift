@@ -12,7 +12,7 @@ class gameSession{
     private var sessionScore : Int = Int.init()
     
     func increaseScore(score : Int){
-        self.sessionScore+=score
+        self.sessionScore += score
     }
 
     init(player : User){
@@ -32,7 +32,7 @@ class gameSession{
     func getWord() -> Word?{
         var proposed_word = findUnusedWord()
         proposed_word?.setUsed(flag: true)
-        print("WordFit35: Word is: \(proposed_word ?? <#default value#>)") //dobbiamo gestire il caso in cui findUnsuedWord ritorna nil, ovvero se non è stata trovata alcuna parola inutilizzata.*/
+        print("GameSession5: Word is: \(proposed_word)") //dobbiamo gestire il caso in cui findUnsuedWord ritorna nil, ovvero se non è stata trovata alcuna parola inutilizzata.*/
         return proposed_word
     }
     
