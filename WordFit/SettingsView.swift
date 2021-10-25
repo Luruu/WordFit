@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct SettingsView: View {
     @State private var showAudio = false
-    @State private var showDarkMode = false
+//   @State private var showDarkMode = false
+    var test = SoundMangager()
+
+    
+    @AppStorage("isDarkMode") var isDarkMode: Bool = true
+    
     @State var newNickname = String()
     @State var placeHolder = "New Nickname"
     
@@ -21,18 +27,21 @@ struct SettingsView: View {
             .foregroundColor(Color.init(red: 0.87, green: 0.33, blue: 0.4))
             .font(Font.custom("Lato",size: 30))
             .lineSpacing(1)
+            
             HStack{
                 Text("DarkMode")
                     .frame(width: 180, height: 32,alignment: .leading)
                     .foregroundColor(Color.init(red: 0.51, green: 0.56, blue: 0.65))
                     .font(Font.custom("Lato",size: 27))
                     .lineSpacing(0.55)
-                Toggle("", isOn: $showDarkMode)
+                Toggle("", isOn: $isDarkMode)
                 .toggleStyle(SwitchToggleStyle(tint: .init(red: 0.87, green: 0.33, blue: 0.4)))
                     .frame(width: 150, height: 32)
-                if !showDarkMode {
-//                            qui va l'azione
-                }
+                    .onChange(of: isDarkMode){ value in
+                        SoundMangager.instance.PlaySoundButton()
+                    }
+//                 if isDarkMode {
+//               }
             }
                 HStack{
                 Text("Audio")
@@ -69,7 +78,6 @@ struct SettingsView: View {
                     },onCommit: {
                         appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
                         newNickname = ""
-                        
                     })
                         
                         .font(Font.custom("Lato",size: 20))
@@ -82,6 +90,7 @@ struct SettingsView: View {
                     Button(action: {
                         appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
                         newNickname = ""
+                        SoundMangager.instance.PlaySoundButton()
                     }) {
                             Text("Change")
                             .font(Font.custom("Roboto",size: 20))
@@ -98,7 +107,9 @@ struct SettingsView: View {
                 .frame(width: 30, height: 70, alignment: .center)
             VStack{
                 Button(action: {
+                    isDarkMode = true
                     print("Reset Tapped!")
+                    SoundMangager.instance.PlaySoundButton()
                 }) {
                         Text("Reset your progress")
                         .font(Font.custom("Roboto",size: 20))
@@ -112,6 +123,7 @@ struct SettingsView: View {
                     .frame(width: 30, height: 30, alignment: .center)
                 Button(action: {
                     print("Credits Tapped!")
+                    SoundMangager.instance.PlaySoundButton()
                 }) {
                         Text("Credits")
                         .font(Font.custom("Lato",size: 18))
@@ -130,6 +142,7 @@ struct SettingsView: View {
 }
 }
 }
+
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {

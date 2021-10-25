@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct HomePageView: View {
+    
+    var testo = SoundMangager()
     @State var nickName = String.init()
     @State var Score = String.init()
     var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
@@ -57,9 +60,12 @@ struct HomePageView: View {
         
             VStack(alignment: .center){
                 Button(action: {
-                    //print("Play Tapped!")
+                    print("Play Tapped!")
+                    SoundMangager.instance.PlaySoundButton()
                 }) {
-                    NavigationLink(destination: PlayView()){
+                    NavigationLink(destination: PlayView() .onAppear{
+                        SoundMangager.instance.PlaySoundButton()
+                    }){
                         Text("PLAY")
                         .font(Font.custom("Lato",size: 18))
                         .lineSpacing(0.3)
@@ -72,10 +78,12 @@ struct HomePageView: View {
                 .padding()
                 HStack{
                     Button(action: {
-    //                    print("Ranking Tapped!")
+                      print("Ranking Tapped!")
                         
                     }) {
-                        NavigationLink(destination: RakingView() )
+                        NavigationLink(destination: RakingView().onAppear{
+                            SoundMangager.instance.PlaySoundButton()
+                        })
                         {
                             Text("Ranking")
                             .font(Font.custom("Roboto",size: 20))
@@ -85,11 +93,15 @@ struct HomePageView: View {
                             .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                             .cornerRadius(4)
                         }
+                        
                     }
                 Button(action: {
-                    print("Games Rules Tapped!")
+//                    print("Games Rules Tapped!")
+                    SoundMangager.instance.PlaySoundButton()
                 }) {
-                    NavigationLink(destination: GameRulesView()){
+                    NavigationLink(destination: GameRulesView().onAppear{
+                        SoundMangager.instance.PlaySoundButton()
+                    }){
                         Text("Games Rules")
                         .font(Font.custom("Roboto",size: 20))
                         .lineSpacing(0.3)
@@ -102,9 +114,12 @@ struct HomePageView: View {
             }
                 HStack{
                     Button(action: {
-                        print("Settings Tapped!")
+//                        print("Settings Tapped!")
+                        SoundMangager.instance.PlaySoundButton()
                     }) {
-                        NavigationLink(destination: SettingsView()){
+                        NavigationLink(destination: SettingsView().onAppear{
+                            SoundMangager.instance.PlaySoundButton()
+                        }){
                             Text("Settings")
                             .font(Font.custom("Roboto",size: 20))
                             .lineSpacing(0.3)
@@ -115,9 +130,12 @@ struct HomePageView: View {
                         }
                     }
                     Button(action: {
-                        print("My Trophies Tapped!")
+//                        print("My Trophies Tapped!")
+                        SoundMangager.instance.PlaySoundButton()
                     }) {
-                        NavigationLink(destination: MyTrophiesView()){
+                        NavigationLink(destination: MyTrophiesView().onAppear{
+                            SoundMangager.instance.PlaySoundButton()
+                        }){
                             Text("My Trophies")
                             .font(Font.custom("Roboto",size: 20))
                             .lineSpacing(0.3)
@@ -128,10 +146,14 @@ struct HomePageView: View {
                         }
                     }
                 }
+            
                 Button(action: {
-                    print("Warnings Tapped!")
+//                    print("Warnings Tapped!")
+                    SoundMangager.instance.PlaySoundButton()
                 }) {
-                    NavigationLink(destination: WarningsView()){
+                    NavigationLink(destination: WarningsView().onAppear{
+                        SoundMangager.instance.PlaySoundButton()
+                    }){
                         Text("WARNINGS")
                         .font(Font.custom("Lato",size: 18))
                         .lineSpacing(0.3)
