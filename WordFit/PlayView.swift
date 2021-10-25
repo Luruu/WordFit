@@ -15,6 +15,8 @@ struct PlayView: View {
     @State var borderColor : Color = Color.white
     @State var wrong : Bool = false
     @State var correct : Bool = false
+    
+//    @Binding var ShowPopUp = false
     init(){session = nil
         wordProposed = Word(value: "", score: 0, suggestion: "")
     }
@@ -122,21 +124,22 @@ struct PlayView: View {
                 HStack{
                     Button(action: {
                         //print("Share Tapped!")
+                        
                     }) {
-                        NavigationLink(destination: SettingsView()){
-                            Text("QUIT")
+//                        NavigationLink(destination: SettingsView()){
+                            Text("Quit")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
                             .frame(width: 136, height: 74)
                             .foregroundColor(.white)
                             .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                             .cornerRadius(8)
-                        }
+//                        }
                     }
                     Button(action: {
                         session_point-=5
                     }) {
-                        NavigationLink(destination: MyTrophiesView()){
+                        NavigationLink(destination: PlayView()){
                             Text("Go Next \n-5 points!")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
