@@ -52,7 +52,7 @@ struct RakingView: View {
             }
             .padding(10)
             Text("")
-                .frame(width: 30, height: 50, alignment: .center)
+                .frame(width: 30, height: 40, alignment: .center)
             Text("Speed Rakings")
                 .frame(width: 180, height: 22, alignment: .center)
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
@@ -68,7 +68,7 @@ struct RakingView: View {
                 .frame(width: 300, height: 40, alignment: .center)
                 .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
                 Text("")
-                    .frame(width: 30, height: 35, alignment: .center)
+                    .frame(width: 30, height: 30, alignment: .center)
                 Image("logo")
                     .resizable()
                     .frame(width: 96, height: 95, alignment: .center)

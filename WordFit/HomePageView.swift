@@ -10,6 +10,8 @@ import AVKit
 
 struct HomePageView: View {
     
+    
+    @State var ShowPopUp : Bool = false
     var testo = SoundMangager()
     @State var nickName = String.init()
     @State var Score = 0

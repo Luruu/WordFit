@@ -14,6 +14,7 @@
 		0EEA39D12721ADD8006D59BF /* RakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D02721ADD8006D59BF /* RakingView.swift */; };
 		0EEA39D32721C471006D59BF /* WarningsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D22721C471006D59BF /* WarningsView.swift */; };
 		0EEA39D52721CCEC006D59BF /* GameRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D42721CCEC006D59BF /* GameRulesView.swift */; };
+		271676DE2727290C00BF4C6D /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271676DD2727290C00BF4C6D /* CreditsView.swift */; };
 		27302CAE2726DDA4004DA9A4 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302CAD2726DDA4004DA9A4 /* Audio.swift */; };
 		27302CB22726E06C004DA9A4 /* ToggleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27302CB02726E06C004DA9A4 /* ToggleSound.wav */; };
 		27302CB32726E06C004DA9A4 /* ButtonSound.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 27302CB12726E06C004DA9A4 /* ButtonSound.aiff */; };
@@ -39,7 +40,6 @@
 		88AD64C327207B8200AC0602 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C227207B8200AC0602 /* User.swift */; };
 		88AD64C72720851600AC0602 /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD64C62720851600AC0602 /* Trophy.swift */; };
 		88ECB77A2721ABFB0013E35D /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECB7792721ABFB0013E35D /* WordList.swift */; };
-		88ECB7842721E5110013E35D /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = 88ECB7832721E5110013E35D /* test2.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +64,7 @@
 		0EEA39D02721ADD8006D59BF /* RakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakingView.swift; sourceTree = "<group>"; };
 		0EEA39D22721C471006D59BF /* WarningsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningsView.swift; sourceTree = "<group>"; };
 		0EEA39D42721CCEC006D59BF /* GameRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesView.swift; sourceTree = "<group>"; };
+		271676DD2727290C00BF4C6D /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		27302CAD2726DDA4004DA9A4 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		27302CB02726E06C004DA9A4 /* ToggleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ToggleSound.wav; sourceTree = "<group>"; };
 		27302CB12726E06C004DA9A4 /* ButtonSound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ButtonSound.aiff; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		88AD64C227207B8200AC0602 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88AD64C62720851600AC0602 /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
 		88ECB7792721ABFB0013E35D /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
-		88ECB7832721E5110013E35D /* test2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test2.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,6 @@
 				27302CAF2726E049004DA9A4 /* Audio Folder */,
 				8884606E2723200000A00B4E /* GameSession.swift */,
 				888460542722F9DD00A00B4E /* Initializer.swift */,
-				88ECB7832721E5110013E35D /* test2.json */,
 				888460522722E21F00A00B4E /* word.json */,
 				888460502722C59200A00B4E /* Decoder.swift */,
 				88ECB7792721ABFB0013E35D /* WordList.swift */,
@@ -158,6 +157,7 @@
 				27FA3442272428C3001E866C /* NickNameView.swift */,
 				0E234FCA27230B670058D376 /* MyTrophiesView.swift */,
 				0E234FC82722F29C0058D376 /* SettingsView.swift */,
+				271676DD2727290C00BF4C6D /* CreditsView.swift */,
 				88AD64C227207B8200AC0602 /* User.swift */,
 				88436EFB2720579E003DDB78 /* Assets.xcassets */,
 				88436EFD2720579E003DDB78 /* Preview Content */,
@@ -243,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD64C1272074E600AC0602 /* Images in Resources */,
-				88ECB7842721E5110013E35D /* test2.json in Resources */,
 				88436EFF2720579E003DDB78 /* Preview Assets.xcassets in Resources */,
 				885CA29F27206AE6008037AF /* word.txt in Resources */,
 				0E234FC72722E3460058D376 /* Loading.storyboard in Resources */,
@@ -263,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EEA39D52721CCEC006D59BF /* GameRulesView.swift in Sources */,
+				271676DE2727290C00BF4C6D /* CreditsView.swift in Sources */,
 				8884606D27231F9A00A00B4E /* Exercise.swift in Sources */,
 				889722DF2721977100856B41 /* Word.swift in Sources */,
 				27B6EED027246F8600CD0FCD /* GameActivityView.swift in Sources */,

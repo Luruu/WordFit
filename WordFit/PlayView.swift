@@ -15,11 +15,11 @@ struct PlayView: View {
     @State var borderColor : Color = Color.white
     @State var wrong : Bool = false
     @State var correct : Bool = false
+    @State var ShowPopUp : Bool = false
     @State var isSet : Bool = false
     @State var notPoints : Bool = false
     let malus : Int = 5
     @State var malusAnswer : Int = 0
-//    @Binding var ShowPopUp = false
     init(){
         session = nil
         wordProposed = Word(value: "", score: 0, suggestion: "")
@@ -75,6 +75,10 @@ struct PlayView: View {
     }
     
     var body: some View {
+        
+        NavigationView{
+        
+        ZStack{
         VStack{
             Image("logo")
                 .resizable()
@@ -89,6 +93,7 @@ struct PlayView: View {
                 .lineSpacing(0.68)
                 .frame(width: 350, height: 200)
                 .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.5)
             if wrong{
                 Text("Wrong answer -\(malusAnswer) points")
                      .font(Font.custom("Lato",size: 25))
@@ -156,7 +161,8 @@ struct PlayView: View {
                 HStack{
                     Button(action: {
                         WordList.getIstance().resetValue()
-                    }) {
+                        self.ShowPopUp = true
+                    }){
                         Text("Quit")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
@@ -165,8 +171,7 @@ struct PlayView: View {
                             .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                             .cornerRadius(8)
                     }
-                    
-                    
+
                     Button(action: {
                         if session_point==0{
                             notPoints = true
@@ -204,10 +209,70 @@ struct PlayView: View {
             .font(Font.custom("Mallory",size: 33.33333333333336))
             .lineSpacing(1.3)
             .padding(.top, 40.0)
-        
+
+
         }
-        .navigationBarHidden(true)
+            
+            if ShowPopUp{
+               PlayView().blur(radius: 5)
+                
+                
+                VStack{
+                Text("Are you sure?")
+                        .font(Font.custom("Lato",size: 49))
+                        .lineSpacing(0.5)
+                        .foregroundColor(.white)
+                        .padding(5)
+                    
+                    Text("The level will be lost")
+                            .font(Font.custom("Lato",size: 25))
+                            .lineSpacing(0.5)
+                            .foregroundColor(.white)
+                    
+                    Text("")
+                        .frame(width: 30, height: 50, alignment: .center)
+             HStack{
+                 Button(action: {
+ //                    print("Games Rules Tapped!")
+                     SoundMangager.instance.PlaySoundButton()
+                 }) {
+                     NavigationLink(destination: HomePageView().onAppear{
+                         SoundMangager.instance.PlaySoundButton()
+                     }){
+                         Text("YES")
+                         .font(Font.custom("Roboto",size: 27))
+                         .lineSpacing(0.3)
+                         .frame(width: 142, height: 70,alignment: .center)
+                         .foregroundColor(.white)
+                         .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
+                         .cornerRadius(9)
+                     }
+                 }
+
+                                 Button(action: {
+                                     self.ShowPopUp = false
+                                     SoundMangager.instance.PlaySoundButton()
+                                 }) {
+                                 
+                                         Text("NO")
+                                         .font(Font.custom("Roboto",size: 27))
+                                         .lineSpacing(0.3)
+                                         .frame(width: 142, height: 70)
+                                         .foregroundColor(.white)
+                                         .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
+                                         .cornerRadius(9)
+                                     }
+                 
+                    }
+             }
+                .frame(width: 360, height: 460)
+                .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
+                .cornerRadius(29)
+            }
     }
+}
+        .navigationBarHidden(true)
+}
 }
 
 struct PlayView_Previews: PreviewProvider {
