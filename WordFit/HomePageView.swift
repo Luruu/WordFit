@@ -37,7 +37,7 @@ struct HomePageView: View {
                         NavigationLink(destination: SettingsView()){
                             Text(" \(self.nickName)")
                                 .onAppear {
-                                    nickName = appPreferences.getStringPreferences(forKey: "NickName") ?? "none"
+                                    nickName = appPreferences.getStringPreferences(forKey: "NickName") ?? "No nickname"
                                         }
                                 .font(Font.custom("Lato",size: 13.33333333333334))
                                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
@@ -47,7 +47,7 @@ struct HomePageView: View {
                     
                     Text("Score: \(self.Score) Trophies: \(tropies.count)" )
                         .onAppear{
-                            Score = appPreferences.getStringPreferences(forKey: "Score") ?? "none"
+                            Score = appPreferences.getStringPreferences(forKey: "Score") ?? "No nickname"
                            
                         }
                     .font(Font.custom("Lato",size: 13.33333333333334))

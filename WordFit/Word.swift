@@ -26,8 +26,7 @@ struct Word: Decodable{
     }
     
     func getScore() -> Int{
-//        return self.score
-        return 0
+        value.count
     }
     
     func getSuggestion() -> String{

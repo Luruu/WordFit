@@ -12,7 +12,6 @@ class appPreferences{
     
     static func clearList(){
         UserDefaults.standard.removeObject(forKey: "NotEmpty")
-        UserDefaults.standard.removeObject(forKey: "DarkMode")
         UserDefaults.standard.removeObject(forKey: "Audio")
         UserDefaults.standard.removeObject(forKey: "NickName")
         UserDefaults.standard.removeObject(forKey: "Score")
@@ -23,9 +22,8 @@ class appPreferences{
     
     static func loadPreferences(){
         UserDefaults.standard.set(true, forKey: "NotEmpty")
-        UserDefaults.standard.set(false, forKey: "DarkMode")
         UserDefaults.standard.set(false, forKey: "Audio")
-        UserDefaults.standard.set("NickName", forKey: "NickName")
+        UserDefaults.standard.set("No nickname", forKey: "NickName")
         UserDefaults.standard.set(0, forKey: "Score")
         let Array = [Int]()
         UserDefaults.standard.set(Array, forKey: "Tropies")

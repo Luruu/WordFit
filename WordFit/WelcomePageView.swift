@@ -39,7 +39,6 @@ struct WelcomePageView: View {
                 .padding(20)
                     ZStack{
                         Button(action: {
-                            print("ciao")
                         }) {
                             NavigationLink(destination: HomePageView()){
                                 Image("circlebutton")

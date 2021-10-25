@@ -8,13 +8,13 @@
 import Foundation
 
 class WordList{
-    private static var wordList : WordList = WordList()
+    private static var Sing_wordList : WordList = WordList() //Singleton
     private var wordList : [Int: Word] = [:]
     private var lenght : Int = Int.init()
     
 //    Singleton Lazy Implementation
     static func getIstance()->WordList{
-        return .wordList
+        return .Sing_wordList
     }
     
      func listInitializer(){
@@ -30,9 +30,7 @@ class WordList{
         wordList.updateValue(tmp, forKey: key)
     }
     
-    func getElementsFromWordList(index : Int) -> Word?{
-        return wordList[index]
-    }
+    func getElementsFromWordList(index : Int) -> Word?{return wordList[index]}
     
     func printList(){
         for item in wordList {
@@ -43,5 +41,6 @@ class WordList{
     
     func getSize() -> Int {return wordList.count}
     
+    func getRandomElement()->Word{wordList.randomElement()!.value}
 }
 

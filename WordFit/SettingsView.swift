@@ -108,8 +108,8 @@ struct SettingsView: View {
             VStack{
                 Button(action: {
                     isDarkMode = true
-                    print("Reset Tapped!")
                     SoundMangager.instance.PlaySoundButton()
+                    appPreferences.clearList()
                 }) {
                         Text("Reset your progress")
                         .font(Font.custom("Roboto",size: 20))

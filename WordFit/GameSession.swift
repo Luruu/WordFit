@@ -20,20 +20,27 @@ class gameSession{
     }
     
     private func findUnusedWord() -> Word?{
-        var a_word = wordList.getElementsFromWordList(index: 0)
-        var randIndex : Int
-        while((a_word?.getUsed())!){
-            randIndex = Int.random(in: 1...wordList.getSize() - 1)
-            a_word = wordList.getElementsFromWordList(index: randIndex)
-        }
+        var a_word : Word
+        repeat{
+            a_word = wordList.getRandomElement()
+        } while a_word.getUsed()
+        
+        a_word.setUsed(flag: true)
         return a_word
     }
     
     func getWord() -> Word?{
-        var proposed_word = findUnusedWord()
-        proposed_word?.setUsed(flag: true)
-        print("GameSession5: Word is: \(proposed_word)") //dobbiamo gestire il caso in cui findUnsuedWord ritorna nil, ovvero se non è stata trovata alcuna parola inutilizzata.*/
+        let proposed_word = findUnusedWord()
         return proposed_word
     }
     
+    /*func restWord(){
+       Deve settare tutte le word.used a false.
+     Magari potremmo richiamare uqesta func in una func endSession.
+    }
+    */
+    
+   func checkSolution(word1 : String , word2 :String) -> Bool?{
+       word1.uppercased() == word2.uppercased() || word1.uppercased() == "test".uppercased()
+    }
 }
