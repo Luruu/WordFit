@@ -8,17 +8,26 @@
 import SwiftUI
 import Foundation
 @main
-struct WordFitApp: App {
+public struct WordFitApp: App {
+    @AppStorage("isDarkMode") var isDarkMode: Bool = true
     var tmp = Initializer()
     var IsfirstLogin : Bool = appPreferences.getBoolPreferences(forKey: "FirstLogin")
-    var body: some Scene {
+    
+    public init() {}
+
+    public var body: some Scene {
         WindowGroup {
             if !IsfirstLogin{
                 HomePageView()
+                    .environment(\.colorScheme, isDarkMode ? .dark : .light)
             }
             else{
                 WelcomePageView()
+                    .environment(\.colorScheme, isDarkMode ? .dark : .light)
             }
         }
+//        .modifier(DarkModeViewModifier())
+//        .environment(\.colorScheme, isDarkMode ? .dark : .light)
+//        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
 }
