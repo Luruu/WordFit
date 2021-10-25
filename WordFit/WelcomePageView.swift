@@ -18,7 +18,7 @@ struct WelcomePageView: View {
                     .lineSpacing(1.67)
                     .foregroundColor(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                     .frame(width: 291, height: 92,alignment: .leading)
-                    .background(Color.white)
+
                 .padding(.leading, CGFloat(20))
                 .padding()
                 Text("Welcome to the \n WordFit Game")
