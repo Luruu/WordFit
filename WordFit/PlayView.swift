@@ -15,8 +15,12 @@ struct PlayView: View {
     @State var borderColor : Color = Color.white
     @State var wrong : Bool = false
     @State var correct : Bool = false
+
     
     @State var ShowPopUp : Bool = false
+
+    @State var isSet : Bool = false
+
     init(){session = nil
         wordProposed = Word(value: "", score: 0, suggestion: "")
     }
@@ -27,7 +31,7 @@ struct PlayView: View {
         wordProposed = (session?.getWord()!)!
     }
     
-    func submit_answer(){
+    func submit_answer() -> Bool{
         if (session?.checkSolution(word1: user_solution, word2: wordProposed.getValue()))!{
             print("Esatto")
             session_point += wordProposed.getScore()
@@ -38,18 +42,20 @@ struct PlayView: View {
                 correct = false
                 borderColor = Color.green
             })
+            return true
         }else{
             print("Errato")
             user_solution = ""
-            //Evidenziare di rosso il text field?
             borderColor = Color.red
             wrong = true
-            _ = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: {_ in
+            _ = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: {_ in
                 wrong = false
                 borderColor = Color.white
             })
+            return false
         }
     }
+    
     var body: some View {
         
         NavigationView{
@@ -90,7 +96,7 @@ struct PlayView: View {
             TextField("Solution",text: $user_solution, onEditingChanged: {edit in
                 
             },onCommit: {
-                submit_answer()
+                isSet = submit_answer()
             })
                 .font(Font.custom("Lato",size: 20))
                 .foregroundColor(Color.black)
@@ -108,11 +114,13 @@ struct PlayView: View {
             Text("")
                 .frame(width: 30, height: 15, alignment: .center)
             
+            
             VStack{
+                //isActive = navigation per risposta esatta.
+                NavigationLink("", destination: GameActivityView(), isActive: $isSet)
             Button(action: {
-                      print("Play Tapped!")
-                  }) {
-                      NavigationLink(destination: GameActivityView()){
+                      isSet = submit_answer()
+                  }){
                           Text("OK")
                           .font(Font.custom("Lato",size: 18))
                           .lineSpacing(0.30)
@@ -121,33 +129,27 @@ struct PlayView: View {
                           .background(Color.init(red: 0.87, green: 0.33, blue: 0.4))
                           .cornerRadius(8)
                       }
-                  }
+                  
                 
                 Text("")
                     .frame(width: 30, height: 20, alignment: .center)
                 
                 HStack{
                     Button(action: {
-                        //print("Share Tapped!")
                         self.ShowPopUp = true
-                        
-                    }) {
-//                        NavigationLink(destination: SettingsView()){
-                            Text("Quit")
+                    }) {                            Text("Quit")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
                             .frame(width: 136, height: 74)
                             .foregroundColor(.white)
                             .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                             .cornerRadius(8)
-//                        }
                     }
-                    
+
                     Button(action: {
-                        session_point-=5
-                    }) {
-                        NavigationLink(destination: PlayView()){
-                            Text("Go Next \n-5 points!")
+                        isSet = true
+                    }){
+                        Text("Go Next \n-5 points!")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
                             .frame(width: 136, height: 74,alignment: .center)
@@ -155,7 +157,7 @@ struct PlayView: View {
                             .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                             .cornerRadius(8)
                         }
-                    }
+
                 }
                 
                 Text("")
@@ -176,9 +178,7 @@ struct PlayView: View {
             .font(Font.custom("Mallory",size: 33.33333333333336))
             .lineSpacing(1.3)
             .padding(2)
-            
 
-            
         }
             
             if ShowPopUp{

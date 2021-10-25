@@ -14,7 +14,7 @@ struct HomePageView: View {
     @State var ShowPopUp : Bool = false
     var testo = SoundMangager()
     @State var nickName = String.init()
-    @State var Score = String.init()
+    @State var Score = 0
     var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
     var body: some View {
         NavigationView{
@@ -49,7 +49,7 @@ struct HomePageView: View {
                     
                     Text("Score: \(self.Score) Trophies: \(tropies.count)" )
                         .onAppear{
-                            Score = appPreferences.getStringPreferences(forKey: "Score") ?? "No nickname"
+                            Score = appPreferences.getIntPreferences(forKey: "Score")
                            
                         }
                     .font(Font.custom("Lato",size: 13.33333333333334))

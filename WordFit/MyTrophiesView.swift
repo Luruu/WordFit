@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MyTrophiesView: View {
+    @State var nickname = appPreferences.getStringPreferences(forKey: "NickName")
+    @State var myscore = appPreferences.getIntPreferences(forKey: "Score")
     var body: some View {
         VStack{
             VStack{
@@ -21,11 +23,11 @@ struct MyTrophiesView: View {
                     .frame(width: 44, height: 18, alignment: .center)
             }
                 VStack{
-                Text("Nickname")
+                    Text(nickname ?? "No name")
                     .font(Font.custom("Mallory Mediudm",size: 13.33333333333334))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                     .lineSpacing(0.55)
-                Text("Score: ?, Trophies: ?")
+                Text("Score: \(myscore), Trophies:?")
                     .font(Font.custom("Lato",size: 13.33333333333334))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                     .lineSpacing(0.55)
