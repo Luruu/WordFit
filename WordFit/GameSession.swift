@@ -30,7 +30,9 @@ class gameSession{
     }
     
     func getWord() -> Word?{
-        let proposed_word = findUnusedWord()
+        var proposed_word = findUnusedWord()
+        proposed_word?.setUsed(flag: true)
+        print("GameSession5: Word is: \(proposed_word)")
         return proposed_word
     }
     

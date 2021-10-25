@@ -16,7 +16,7 @@ import Foundation
 class Initializer{
     init(){
         WordList.getIstance().listInitializer()
-//        appPreferences.clearList()
+        //appPreferences.clearList()
         let isNotEmpty = appPreferences.getBoolPreferences(forKey: "NotEmpty")
         if (isNotEmpty == false) { //it's empty, so load preferences.
             appPreferences.loadPreferences()

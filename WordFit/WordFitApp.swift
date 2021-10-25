@@ -21,7 +21,7 @@ public struct WordFitApp: App {
                 HomePageView()
                     .environment(\.colorScheme, isDarkMode ? .dark : .light)
             }
-            else{
+            else{ //first access only
                 WelcomePageView()
                     .environment(\.colorScheme, isDarkMode ? .dark : .light)
             }

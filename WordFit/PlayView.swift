@@ -48,8 +48,6 @@ struct PlayView: View {
             })
         }
     }
-    
-    
     var body: some View {
         VStack{
             Image("logo")
