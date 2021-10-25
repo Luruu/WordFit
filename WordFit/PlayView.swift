@@ -16,9 +16,29 @@ struct PlayView: View {
     @State var wrong : Bool = false
     @State var correct : Bool = false
     @State var isSet : Bool = false
+    @State var notPoints : Bool = false
+    let malus : Int = 5
+    @State var malusAnswer : Int = 0
 //    @Binding var ShowPopUp = false
-    init(){session = nil
+    init(){
+        session = nil
         wordProposed = Word(value: "", score: 0, suggestion: "")
+    }
+    
+    func calculateMalus(){
+        print("session point : ",session_point)
+        if session_point - malus >= 0{
+            session_point = session_point - malus
+        }
+        else{
+            session_point = 0
+        }
+    }
+    
+    func goNext(){
+        calculateMalus()
+        wordProposed = (session?.getWord())!
+        user_solution=""
     }
     
     func start_Game(){
@@ -29,22 +49,24 @@ struct PlayView: View {
     
     func submit_answer() -> Bool{
         if (session?.checkSolution(word1: user_solution, word2: wordProposed.getValue()))!{
-            print("Esatto")
             session_point += wordProposed.getScore()
             correct = true
             borderColor = Color.green
             //Andare nella view dei JJ
-            _ = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: {_ in
+            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                 correct = false
                 borderColor = Color.green
             })
             return true
         }else{
-            print("Errato")
             user_solution = ""
             borderColor = Color.red
+            if(session_point > 0){
+                malusAnswer = 1
+                session_point = session_point - malusAnswer
+            }
             wrong = true
-            _ = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: {_ in
+            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                 wrong = false
                 borderColor = Color.white
             })
@@ -68,7 +90,7 @@ struct PlayView: View {
                 .frame(width: 350, height: 200)
                 .multilineTextAlignment(.center)
             if wrong{
-                Text("Wrong answer")
+                Text("Wrong answer -\(malusAnswer) points")
                      .font(Font.custom("Lato",size: 25))
                      .foregroundColor(Color.red)
                      .lineSpacing(0.68)
@@ -76,16 +98,23 @@ struct PlayView: View {
             }
            
             if correct{
-                Text("Correct answer")
+                Text("Correct answer: +\(wordProposed.getScore()) points")
                      .font(Font.custom("Lato",size: 25))
                      .foregroundColor(Color.green)
                      .lineSpacing(0.68)
                      .multilineTextAlignment(.center)
             }
             
+            if notPoints{
+                Text("You can't go next, at least 1 point is required")
+                    .font(Font.custom("Lato", size: 25))
+                    .foregroundColor(Color.orange)
+                    .lineSpacing(0.68)
+                    .multilineTextAlignment(.center)
+            }
+            
             VStack{
             TextField("Solution",text: $user_solution, onEditingChanged: {edit in
-                
             },onCommit: {
                 isSet = submit_answer()
             })
@@ -119,17 +148,16 @@ struct PlayView: View {
                           .foregroundColor(.white)
                           .background(Color.init(red: 0.87, green: 0.33, blue: 0.4))
                           .cornerRadius(8)
+                          .padding()
                       }
                   
                 
-                Text("")
-                    .frame(width: 30, height: 20, alignment: .center)
-                
+               
                 HStack{
                     Button(action: {
-                        //print("Share Tapped!")
                         WordList.getIstance().resetValue()
-                    }) {                            Text("Quit")
+                    }) {
+                        Text("Quit")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
                             .frame(width: 136, height: 74)
@@ -140,9 +168,17 @@ struct PlayView: View {
                     
                     
                     Button(action: {
-                        isSet = true
+                        if session_point==0{
+                            notPoints = true
+                            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
+                                notPoints = false
+                            })
+                            
+                        }else{
+                            goNext()
+                        }
                     }){
-                        Text("Go Next \n-5 points!")
+                        Text("Go Next -\(malus) points!")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
                             .frame(width: 136, height: 74,alignment: .center)
@@ -153,24 +189,21 @@ struct PlayView: View {
 
                 }
                 
-                Text("")
-                    .frame(width: 30, height: 15, alignment: .center)
                 
                 Text("Actual Points : \(session_point)")
                     .font(Font.custom("Lato",size: 20))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                     .lineSpacing(1.13)
+                    .padding()
             
             }
             
-            Text("")
-                .frame(width: 30, height: 30, alignment: .center)
-            
+
             Text("WordFit")
             .foregroundColor(Color.init(red: 0.8, green: 0.08, blue: 0.41))
             .font(Font.custom("Mallory",size: 33.33333333333336))
             .lineSpacing(1.3)
-            .padding(2)
+            .padding(.top, 40.0)
         
         }
         .navigationBarHidden(true)
