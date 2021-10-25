@@ -42,5 +42,11 @@ class WordList{
     func getSize() -> Int {return wordList.count}
     
     func getRandomElement()->Word{wordList.randomElement()!.value}
+    
+    func resetValue(){
+        for i in 0...wordList.count - 1{
+            wordList[i]?.setUsed(flag: false)
+        }
+    }
 }
 

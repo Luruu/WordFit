@@ -19,6 +19,7 @@ struct SettingsView: View {
     @State var newNickname = String()
     @State var placeHolder = "New Nickname"
     
+    
     var body: some View {
         VStack{
         VStack{
