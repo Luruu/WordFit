@@ -16,7 +16,7 @@ struct WordFitApp: App {
             if !IsfirstLogin{
                 HomePageView()
             }
-            else{
+            else{ //first access only
                 WelcomePageView()
             }
         }

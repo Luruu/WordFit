@@ -4,7 +4,6 @@
 //
 //  Created by Mario Oliva on 23/10/21.
 //
-
 import SwiftUI
 
 struct NickNameView: View {

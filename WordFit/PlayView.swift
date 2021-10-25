@@ -20,6 +20,9 @@ struct PlayView: View {
         print("PlayView20: solution ", Solution)
         print("PlayView21: suggestion ",suggestion)
     }
+    func getQuestion(){
+        
+    }
     var body: some View {
         VStack{
             Image("logo")

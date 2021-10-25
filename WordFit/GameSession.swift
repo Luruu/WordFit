@@ -32,7 +32,7 @@ class gameSession{
     func getWord() -> Word?{
         var proposed_word = findUnusedWord()
         proposed_word?.setUsed(flag: true)
-        print("GameSession5: Word is: \(proposed_word)") //dobbiamo gestire il caso in cui findUnsuedWord ritorna nil, ovvero se non è stata trovata alcuna parola inutilizzata.*/
+        print("GameSession5: Word is: \(proposed_word)") //dobbiamo gestire il caso in cui findUnsuedWord ritorna nil, ovvero se non è stata trovata una parola inutilizzata.*/
         return proposed_word
     }
     
