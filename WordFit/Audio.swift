@@ -36,5 +36,16 @@ class SoundMangager {
             print("error play Sound. \(error.localizedDescription)")
       }
     }
+    
+    func PlaySoundError() {
+        guard let url = Bundle.main.url(forResource: "ErrorSuond", withExtension: ".wav") else {return}
+        
+        do{
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch let error {
+            print("error play Sound. \(error.localizedDescription)")
+      }
+    }
 }
 
