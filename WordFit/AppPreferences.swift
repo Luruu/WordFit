@@ -18,6 +18,8 @@ class appPreferences{
         UserDefaults.standard.removeObject(forKey: "Tropies")
         UserDefaults.standard.removeObject(forKey: "FirstLogin")
         UserDefaults.standard.removeObject(forKey: "FirstWorld")
+        UserDefaults.standard.removeObject(forKey: "nFind")
+
     }
     
     static func loadPreferences(){
@@ -25,6 +27,7 @@ class appPreferences{
         UserDefaults.standard.set(false, forKey: "Audio")
         UserDefaults.standard.set("No nickname", forKey: "NickName")
         UserDefaults.standard.set(0, forKey: "Score")
+        UserDefaults.standard.set(0, forKey: "nFind")
         let Array = [Int]()
         UserDefaults.standard.set(Array, forKey: "Tropies")
         UserDefaults.standard.set(true, forKey: "FirstLogin")

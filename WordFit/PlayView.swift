@@ -14,19 +14,26 @@ struct PlayView: View {
     @State var session : gameSession?
     @State var borderColor : Color = Color.white
     @State var wrong : Bool = false
+    @State var wrongMsg : Bool = false
     @State var correct : Bool = false
+    @State var correctMsg : Bool = false
     @State var ShowPopUp : Bool = false
     @State var isSet : Bool = false
     @State var notPoints : Bool = false
-    let malus : Int = 5
     @State var malusAnswer : Int = 0
+    @State var quit : Bool = false
+    @State var nFind : Int = 0
+    @State var win : Bool = false
+    @State var msgString : String = ""
+    @State var haveWin : Bool = false//flag to see the nav link to come back to home
+    @State var msgColor : Color = Color.red
+    let malus : Int = 5
     init(){
         session = nil
         wordProposed = Word(value: "", score: 0, suggestion: "")
     }
     
     func calculateMalus(){
-        print("session point : ",session_point)
         if session_point - malus >= 0{
             session_point = session_point - malus
         }
@@ -36,7 +43,6 @@ struct PlayView: View {
     }
     
     func goNext(){
-        calculateMalus()
         wordProposed = (session?.getWord())!
         user_solution=""
     }
@@ -47,17 +53,43 @@ struct PlayView: View {
         wordProposed = (session?.getWord()!)!
     }
     
+    //Return true when user has find 2 word soo the game end
+    //return false when not have completed the game but has just find a word.
+    func hasWin()->Bool{
+        if nFind == 2{
+            session?.endGame(score: session_point, quit: false)
+            appPreferences.setIntPreferences(forKey: "nFind", value: 0)
+            haveWin = true
+            return true
+        }
+        else{
+            goNext()
+            return false
+        }
+    }
+    
+    /*
+     this function have to return false when the answer it's wrong and false ONLY when user
+     find the correct word but not find the second. In the case of second hasWin shows
+     a msg that notify the win and actives the NavigationLink to go to home.
+     */
     func submit_answer() -> Bool{
+        var retval : Bool = false
         if (session?.checkSolution(word1: user_solution, word2: wordProposed.getValue()))!{
             session_point += wordProposed.getScore()
-            correct = true
+            correctMsg = true
+            user_solution = ""
+            msgString = (nFind==1) ? "You won, your new score is \(appPreferences.getIntPreferences(forKey: "Score") + session_point)" :
+           "Correct answer: +\(wordProposed.getScore()) points"
             borderColor = Color.green
-            //Andare nella view dei JJ
+            msgColor = Color.green
             _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
-                correct = false
-                borderColor = Color.green
+                correctMsg = false
+                nFind+=1
+                retval = !hasWin()
             })
-            return true
+            appPreferences.setIntPreferences(forKey: "nFind", value: nFind)
+            return retval
         }else{
             user_solution = ""
             borderColor = Color.red
@@ -65,10 +97,13 @@ struct PlayView: View {
                 malusAnswer = 1
                 session_point = session_point - malusAnswer
             }
-            wrong = true
+            wrongMsg = true
+            msgString = "Wrong answer -\(malusAnswer) points"
+            msgColor = Color.red
+            borderColor = Color.white
             _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
-                wrong = false
-                borderColor = Color.white
+                wrongMsg = false
+                wrong = true
             })
             return false
         }
@@ -94,30 +129,17 @@ struct PlayView: View {
                 .frame(width: 350, height: 200)
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
-            if wrong{
-                Text("Wrong answer -\(malusAnswer) points")
-                     .font(Font.custom("Lato",size: 25))
-                     .foregroundColor(Color.red)
-                     .lineSpacing(0.68)
-                     .multilineTextAlignment(.center)
-            }
            
-            if correct{
-                Text("Correct answer: +\(wordProposed.getScore()) points")
-                     .font(Font.custom("Lato",size: 25))
-                     .foregroundColor(Color.green)
-                     .lineSpacing(0.68)
-                     .multilineTextAlignment(.center)
-            }
             
-            if notPoints{
-                Text("You can't go next, at least 1 point is required")
+            if notPoints || correctMsg || wrongMsg{
+                Text(msgString)
                     .font(Font.custom("Lato", size: 25))
-                    .foregroundColor(Color.orange)
+                    .foregroundColor(msgColor)
                     .lineSpacing(0.68)
                     .multilineTextAlignment(.center)
             }
             
+            NavigationLink("",destination: HomePageView(), isActive: $haveWin )
             VStack{
             TextField("Solution",text: $user_solution, onEditingChanged: {edit in
             },onCommit: {
@@ -131,7 +153,7 @@ struct PlayView: View {
                 .lineSpacing(0.27)
                 .cornerRadius(1.67)
                 .onAppear(perform: {
-                    start_Game()
+                        start_Game()
                 })
                 .border(borderColor)
             }
@@ -175,11 +197,14 @@ struct PlayView: View {
                     Button(action: {
                         if session_point==0{
                             notPoints = true
+                            msgString = "You can't go next. \nAt least 1 point is required"
+                            msgColor = Color.orange
                             _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                                 notPoints = false
                             })
                             
                         }else{
+                            calculateMalus()
                             goNext()
                         }
                     }){
@@ -215,9 +240,8 @@ struct PlayView: View {
             
             if ShowPopUp{
                PlayView().blur(radius: 5)
-                
-                
                 VStack{
+                    NavigationLink("",destination : HomePageView(), isActive: $quit)
                 Text("Are you sure?")
                         .font(Font.custom("Lato",size: 49))
                         .lineSpacing(0.5)
@@ -232,13 +256,10 @@ struct PlayView: View {
                     Text("")
                         .frame(width: 30, height: 50, alignment: .center)
              HStack{
-                 Button(action: {
- //                    print("Games Rules Tapped!")
-                     SoundMangager.instance.PlaySoundButton()
-                 }) {
-                     NavigationLink(destination: HomePageView().onAppear{
-                         SoundMangager.instance.PlaySoundButton()
-                     }){
+                 Button(action: {                     SoundMangager.instance.PlaySoundButton()
+                     quit = true
+                     session?.endGame(score: 0, quit: true)
+                 }){
                          Text("YES")
                          .font(Font.custom("Roboto",size: 27))
                          .lineSpacing(0.3)
@@ -247,7 +268,7 @@ struct PlayView: View {
                          .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                          .cornerRadius(9)
                      }
-                 }
+                 
 
                                  Button(action: {
                                      self.ShowPopUp = false

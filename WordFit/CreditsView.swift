@@ -29,11 +29,12 @@ struct CreditsView: View {
                 .lineSpacing(1.29)
                 .foregroundColor(Color.init(red: 0.87, green: 0.33, blue: 0.4))
                 .padding()
-            Text("This app is created by :\nBorriello Giovanni Rosario (Idea collab.)\nD'Amore Salvatore(Graphic coding)\nDe Rosa Salvatore(Idea collab.)\nEsposito Renato (Class coding)\nOliva Mario(Graphic coding)\nPiscitelli Vittorio(Graphic coding)\nRubino Luca(Class coding)\nTerraciano Vincenzo(Idea collab.)\nVacca Maria(Idea collab.)\nZagaria Emanuele Raffaele(Idea collab.)")
+            Text("This app is created by :\nBorriello Giovanni Rosario\nD'Amore Salvatore\nDe Rosa Salvatore\nEsposito Renato\nOliva Mario\nPiscitelli Vittorio\nRubino Luca\nTerraciano Vincenzo\nVacca Maria\nZagaria Emanuele Raffaele")
                 .font(Font.custom("Lato",size: 20))
                 .frame(width: 380, height: 300, alignment: .center)
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .lineSpacing(1)
+                .padding()
                 
             Text("")
                 .frame(width: 30, height: 90, alignment: .center)

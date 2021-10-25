@@ -26,8 +26,5 @@ public struct WordFitApp: App {
                     .environment(\.colorScheme, isDarkMode ? .dark : .light)
             }
         }
-//        .modifier(DarkModeViewModifier())
-//        .environment(\.colorScheme, isDarkMode ? .dark : .light)
-//        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
 }

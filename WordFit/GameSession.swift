@@ -28,9 +28,12 @@ class gameSession{
         return proposed_word
     }
     
-    func endGame(score : Int){
-        let tmp = score + appPreferences.getIntPreferences(forKey: "Score")
-        appPreferences.setIntPreferences(forKey:"Score", value : tmp )
+    func endGame(score : Int, quit : Bool){
+        if !quit{ //if user has not quit or timer it's not elapsed
+            let tmp = score + appPreferences.getIntPreferences(forKey: "Score")
+            appPreferences.setIntPreferences(forKey:"Score", value : tmp )
+        }
+        
         wordList.resetValue()
     }
     
