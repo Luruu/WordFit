@@ -20,6 +20,8 @@ struct SettingsView: View {
     @State var placeHolder = "New Nickname"
     
     var body: some View {
+        
+        
         VStack{
         VStack{
             Text("App Settings")
@@ -38,7 +40,7 @@ struct SettingsView: View {
                 .toggleStyle(SwitchToggleStyle(tint: .init(red: 0.87, green: 0.33, blue: 0.4)))
                     .frame(width: 150, height: 32)
                     .onChange(of: isDarkMode){ value in
-                        SoundMangager.instance.PlaySoundButton()
+                        SoundMangager.instance.PlaySoundToggle()
                     }
 //                 if isDarkMode {
 //               }
@@ -81,8 +83,8 @@ struct SettingsView: View {
                     })
                         
                         .font(Font.custom("Lato",size: 20))
-                        .foregroundColor(Color.black)
                         .frame(width:  UIScreen.main.bounds.size.width - 185, height: 33, alignment: .center)
+                        .foregroundColor(Color.init(red: 0.51, green: 0.56, blue: 0.65))
                         .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
                         .multilineTextAlignment(.center)
                         .lineSpacing(0.27)
@@ -107,7 +109,6 @@ struct SettingsView: View {
                 .frame(width: 30, height: 70, alignment: .center)
             VStack{
                 Button(action: {
-                    isDarkMode = true
                     SoundMangager.instance.PlaySoundButton()
                     appPreferences.clearList()
                 }) {
@@ -125,6 +126,9 @@ struct SettingsView: View {
                     print("Credits Tapped!")
                     SoundMangager.instance.PlaySoundButton()
                 }) {
+                    NavigationLink(destination: CreditsView() .onAppear{
+                        SoundMangager.instance.PlaySoundButton()
+                    }){
                         Text("Credits")
                         .font(Font.custom("Lato",size: 18))
                         .lineSpacing(0.29)
@@ -132,6 +136,7 @@ struct SettingsView: View {
                         .foregroundColor(.white)
                         .background(Color.init(red: 0.87, green: 0.33, blue: 0.4))
                         .cornerRadius(8)
+                }
                     }
             }
             Text("")
@@ -139,10 +144,11 @@ struct SettingsView: View {
             Image("logo")
                 .resizable()
                 .frame(width: 96, height: 95, alignment: .center)
-}
-}
-}
+        }
+        
 
+}
+}
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
