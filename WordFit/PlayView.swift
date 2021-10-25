@@ -16,8 +16,8 @@ struct PlayView: View {
     @State var wrong : Bool = false
     @State var correct : Bool = false
     @State var isSet : Bool = false
-    init(){
-        session = nil
+//    @Binding var ShowPopUp = false
+    init(){session = nil
         wordProposed = Word(value: "", score: 0, suggestion: "")
     }
     
@@ -129,24 +129,20 @@ struct PlayView: View {
                     Button(action: {
                         //print("Share Tapped!")
                         WordList.getIstance().resetValue()
-                    }) {
-                        NavigationLink(destination: SettingsView()){
-                            Text("QUIT")
+                    }) {                            Text("Quit")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
                             .frame(width: 136, height: 74)
                             .foregroundColor(.white)
                             .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                             .cornerRadius(8)
-                        }
                     }
                     
                     
                     Button(action: {
                         isSet = true
-                    }) //{
-                        /*NavigationLink(destination: MyTrophiesView())*/{
-                            Text("Go Next \n-5 points!")
+                    }){
+                        Text("Go Next \n-5 points!")
                             .font(Font.custom("Lato",size: 20))
                             .lineSpacing(0.27)
                             .frame(width: 136, height: 74,alignment: .center)
@@ -154,7 +150,7 @@ struct PlayView: View {
                             .background(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                             .cornerRadius(8)
                         }
-//                    }
+
                 }
                 
                 Text("")

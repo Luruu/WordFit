@@ -95,23 +95,24 @@ struct HomePageView: View {
                         }
                         
                     }
-                Button(action: {
-//                    print("Games Rules Tapped!")
-                    SoundMangager.instance.PlaySoundButton()
-                }) {
-                    NavigationLink(destination: GameRulesView().onAppear{
+                    Button(action: {
+//                        print("My Trophies Tapped!")
                         SoundMangager.instance.PlaySoundButton()
-                    }){
-                        Text("Games Rules")
-                        .font(Font.custom("Roboto",size: 20))
-                        .lineSpacing(0.3)
-                        .frame(width: 142, height: 58,alignment: .center)
-                        .foregroundColor(.white)
-                        .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
-                        .cornerRadius(4)
+                    }) {
+                        NavigationLink(destination: MyTrophiesView().onAppear{
+                            SoundMangager.instance.PlaySoundButton()
+                        }){
+                            Text("My Trophies")
+                            .font(Font.custom("Roboto",size: 20))
+                            .lineSpacing(0.3)
+                            .frame(width: 142, height: 58,alignment: .center)
+                            .foregroundColor(.white)
+                            .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
+                            .cornerRadius(4)
+                        }
                     }
+                    
                 }
-            }
                 HStack{
                     Button(action: {
 //                        print("Settings Tapped!")
@@ -130,13 +131,13 @@ struct HomePageView: View {
                         }
                     }
                     Button(action: {
-//                        print("My Trophies Tapped!")
+    //                    print("Games Rules Tapped!")
                         SoundMangager.instance.PlaySoundButton()
                     }) {
-                        NavigationLink(destination: MyTrophiesView().onAppear{
+                        NavigationLink(destination: GameRulesView().onAppear{
                             SoundMangager.instance.PlaySoundButton()
                         }){
-                            Text("My Trophies")
+                            Text("Games Rules")
                             .font(Font.custom("Roboto",size: 20))
                             .lineSpacing(0.3)
                             .frame(width: 142, height: 58,alignment: .center)

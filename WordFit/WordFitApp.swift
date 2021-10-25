@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 @main
 public struct WordFitApp: App {
-    @AppStorage("isDarkMode") var isDarkMode: Bool = true
+    @AppStorage("isDarkMode") var isDarkMode: Bool = false
     var tmp = Initializer()
     var IsfirstLogin : Bool = appPreferences.getBoolPreferences(forKey: "FirstLogin")
     

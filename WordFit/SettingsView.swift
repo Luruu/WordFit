@@ -14,7 +14,7 @@ struct SettingsView: View {
     var test = SoundMangager()
 
     
-    @AppStorage("isDarkMode") var isDarkMode: Bool = true
+    @AppStorage("isDarkMode") var isDarkMode: Bool = false
     
     @State var newNickname = String()
     @State var placeHolder = "New Nickname"

@@ -17,7 +17,7 @@ struct WarningsView: View {
                 .lineSpacing(1.67)
                 .foregroundColor(Color.init(red: 0.8, green: 0.08, blue: 0.41))
                 .frame(width: 221, height: 51,alignment: .center)
-                .background(Color.white)
+            
             Spacer()
             Text("Warnings")
                 .frame(width: 180, height: 32, alignment: .center)

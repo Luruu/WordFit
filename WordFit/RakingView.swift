@@ -68,7 +68,7 @@ struct RakingView: View {
                 .frame(width: 300, height: 40, alignment: .center)
                 .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
                 Text("")
-                    .frame(width: 30, height: 50, alignment: .center)
+                    .frame(width: 30, height: 35, alignment: .center)
                 Image("logo")
                     .resizable()
                     .frame(width: 96, height: 95, alignment: .center)
