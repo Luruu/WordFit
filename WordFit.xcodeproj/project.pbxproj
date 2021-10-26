@@ -14,11 +14,12 @@
 		0EEA39D12721ADD8006D59BF /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D02721ADD8006D59BF /* RankingView.swift */; };
 		0EEA39D32721C471006D59BF /* WarningsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D22721C471006D59BF /* WarningsView.swift */; };
 		0EEA39D52721CCEC006D59BF /* GameRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D42721CCEC006D59BF /* GameRulesView.swift */; };
+		2710BE282728241B00F53EAB /* ErrorSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2710BE272728241B00F53EAB /* ErrorSound.mp3 */; };
+		2710BE2A2728259D00F53EAB /* 515823-matrixxx-select-granted-0-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2710BE292728259D00F53EAB /* 515823-matrixxx-select-granted-0-3.mp3 */; };
 		271676DE2727290C00BF4C6D /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271676DD2727290C00BF4C6D /* CreditsView.swift */; };
 		27302CAE2726DDA4004DA9A4 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302CAD2726DDA4004DA9A4 /* Audio.swift */; };
 		27302CB22726E06C004DA9A4 /* ToggleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27302CB02726E06C004DA9A4 /* ToggleSound.wav */; };
 		27302CB32726E06C004DA9A4 /* ButtonSound.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 27302CB12726E06C004DA9A4 /* ButtonSound.aiff */; };
-		27302CB52726FF65004DA9A4 /* ErrorSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27302CB42726FF64004DA9A4 /* ErrorSound.wav */; };
 		27B6EED027246F8600CD0FCD /* GameActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EECF27246F8600CD0FCD /* GameActivityView.swift */; };
 		27FA344127241FA0001E866C /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA344027241FA0001E866C /* PlayView.swift */; };
 		27FA3443272428C3001E866C /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3442272428C3001E866C /* NickNameView.swift */; };
@@ -64,11 +65,12 @@
 		0EEA39D02721ADD8006D59BF /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		0EEA39D22721C471006D59BF /* WarningsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningsView.swift; sourceTree = "<group>"; };
 		0EEA39D42721CCEC006D59BF /* GameRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesView.swift; sourceTree = "<group>"; };
+		2710BE272728241B00F53EAB /* ErrorSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ErrorSound.mp3; sourceTree = "<group>"; };
+		2710BE292728259D00F53EAB /* 515823-matrixxx-select-granted-0-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "515823-matrixxx-select-granted-0-3.mp3"; sourceTree = "<group>"; };
 		271676DD2727290C00BF4C6D /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		27302CAD2726DDA4004DA9A4 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		27302CB02726E06C004DA9A4 /* ToggleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ToggleSound.wav; sourceTree = "<group>"; };
 		27302CB12726E06C004DA9A4 /* ButtonSound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ButtonSound.aiff; sourceTree = "<group>"; };
-		27302CB42726FF64004DA9A4 /* ErrorSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ErrorSound.wav; sourceTree = "<group>"; };
 		27B6EECF27246F8600CD0FCD /* GameActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameActivityView.swift; sourceTree = "<group>"; };
 		27FA344027241FA0001E866C /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		27FA3442272428C3001E866C /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
@@ -107,7 +109,8 @@
 		27302CAF2726E049004DA9A4 /* Audio Folder */ = {
 			isa = PBXGroup;
 			children = (
-				27302CB42726FF64004DA9A4 /* ErrorSound.wav */,
+				2710BE292728259D00F53EAB /* 515823-matrixxx-select-granted-0-3.mp3 */,
+				2710BE272728241B00F53EAB /* ErrorSound.mp3 */,
 				27302CB02726E06C004DA9A4 /* ToggleSound.wav */,
 				27302CB12726E06C004DA9A4 /* ButtonSound.aiff */,
 			);
@@ -248,7 +251,8 @@
 				0E234FC72722E3460058D376 /* Loading.storyboard in Resources */,
 				27302CB32726E06C004DA9A4 /* ButtonSound.aiff in Resources */,
 				88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */,
-				27302CB52726FF65004DA9A4 /* ErrorSound.wav in Resources */,
+				2710BE2A2728259D00F53EAB /* 515823-matrixxx-select-granted-0-3.mp3 in Resources */,
+				2710BE282728241B00F53EAB /* ErrorSound.mp3 in Resources */,
 				888460532722E21F00A00B4E /* word.json in Resources */,
 				27302CB22726E06C004DA9A4 /* ToggleSound.wav in Resources */,
 			);

@@ -121,7 +121,7 @@ struct PlayView: View {
         NavigationView{
         
         ZStack{
-        VStack{
+            VStack(){
                 Image("logo")
                 .resizable()
                 .frame(width: 90, height: 90)
