@@ -46,7 +46,9 @@ class WordList{
     func resetValue(){
         for i in 0...wordList.count - 1{
             wordList[i]?.setUsed(flag: false)
+            
         }
     }
+    
 }
 

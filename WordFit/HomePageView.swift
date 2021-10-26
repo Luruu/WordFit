@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AVKit
+
 
 struct HomePageView: View {
     
@@ -15,8 +15,6 @@ struct HomePageView: View {
     var testo = SoundMangager()
     @State var nickName = "No nickname"
     @State var Score = 0
-    @State var setNick : Bool = false
-    @State var appear : Bool = false
     var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
     var body: some View {
         NavigationView{
@@ -49,27 +47,23 @@ struct HomePageView: View {
                          }
                     }
                     
-                    NavigationLink("",destination: NickNameView(), isActive: $setNick)
+                
                     Text("Score: \(self.Score) Trophies: \(tropies.count)" )
                         .onAppear{
                                 Score = appPreferences.getIntPreferences(forKey: "Score")
 
-                                 if Score>0{
+                                /* if Score>0{
                                      if nickName == "No nickname"{
-                                         if !appear{
-                                             setNick = true
-                                         }
-                                             print("Devi inserire il nick")
+                                         
+                                        print("Devi inserire il nick")
                                          
                                      }else{ //Score > 0 ma il nick gia esiste
-                                         setNick = false
                                          print("entro in score >0 ma nick esistente ed è : \(nickName)")
                                          let kit = DictParthKit.getIstance()
                                          
                                          kit.updateRanking(key: nickName, value: String(Score))
-                                         print(setNick)
                                      }
-                                 }
+                                 }*/
                             
                             
                            /* Score = appPreferences.getIntPreferences(forKey: "Score")
