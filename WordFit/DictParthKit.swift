@@ -8,10 +8,17 @@
 import Foundation
 import ParthenoKit
 
-class DicParthKit{
+class DictParthKit{
+    private static var istance : DictParthKit = DictParthKit()
     var kit : ParthenoKit = ParthenoKit.init()
     
-    func read(tag_:String, key_:String) -> Dictionary<"String", "String"> {
+    static func getIstance() -> DictParthKit {
+        return .istance
+    }
+    func read(tag_:String, key_:String) -> Dictionary<String, String> {
         return kit.readSync(team: "TeamF", tag: tag_, key: key_)
+    }
+    func write(tag_:String, key_:String, value_:String) -> Bool {
+        return kit.writeSync(team: "TeamF", tag: tag_, key: key_, value: value_)
     }
 }

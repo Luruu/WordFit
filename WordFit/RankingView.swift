@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
-import ParthenoKit
 
 struct RankingView: View {
-    var kit : ParthenoKit = ParthenoKit.init()
-    
+    @State var kit = DictParthKit.getIstance()
     func showRanking() -> Bool {
-        let res = kit.readSync(team: "TeamF", tag: "Score", key: "1")
+        let res = kit.read(tag_: "Score", key_: "1")
         print("sorta", res)
         return true
     }
@@ -64,27 +62,8 @@ struct RankingView: View {
             .padding(10)
             Text("")
                 .frame(width: 30, height: 40, alignment: .center)
-            Text("Speed Rakings")
-                .frame(width: 180, height: 22, alignment: .center)
-                .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
-                .font(Font.custom("Lato",size: 19))
-            VStack{
-            Text("Inserire nome dell'utente")
-                .frame(width: 300, height: 40, alignment: .center)
-                .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-            Text("Inserire nome dell'utente")
-                .frame(width: 300, height: 40, alignment: .center)
-                .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-            Text("Inserire nome dell'utente")
-                .frame(width: 300, height: 40, alignment: .center)
-                .background(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                Text("")
-                    .frame(width: 30, height: 30, alignment: .center)
-                Image("logo")
-                    .resizable()
-                    .frame(width: 96, height: 95, alignment: .center)
-            }
-            .padding(10)
+            
+           
         }
         }.onAppear{
             showRanking()
