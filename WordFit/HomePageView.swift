@@ -15,6 +15,7 @@ struct HomePageView: View {
     var testo = SoundMangager()
     @State var nickName = String.init()
     @State var Score = 0
+    @State var setNick : Bool = false //show nickview when is true
     var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
     var body: some View {
         NavigationView{
@@ -46,11 +47,23 @@ struct HomePageView: View {
                                 .lineSpacing(0.55)
                          }
                     }
-                    
+                    NavigationLink("", destination: NickNameView(), isActive: $setNick)
                     Text("Score: \(self.Score) Trophies: \(tropies.count)" )
                         .onAppear{
                             Score = appPreferences.getIntPreferences(forKey: "Score")
-                           
+                            if Score>0 {
+                                let kit = DictParthKit.getIstance()
+                                if(!kit.ExistsKey(key: nickName)){
+                                    //nickname non settato
+                                    setNick = true
+                                    
+                                    print("59true")
+                                }
+                                else{
+                                    kit.updateRanking(key: nickName)
+                                    print("61FALSE")
+                                }
+                            }
                         }
                     .font(Font.custom("Lato",size: 13.33333333333334))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))

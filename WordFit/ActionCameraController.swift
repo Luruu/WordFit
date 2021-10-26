@@ -4,7 +4,7 @@
 //
 //  Created by Mario Oliva on 26/10/21.
 //
-
+/*
 import UIKit
 import AVFoundation
 import Vision
@@ -17,7 +17,7 @@ final class ActionCameraController: UIViewController, AVCaptureVideoDataOutputSa
     let detectPlayerRequest = VNDetectHumanBodyPoseRequest()
     let bodyPoseDetectionMinConfidence: VNConfidence = 0.6
     let bodyPoseRecognizedPointMinConfidence: VNConfidence = 0.1
-//    var playerStats = PlayerStats()
+    var playerStats = PlayerStats()
 //    let c = MPCManager.sharedInstance
     weak var delegate: ActionCameraDelegate?
     
@@ -313,4 +313,4 @@ struct ActionCameraControllerView: UIViewControllerRepresentable {
             parent.labelResult = category
         }
     }
-}
+}*/

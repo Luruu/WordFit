@@ -4,7 +4,7 @@
 //
 //  Created by Mario Oliva on 26/10/21.
 //
-
+/*
 import UIKit
 import Vision
 
@@ -73,4 +73,4 @@ class JointSegmentView: UIView, AnimatedTransitioning {
         jointSegmentLayer.path = jointSegmentPath.cgPath
     }
 }
-
+*/
