@@ -13,9 +13,10 @@ struct HomePageView: View {
    
     @State var ShowPopUp : Bool = false
     var testo = SoundMangager()
-    @State var nickName = String.init()
+    @State var nickName = "No nickname"
     @State var Score = 0
     @State var setNick : Bool = false
+    @State var appear : Bool = false
     var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
     var body: some View {
         NavigationView{
@@ -48,25 +49,45 @@ struct HomePageView: View {
                          }
                     }
                     
+                    NavigationLink("",destination: NickNameView(), isActive: $setNick)
                     Text("Score: \(self.Score) Trophies: \(tropies.count)" )
                         .onAppear{
-                            Score = appPreferences.getIntPreferences(forKey: "Score")
+                                Score = appPreferences.getIntPreferences(forKey: "Score")
 
-                            let kit = DictParthKit.getIstance()
-                            print("score ",Score)
+                                 if Score>0{
+                                     if nickName == "No nickname"{
+                                         if !appear{
+                                             setNick = true
+                                         }
+                                             print("Devi inserire il nick")
+                                         
+                                     }else{ //Score > 0 ma il nick gia esiste
+                                         setNick = false
+                                         print("entro in score >0 ma nick esistente ed è : \(nickName)")
+                                         let kit = DictParthKit.getIstance()
+                                         
+                                         kit.updateRanking(key: nickName, value: String(Score))
+                                         print(setNick)
+                                     }
+                                 }
+                            
+                            
+                           /* Score = appPreferences.getIntPreferences(forKey: "Score")
+
                             if Score>0{
-                                print("nick57: ", nickName)
-                                if !kit.ExistsKey(key: nickName){
-                                    setNick = true
-                                    print("59true")
-                                    print("valore nel db: ", kit.read(key_: nickName))
-                                    kit.updateRanking(key: nickName)
-                                }
-                                else{ //Score > 0 ma il nick gia esiste
+                                if nickName == "No nickname"{
+                                        setNick = true
+                                        print("Devi inserire il nick")
+                                    
+                                }else{ //Score > 0 ma il nick gia esiste
                                     setNick = false
-                                    print("61FALSE")
+                                    print("entro in score >0 ma nick esistente ed è : \(nickName)")
+                                    let kit = DictParthKit.getIstance()
+                                    
+                                    kit.updateRanking(key: nickName, value: String(Score))
+                                    print(setNick)
                                 }
-                            }
+                            }*/
                         }
                     .font(Font.custom("Lato",size: 13.33333333333334))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
@@ -75,7 +96,7 @@ struct HomePageView: View {
                 .multilineTextAlignment(.center)
                 
             }
-        
+            
             VStack(alignment: .center){
                 Button(action: {
                     print("Play Tapped!")

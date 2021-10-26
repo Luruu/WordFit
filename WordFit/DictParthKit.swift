@@ -34,9 +34,9 @@ class DictParthKit{
         }
     }
     
-    func updateRanking(key : String){
-        if(write(key_: key, value_: "5000")){
-            print("writediupdateranking_fatta")
+    func updateRanking(key : String, value : String){
+        if(write(key_: key, value_: value)){
+            print("writediupdateranking_fatta : ho registrato : ", read(key_: key))
         }else{
             print("writediupdateranking_NONfatta")
         }
