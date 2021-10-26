@@ -6,10 +6,21 @@
 //
 
 import SwiftUI
+import ParthenoKit
 
 struct RankingView: View {
+    var kit : ParthenoKit = ParthenoKit.init()
+    
+    func showRanking() -> Bool {
+        let res = kit.readSync(team: "TeamF", tag: "Score", key: "1")
+        print("sorta", res)
+        return true
+    }
+    
+    
     var body: some View {
         VStack{
+            
         VStack{
         ZStack{
         Image(systemName: "circle.fill")
@@ -75,6 +86,8 @@ struct RankingView: View {
             }
             .padding(10)
         }
+        }.onAppear{
+            showRanking()
         }
 }
 }
