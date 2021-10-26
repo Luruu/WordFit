@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct PlayView: View {
+    @State var timeRemaningMin = 2
+    @State var timeRemaningSec = 60
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    @State var repeats : Bool = true
+    @State var timerExpired : Bool = false
     @State var wordProposed : Word
     @State var user_solution :  String = ""
     @State var session_point : Int = 0
@@ -32,7 +38,7 @@ struct PlayView: View {
         session = nil
         wordProposed = Word(value: "", score: 0, suggestion: "")
     }
-    
+
     func calculateMalus(){
         if session_point - malus >= 0{
             session_point = session_point - malus
@@ -115,23 +121,44 @@ struct PlayView: View {
         
         ZStack{
         VStack{
+            NavigationLink("",destination : HomePageView(), isActive: $quit)
             Image("logo")
                 .resizable()
-                .frame(width: 116, height: 116)
+                .frame(width: 90, height: 90)
             
-            Text("")
-                .frame(width: 30, height: 10, alignment: .center)
+//            Text("")
+//                .frame(width: 30, height: 10, alignment: .center)
+            
+            Text("\(timeRemaningMin) : \(timeRemaningSec)")
+                .onReceive(timer){ _ in
+                    if timeRemaningMin >= 0 && timeRemaningSec != 0 {
+                        timeRemaningSec -= 1
+                        if timeRemaningSec == 0 && timeRemaningMin != 0{
+                            timeRemaningMin -= 1
+                            timeRemaningSec = 60
+                        }
+                        else if timeRemaningMin == 0 && timeRemaningSec == 0{
+                            msgString = "Timer expired, Game Over"
+                            msgColor = Color.red
+                            timerExpired = true
+                            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
+                                quit = true
+                            })
+                            session?.endGame(score: 0, quit: true)
+                        }
+                    }
+                }
             
             Text(wordProposed.getSuggestion())
                 .font(Font.custom("Lato",size: 33.33333333333336))
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .lineSpacing(0.68)
-                .frame(width: 350, height: 200)
+                .frame(width: 350, height: 100)
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
            
             
-            if notPoints || correctMsg || wrongMsg{
+            if notPoints || correctMsg || wrongMsg || timerExpired{
                 Text(msgString)
                     .font(Font.custom("Lato", size: 25))
                     .foregroundColor(msgColor)
