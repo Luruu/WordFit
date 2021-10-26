@@ -28,8 +28,8 @@ class appPreferences{
         UserDefaults.standard.set("No nickname", forKey: "NickName")
         UserDefaults.standard.set(0, forKey: "Score")
         UserDefaults.standard.set(0, forKey: "nFind")
-        let Array = [Int]()
-        UserDefaults.standard.set(Array, forKey: "Tropies")
+        //let Array = [Int]()
+        UserDefaults.standard.set(0, forKey: "Tropies")
         UserDefaults.standard.set(true, forKey: "FirstLogin")
         UserDefaults.standard.set(true, forKey: "FirstWorld")
     }

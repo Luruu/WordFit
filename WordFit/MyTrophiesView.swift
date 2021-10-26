@@ -10,6 +10,7 @@ import SwiftUI
 struct MyTrophiesView: View {
     @State var nickname = appPreferences.getStringPreferences(forKey: "NickName")
     @State var myscore = appPreferences.getIntPreferences(forKey: "Score")
+    var trophies = appPreferences.getIntPreferences(forKey: "Tropies")
     var body: some View {
         VStack{
             VStack{
@@ -51,67 +52,43 @@ struct MyTrophiesView: View {
                     Rectangle()
                         .frame(width: 66, height: 67)
                         .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster10")
+                        if(trophies == 0) {
+                            Image("Raster10")
+                                .resizable()
+                                .frame(width: 66, height: 67)
+                                .hidden()
+                        }
+                        else{
+                            Image("Raster10")
+                                .resizable()
+                                .frame(width: 66, height: 67)
+                        }
+                       
+                    }
+                    
+                    ZStack{
+                    Rectangle()
+                        .frame(width: 66, height: 67)
+                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
+                        /*  Image("Raster8")
                             .resizable()
-                            .frame(width: 66, height: 67)
+                            .frame(width: 66, height: 67) */
                     }
                     ZStack{
                     Rectangle()
                         .frame(width: 66, height: 67)
                         .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster8")
+                        /*  Image("Raster7")
                             .resizable()
-                            .frame(width: 66, height: 67)
+                            .frame(width: 66, height: 67) */
                     }
                     ZStack{
                     Rectangle()
                         .frame(width: 66, height: 67)
                         .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster7")
+                        /*  Image("Raster6")
                             .resizable()
-                            .frame(width: 66, height: 67)
-                    }
-                    ZStack{
-                    Rectangle()
-                        .frame(width: 66, height: 67)
-                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster6")
-                            .resizable()
-                            .frame(width: 66, height: 67)
-                    }
-                }
-                HStack{
-                    ZStack{
-                    Rectangle()
-                        .frame(width: 66, height: 67)
-                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster1")
-                            .resizable()
-                            .frame(width: 66, height: 67)
-                    }
-                    ZStack{
-                    Rectangle()
-                        .frame(width: 66, height: 67)
-                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster2")
-                            .resizable()
-                            .frame(width: 66, height: 67)
-                    }
-                    ZStack{
-                    Rectangle()
-                        .frame(width: 66, height: 67)
-                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster3")
-                            .resizable()
-                            .frame(width: 66, height: 67)
-                    }
-                    ZStack{
-                    Rectangle()
-                        .frame(width: 66, height: 67)
-                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster4")
-                            .resizable()
-                            .frame(width: 66, height: 67)
+                            .frame(width: 66, height: 67) */
                     }
                 }
                 HStack{
@@ -119,25 +96,59 @@ struct MyTrophiesView: View {
                     Rectangle()
                         .frame(width: 66, height: 67)
                         .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster5")
+                        /*   Image("Raster1")
                             .resizable()
-                            .frame(width: 66, height: 67)
+                            .frame(width: 66, height: 67) */
                     }
                     ZStack{
                     Rectangle()
                         .frame(width: 66, height: 67)
                         .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster9")
+                        /*  Image("Raster2")
                             .resizable()
-                            .frame(width: 66, height: 67)
+                            .frame(width: 66, height: 67) */
                     }
                     ZStack{
                     Rectangle()
                         .frame(width: 66, height: 67)
                         .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
-                        Image("Raster11")
+                        /*  Image("Raster3")
                             .resizable()
-                            .frame(width: 66, height: 67)
+                            .frame(width: 66, height: 67) */
+                    }
+                    ZStack{
+                    Rectangle()
+                        .frame(width: 66, height: 67)
+                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
+                        /*  Image("Raster4")
+                            .resizable()
+                            .frame(width: 66, height: 67) */
+                    }
+                }
+                HStack{
+                    ZStack{
+                    Rectangle()
+                        .frame(width: 66, height: 67)
+                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
+                        /*    Image("Raster5")
+                            .resizable()
+                            .frame(width: 66, height: 67) */
+                    }
+                    ZStack{
+                    Rectangle()
+                        .frame(width: 66, height: 67)
+                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
+                         /*  Image("Raster9")
+                            .resizable()
+                            .frame(width: 66, height: 67) */
+                    }
+                    ZStack{
+                    Rectangle()
+                        .frame(width: 66, height: 67)
+                        .foregroundColor(Color.init(red: 0.9, green: 0.91, blue: 0.95))
+                          /* Image("Raster11")
+                            .resizable()
+                            .frame(width: 66, height: 67) */
                     }
                     ZStack{
                     Rectangle()
@@ -150,8 +161,9 @@ struct MyTrophiesView: View {
                 Image("logo")
                     .resizable()
                     .frame(width: 96, height: 95, alignment: .center)
-            }
+            
 }
+        }
 }
 }
 

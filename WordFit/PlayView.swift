@@ -34,6 +34,7 @@ struct PlayView: View {
     @State var haveWin : Bool = false//flag to see the nav link to come back to home
     @State var msgColor : Color = Color.red
     let malus : Int = 5
+    @State var trofeo_count : Int = 0
     init(){
         session = nil
         wordProposed = Word(value: "", score: 0, suggestion: "")
@@ -48,9 +49,19 @@ struct PlayView: View {
         }
     }
     
-    func goNext(){
+     func goNext(){
         wordProposed = (session?.getWord())!
         user_solution=""
+        trofeo_count += 1
+         if (trofeo_count == 1){
+             let gia_ottenuto = appPreferences.getIntPreferences(forKey: "Tropies")
+             
+             print("gia: ",gia_ottenuto)
+             if gia_ottenuto == 0 {
+                 print("CONGRATULATIONS! YOU RECEVEID A TROPHY!")
+                 appPreferences.setIntPreferences(forKey: "Tropies", value: 1)
+             }
+         }
     }
     
     func start_Game(){
