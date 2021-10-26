@@ -127,7 +127,7 @@ struct SettingsView: View {
                     print("Credits Tapped!")
                     SoundMangager.instance.PlaySoundButton()
                 }) {
-                    NavigationLink(destination: CreditsView() .onAppear{
+                    NavigationLink(destination: GameActivityView() .onAppear{
                         SoundMangager.instance.PlaySoundButton()
                     }){
                         Text("Credits")

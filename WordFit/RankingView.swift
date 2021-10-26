@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct RankingView: View {
-    @State var kit = DictParthKit.getIstance()
+/*    @State var kit = DictParthKit.getIstance()
     func showRanking() -> Bool {
         let res = kit.read(tag_: "Score", key_: "1")
         print("sorta", res)
         return true
     }
-    
+ */
     
     var body: some View {
         VStack{
@@ -66,7 +66,7 @@ struct RankingView: View {
            
         }
         }.onAppear{
-            showRanking()
+//            showRanking()
         }
 }
 }

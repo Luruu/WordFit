@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct GameActivityView: View {
+
+    @State var labelRes: String = ""
+    
     var body: some View {
         VStack{
         VStack{
@@ -37,9 +40,12 @@ struct GameActivityView: View {
         }
         
         VStack{
-            Rectangle()
+            /*Rectangle()
                .frame(width: 377, height: 500)
                .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
+             */
+            ActionCameraControllerView(labelResult: $labelRes)
+                .edgesIgnoringSafeArea(.top)
         }
             //N è il numero di ripetizioni fatte dall'utente mentre Z è il numero totale di reps
         Text("N/Z")
