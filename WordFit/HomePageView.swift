@@ -83,7 +83,7 @@ struct HomePageView: View {
                       print("Ranking Tapped!")
                         
                     }) {
-                        NavigationLink(destination: RakingView().onAppear{
+                        NavigationLink(destination: RankingView().onAppear{
                             SoundMangager.instance.PlaySoundButton()
                         })
                         {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RakingView: View {
+struct RankingView: View {
     var body: some View {
         VStack{
         VStack{
@@ -35,7 +35,7 @@ struct RakingView: View {
             Text("")
                 .frame(width: 30, height: 50, alignment: .center)
         VStack{
-            Text("Score Rakings")
+            Text("Score Rankings")
                 .frame(width: 180, height: 22, alignment: .center)
                 .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                 .font(Font.custom("Lato",size: 19))
@@ -78,8 +78,8 @@ struct RakingView: View {
         }
 }
 }
-struct RakingView_Previews: PreviewProvider {
+struct RankingView_Previews: PreviewProvider {
     static var previews: some View {
-        RakingView()
+        RankingView()
     }
 }
