@@ -105,6 +105,7 @@ struct PlayView: View {
             }
             wrongMsg = true
             msgString = "Wrong answer -\(malusAnswer) points"
+            SoundMangager.instance.PlaySoundError()
             msgColor = Color.red
             borderColor = Color.white
             _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
@@ -121,8 +122,7 @@ struct PlayView: View {
         
         ZStack{
         VStack{
-            NavigationLink("",destination : HomePageView(), isActive: $quit)
-            Image("logo")
+                Image("logo")
                 .resizable()
                 .frame(width: 90, height: 90)
             
@@ -140,10 +140,10 @@ struct PlayView: View {
                         else if timeRemaningMin == 0 && timeRemaningSec == 0{
                             msgString = "Timer expired, Game Over"
                             msgColor = Color.red
-                            timerExpired = true
-                            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
-                                quit = true
-                            })
+//                            timerExpired = true
+                          _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
+                              quit = true
+                           })
                             session?.endGame(score: 0, quit: true)
                         }
                     }
@@ -203,12 +203,13 @@ struct PlayView: View {
                           .background(Color.init(red: 0.87, green: 0.33, blue: 0.4))
                           .cornerRadius(8)
                           .padding()
-                      }
+                  }
                   
                 
                
                 HStack{
                     Button(action: {
+                        SoundMangager.instance.PlaySoundButton()
                         WordList.getIstance().resetValue()
                         self.ShowPopUp = true
                     }){
@@ -283,7 +284,8 @@ struct PlayView: View {
                     Text("")
                         .frame(width: 30, height: 50, alignment: .center)
              HStack{
-                 Button(action: {                     SoundMangager.instance.PlaySoundButton()
+                 Button(action: {
+                     SoundMangager.instance.PlaySoundButton()
                      quit = true
                      session?.endGame(score: 0, quit: true)
                  }){

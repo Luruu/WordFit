@@ -38,7 +38,7 @@ class SoundMangager {
     }
     
     func PlaySoundError() {
-        guard let url = Bundle.main.url(forResource: "ErrorSuond", withExtension: ".wav") else {return}
+        guard let url = Bundle.main.url(forResource: "ErrorSound", withExtension: ".wav") else {return}
         
         do{
             player = try AVAudioPlayer(contentsOf: url)
