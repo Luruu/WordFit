@@ -34,10 +34,15 @@ class DictParthKit{
     }
     
         func updateRanking(key : String){
-            write(key_: key, value_: "5000")
-            var dict: [String: String] = [:]
+            if(write(key_: key, value_: "5000")){
+                print("writediupdateranking_fatta")
+            }else{
+                print("writediupdateranking_NONfatta")
+            }
+                
+            /*var dict: [String: String] = [:]
             dict = read(key_: key)
-            print(dict)
+            print(dict)*/
             
             
         }

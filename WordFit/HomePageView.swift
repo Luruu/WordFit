@@ -51,16 +51,18 @@ struct HomePageView: View {
                     Text("Score: \(self.Score) Trophies: \(tropies.count)" )
                         .onAppear{
                             Score = appPreferences.getIntPreferences(forKey: "Score")
-                            if Score>0 {
-                                let kit = DictParthKit.getIstance()
-                                if(!kit.ExistsKey(key: nickName)){
-                                    //nickname non settato
+                            let kit = DictParthKit.getIstance()
+                            print("score ",Score)
+                            if Score>0{
+                                print("nick57: ", nickName)
+                                if !kit.ExistsKey(key: nickName){
                                     setNick = true
-                                    
                                     print("59true")
-                                }
-                                else{
+                                    print("valore nel db: ", kit.read(key_: nickName))
                                     kit.updateRanking(key: nickName)
+                                }
+                                else{ //Score > 0 ma il nick gia esiste
+                                    setNick = false
                                     print("61FALSE")
                                 }
                             }

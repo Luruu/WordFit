@@ -67,7 +67,9 @@ struct NickNameView: View {
                               .cornerRadius(8)
                            }.simultaneousGesture(TapGesture().onEnded{
                                appPreferences.setStringPreferences(forKey: "NickName", value: newNickname)
+                               
                                newNickname = ""
+                               
                            })
                            
                       }

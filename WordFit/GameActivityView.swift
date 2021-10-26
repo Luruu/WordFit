@@ -44,8 +44,8 @@ struct GameActivityView: View {
                .frame(width: 377, height: 500)
                .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
              */
-            ActionCameraControllerView(labelResult: $labelRes)
-                .edgesIgnoringSafeArea(.top)
+            /*ActionCameraControllerView(labelResult: $labelRes)
+                .edgesIgnoringSafeArea(.top)*/
         }
             //N è il numero di ripetizioni fatte dall'utente mentre Z è il numero totale di reps
         Text("N/Z")
@@ -62,3 +62,4 @@ struct GameActivityView_Previews: PreviewProvider {
         GameActivityView()
     }
 }
+
