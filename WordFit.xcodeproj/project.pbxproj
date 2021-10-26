@@ -33,6 +33,7 @@
 		27B6EED027246F8600CD0FCD /* GameActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EECF27246F8600CD0FCD /* GameActivityView.swift */; };
 		27FA344127241FA0001E866C /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA344027241FA0001E866C /* PlayView.swift */; };
 		27FA3443272428C3001E866C /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3442272428C3001E866C /* NickNameView.swift */; };
+		81F1E75D272859BA00351935 /* DictParthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F1E75C272859BA00351935 /* DictParthKit.swift */; };
 		88436EF82720579C003DDB78 /* WordFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88436EF72720579C003DDB78 /* WordFitApp.swift */; };
 		88436EFA2720579C003DDB78 /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88436EF92720579C003DDB78 /* WelcomePageView.swift */; };
 		88436EFC2720579E003DDB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88436EFB2720579E003DDB78 /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		27B6EECF27246F8600CD0FCD /* GameActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameActivityView.swift; sourceTree = "<group>"; };
 		27FA344027241FA0001E866C /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		27FA3442272428C3001E866C /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
+		81F1E75C272859BA00351935 /* DictParthKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictParthKit.swift; sourceTree = "<group>"; };
 		88436EF42720579C003DDB78 /* WordFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88436EF72720579C003DDB78 /* WordFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFitApp.swift; sourceTree = "<group>"; };
 		88436EF92720579C003DDB78 /* WelcomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				888460542722F9DD00A00B4E /* Initializer.swift */,
 				888460522722E21F00A00B4E /* word.json */,
 				888460502722C59200A00B4E /* Decoder.swift */,
+				81F1E75C272859BA00351935 /* DictParthKit.swift */,
 				88ECB7792721ABFB0013E35D /* WordList.swift */,
 				889722DE2721977100856B41 /* Word.swift */,
 				88AD64C62720851600AC0602 /* Trophy.swift */,
@@ -302,6 +305,7 @@
 				2710BE3227282C9E00F53EAB /* BoundingBoxView.swift in Sources */,
 				2710BE3E2728329F00F53EAB /* VisionObjectRecognitionViewController.swift in Sources */,
 				2710BE2C27282B5800F53EAB /* CameraController.swift in Sources */,
+				81F1E75D272859BA00351935 /* DictParthKit.swift in Sources */,
 				271676DE2727290C00BF4C6D /* CreditsView.swift in Sources */,
 				8884606D27231F9A00A00B4E /* Exercise.swift in Sources */,
 				2710BE3627282D0E00F53EAB /* AnimatedTransitioning.swift in Sources */,
