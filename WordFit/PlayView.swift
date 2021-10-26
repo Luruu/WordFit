@@ -11,7 +11,7 @@ struct PlayView: View {
     @State var timeRemaningMin = 2
     @State var timeRemaningSec = 60
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
+    @State var goActivity = false
     @State var repeats : Bool = true
     @State var timerExpired : Bool = false
     @State var wordProposed : Word
@@ -77,9 +77,12 @@ struct PlayView: View {
             session?.endGame(score: session_point, quit: false)
             appPreferences.setIntPreferences(forKey: "nFind", value: 0)
             haveWin = true
+            let kit = DictParthKit.getIstance()
+            kit.updateRanking(key: appPreferences.getStringPreferences(forKey: "NickName")!)
             return true
         }
         else{
+            goActivity = true
             goNext()
             return false
         }
@@ -168,6 +171,9 @@ struct PlayView: View {
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
            
+                if goActivity{
+                    NavigationLink("",destination: HomePageView())
+                }
             
             if notPoints || correctMsg || wrongMsg || timerExpired{
                 Text(msgString)
@@ -177,7 +183,7 @@ struct PlayView: View {
                     .multilineTextAlignment(.center)
             }
             
-            NavigationLink("",destination: HomePageView(), isActive: $haveWin )
+                NavigationLink("",destination: GameActivityView(), isActive: $goActivity )
             VStack{
             TextField("Solution",text: $user_solution, onEditingChanged: {edit in
             },onCommit: {

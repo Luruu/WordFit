@@ -13,6 +13,8 @@ import SwiftUI
 
 final class ActionCameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
+    @AppStorage("rep") var rep : Int = 0
+    
     var detectionOverlay: CALayer! = nil
     let detectPlayerRequest = VNDetectHumanBodyPoseRequest()
     let bodyPoseDetectionMinConfidence: VNConfidence = 0.6
@@ -77,6 +79,14 @@ final class ActionCameraController: UIViewController, AVCaptureVideoDataOutputSa
                         
                         let res = self.playerStats.getPrediction()!
                         print(res)
+                        if res == "jumpingjack"{
+                            self.rep += 1
+                            
+                        }
+                        else{
+                            self.rep += 1
+                            
+                        }
                         
                         self.delegate?.actionRecognized(of: res)
                         

@@ -25,6 +25,9 @@ struct HomePageView: View {
                 .resizable()
                 .frame(width: 116, height: 116)
                 .padding(60)
+                .onAppear{
+                    UserDefaults.standard.setValue(0, forKey: "rep")
+                }
             VStack{
             ZStack{
             Image(systemName: "circle.fill")
