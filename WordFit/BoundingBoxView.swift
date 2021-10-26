@@ -4,7 +4,7 @@
 //
 //  Created by Mario Oliva on 26/10/21.
 //
-
+/*
 import UIKit
 
 class BoundingBoxView: UIView, AnimatedTransitioning {
@@ -89,3 +89,4 @@ class BoundingBoxView: UIView, AnimatedTransitioning {
     }
 }
 
+*/

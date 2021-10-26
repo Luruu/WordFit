@@ -4,7 +4,7 @@
 //
 //  Created by Mario Oliva on 26/10/21.
 //
-
+/*
 import UIKit
 import AVFoundation
 import Vision
@@ -313,4 +313,4 @@ struct ActionCameraControllerView: UIViewControllerRepresentable {
             parent.labelResult = category
         }
     }
-}
+}*/

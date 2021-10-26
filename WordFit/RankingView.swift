@@ -10,8 +10,9 @@ import SwiftUI
 struct RankingView: View {
     @State var kit = DictParthKit.getIstance()
     func showRanking() -> Bool {
-        let res = kit.read(tag_: "Score", key_: "1")
-        print("sorta", res)
+        //let res = kit.read(key_: "1").count
+        let res = kit.ExistsKey(key: "1")
+        print(res)
         return true
     }
     
