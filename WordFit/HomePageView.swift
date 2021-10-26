@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AVKit
+
 
 struct HomePageView: View {
     
@@ -51,25 +51,24 @@ struct HomePageView: View {
                     
                     NavigationLink("",destination: NickNameView(), isActive: $setNick)
                     Text("Score: \(self.Score) Trophies: \(Int(tropies))" )
+                
                         .onAppear{
                                 Score = appPreferences.getIntPreferences(forKey: "Score")
 
-                                 if Score>0{
+                                /* if Score>0{
                                      if nickName == "No nickname"{
-                                         if !appear{
-                                             setNick = true
-                                         }
-                                             print("Devi inserire il nick")
+                                         
+                                        print("Devi inserire il nick")
                                          
                                      }else{ //Score > 0 ma il nick gia esiste
-                                         setNick = false
                                          print("entro in score >0 ma nick esistente ed è : \(nickName)")
                                          let kit = DictParthKit.getIstance()
                                          
                                          kit.updateRanking(key: nickName, value: String(Score))
                                          print("setNick: ", setNick)
+
                                      }
-                                 }
+                                 }*/
                             
                             
                            /* Score = appPreferences.getIntPreferences(forKey: "Score")

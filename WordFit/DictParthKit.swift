@@ -11,6 +11,8 @@ import ParthenoKit
 class DictParthKit{
     private static var istance : DictParthKit = DictParthKit()
     var kit : ParthenoKit = ParthenoKit.init()
+    var arrScore : [Int] = Array.init()
+    var arrName : [String] = Array.init()
     
     static func getIstance() -> DictParthKit {
         return .istance
@@ -34,15 +36,32 @@ class DictParthKit{
         }
     }
     
-    func updateRanking(key : String, value : String){
-        if(write(key_: key, value_: value)){
-            print("writediupdateranking_fatta : ho registrato : ", read(key_: key))
-        }else{
-            print("writediupdateranking_NONfatta")
+    func updateRanking(key : String) -> Bool{
+        if appPreferences.getStringPreferences(forKey: "NickName") != "No nickname"{
+            return false
         }
-        /*var dict: [String: String] = [:]
-            dict = read(key_: key)
-            print(dict)*/
+        else{
+            write(key_: key, value_: appPreferences.getStringPreferences(forKey: "Score")!)
+            return true
+        }
+    }
+    
+    func DictSort(){
+        let d : Dictionary<String,String> = read(key_: "%")
+        var i = 0
+        for (k,v) in (Array(d).sorted {Int($0.1)! >= Int($1.1)!}) {
+            arrName.append(k)
+            arrScore.append(Int(v)!)
+            i+=1
+        }
+    }
+    
+    func getArrayName() -> [String]{
+        return arrName
+    }
+    
+    func getArrayInt() -> [Int]{
+        return arrScore
     }
     
 }
