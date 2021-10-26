@@ -52,7 +52,7 @@ struct PlayView: View {
      func goNext(){
         wordProposed = (session?.getWord())!
         user_solution=""
-        trofeo_count += 1
+        /*trofeo_count += 1
          if (trofeo_count == 1){
              let gia_ottenuto = appPreferences.getIntPreferences(forKey: "Tropies")
              
@@ -61,7 +61,7 @@ struct PlayView: View {
                  print("CONGRATULATIONS! YOU RECEVEID A TROPHY!")
                  appPreferences.setIntPreferences(forKey: "Tropies", value: 1)
              }
-         }
+         }*/
     }
     
     func start_Game(){

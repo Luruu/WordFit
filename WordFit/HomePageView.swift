@@ -17,7 +17,7 @@ struct HomePageView: View {
     @State var Score = 0
     @State var setNick : Bool = false
     @State var appear : Bool = false
-    var tropies : Int = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! Int
+   
     var body: some View {
         NavigationView{
         VStack{
@@ -50,7 +50,7 @@ struct HomePageView: View {
                     }
                     
                     NavigationLink("",destination: NickNameView(), isActive: $setNick)
-                    Text("Score: \(self.Score) Trophies: \(Int(tropies))" )
+                    Text("Score: \(self.Score)")
                 
                         .onAppear{
                                 Score = appPreferences.getIntPreferences(forKey: "Score")
@@ -126,30 +126,15 @@ struct HomePageView: View {
                             Text("Ranking")
                             .font(Font.custom("Roboto",size: 20))
                             .lineSpacing(0.3)
-                            .frame(width: 142, height: 58)
+                            .frame(width: 298, height: 54, alignment: .center)
                             .foregroundColor(.white)
                             .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
-                            .cornerRadius(4)
+                            .cornerRadius(8)
                         }
                         
                     }
-                    .padding(.trailing,5)
-                    Button(action: {
-//                        print("My Trophies Tapped!")
-                        SoundMangager.instance.PlaySoundButton()
-                    }) {
-                        NavigationLink(destination: MyTrophiesView().onAppear{
-                            SoundMangager.instance.PlaySoundButton()
-                        }){
-                            Text("My Trophies")
-                            .font(Font.custom("Roboto",size: 20))
-                            .lineSpacing(0.3)
-                            .frame(width: 142, height: 58,alignment: .center)
-                            .foregroundColor(.white)
-                            .background(Color.init(red: 0.28, green: 0.32, blue: 0.37))
-                            .cornerRadius(4)
-                        }
-                    }
+                   // .padding(.trailing,5)
+                    
                     
                 }
                 .padding(.bottom,5)
