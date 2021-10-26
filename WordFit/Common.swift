@@ -31,6 +31,7 @@ struct PlayerStats {
 
 
     mutating func getPrediction() -> String? {
+        print("get prediction")
             guard
               let poseMultiArray = prepareInputWithObservations(poseObservations),
               let predictions = try? actionClassifier.prediction(poses: poseMultiArray)
@@ -39,12 +40,13 @@ struct PlayerStats {
             return nil
         }
         let throwType = predictions.label
+        print("trhow type = \(throwType)")
         return throwType
     }
 }
 
 struct GameConstants {
-    static let maxPoseObservations = 60
+    static let maxPoseObservations = 75
     static let noObservationFrameLimit = 30
 }
 
@@ -148,7 +150,7 @@ func getBodyJointsFor(observation: VNHumanBodyPoseObservation) -> ([VNHumanBodyP
 
 func prepareInputWithObservations(_ observations: [VNHumanBodyPoseObservation]) -> MLMultiArray? {
     let numAvailableFrames = observations.count
-    let observationsNeeded = 60
+    let observationsNeeded = 75
     var multiArrayBuffer = [MLMultiArray]()
 
     for frameIndex in 0 ..< min(numAvailableFrames, observationsNeeded) {

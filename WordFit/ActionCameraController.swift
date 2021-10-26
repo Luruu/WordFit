@@ -72,7 +72,7 @@ final class ActionCameraController: UIViewController, AVCaptureVideoDataOutputSa
                 DispatchQueue.main.async {
 //                    print(self.playerStats.poseObservations.count)
                     
-                    if self.playerStats.poseObservations.count == 60 {
+                    if self.playerStats.poseObservations.count == 75 {
 //                        self.playerStats.getPrediction() ?? ""
                         
                         let res = self.playerStats.getPrediction()!

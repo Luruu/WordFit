@@ -97,6 +97,7 @@ struct HomePageView: View {
                         }
                         
                     }
+                    .padding(.trailing)
                     Button(action: {
 //                        print("My Trophies Tapped!")
                         SoundMangager.instance.PlaySoundButton()
@@ -115,6 +116,8 @@ struct HomePageView: View {
                     }
                     
                 }
+                .padding(.bottom)
+                
                 HStack{
                     Button(action: {
 //                        print("Settings Tapped!")
@@ -132,6 +135,7 @@ struct HomePageView: View {
                             .cornerRadius(4)
                         }
                     }
+                    .padding(.trailing)
                     Button(action: {
     //                    print("Games Rules Tapped!")
                         SoundMangager.instance.PlaySoundButton()
