@@ -15,7 +15,7 @@ struct HomePageView: View {
     var testo = SoundMangager()
     @State var nickName = String.init()
     @State var Score = 0
-    @State var setNick : Bool = false //show nickview when is true
+    @State var setNick : Bool = false
     var tropies : [Int] = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! [Int]
     var body: some View {
         NavigationView{
@@ -47,10 +47,11 @@ struct HomePageView: View {
                                 .lineSpacing(0.55)
                          }
                     }
-                    NavigationLink("", destination: NickNameView(), isActive: $setNick)
+                    
                     Text("Score: \(self.Score) Trophies: \(tropies.count)" )
                         .onAppear{
                             Score = appPreferences.getIntPreferences(forKey: "Score")
+
                             let kit = DictParthKit.getIstance()
                             print("score ",Score)
                             if Score>0{
@@ -112,6 +113,7 @@ struct HomePageView: View {
                         }
                         
                     }
+                    .padding(.trailing)
                     Button(action: {
 //                        print("My Trophies Tapped!")
                         SoundMangager.instance.PlaySoundButton()
@@ -130,6 +132,8 @@ struct HomePageView: View {
                     }
                     
                 }
+                .padding(.bottom,5)
+                
                 HStack{
                     Button(action: {
 //                        print("Settings Tapped!")
@@ -147,6 +151,7 @@ struct HomePageView: View {
                             .cornerRadius(4)
                         }
                     }
+                    .padding(.trailing,5)
                     Button(action: {
     //                    print("Games Rules Tapped!")
                         SoundMangager.instance.PlaySoundButton()

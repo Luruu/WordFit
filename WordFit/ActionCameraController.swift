@@ -4,7 +4,7 @@
 //
 //  Created by Mario Oliva on 26/10/21.
 //
-/*
+
 import UIKit
 import AVFoundation
 import Vision
@@ -72,7 +72,7 @@ final class ActionCameraController: UIViewController, AVCaptureVideoDataOutputSa
                 DispatchQueue.main.async {
 //                    print(self.playerStats.poseObservations.count)
                     
-                    if self.playerStats.poseObservations.count == 60 {
+                    if self.playerStats.poseObservations.count == 75 {
 //                        self.playerStats.getPrediction() ?? ""
                         
                         let res = self.playerStats.getPrediction()!
@@ -313,4 +313,4 @@ struct ActionCameraControllerView: UIViewControllerRepresentable {
             parent.labelResult = category
         }
     }
-}*/
+}

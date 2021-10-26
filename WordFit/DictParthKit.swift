@@ -21,6 +21,7 @@ class DictParthKit{
     func write(key_:String, value_:String) -> Bool {
         return kit.writeSync(team: "TeamF", tag: "Ranking", key: key_, value: value_)
     }
+
     
     func ExistsKey(key: String) -> Bool{
         if read(key_: key).count == 0{

@@ -65,7 +65,6 @@ struct PlayView: View {
         if nFind == 2{
             session?.endGame(score: session_point, quit: false)
             appPreferences.setIntPreferences(forKey: "nFind", value: 0)
-            
             haveWin = true
             return true
         }
