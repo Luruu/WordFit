@@ -19,7 +19,7 @@ struct HomePageView: View {
     @State var appear : Bool = false
     var tropies : Int = appPreferences.getIntArrayPreferences(forKey: "Tropies") as! Int
     var body: some View {
-        NavigationView{ 
+        NavigationView{
         VStack{
             Image("logo")
                 .resizable()
