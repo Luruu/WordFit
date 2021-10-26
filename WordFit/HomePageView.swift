@@ -116,7 +116,7 @@ struct HomePageView: View {
                     }
                     
                 }
-                .padding(.bottom)
+                .padding(.bottom,5)
                 
                 HStack{
                     Button(action: {
@@ -135,7 +135,7 @@ struct HomePageView: View {
                             .cornerRadius(4)
                         }
                     }
-                    .padding(.trailing)
+                    .padding(.trailing,5)
                     Button(action: {
     //                    print("Games Rules Tapped!")
                         SoundMangager.instance.PlaySoundButton()
