@@ -129,7 +129,7 @@ struct PlayView: View {
 //            Text("")
 //                .frame(width: 30, height: 10, alignment: .center)
             
-            Text("\(timeRemaningMin) : \(timeRemaningSec)")
+            Text("   \(timeRemaningMin) : \(timeRemaningSec)")
                 .onReceive(timer){ _ in
                     if timeRemaningMin >= 0 && timeRemaningSec != 0 {
                         timeRemaningSec -= 1
