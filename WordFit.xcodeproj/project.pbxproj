@@ -16,6 +16,13 @@
 		0EEA39D52721CCEC006D59BF /* GameRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA39D42721CCEC006D59BF /* GameRulesView.swift */; };
 		2710BE282728241B00F53EAB /* ErrorSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2710BE272728241B00F53EAB /* ErrorSound.mp3 */; };
 		2710BE2A2728259D00F53EAB /* 515823-matrixxx-select-granted-0-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2710BE292728259D00F53EAB /* 515823-matrixxx-select-granted-0-3.mp3 */; };
+		2710BE2C27282B5800F53EAB /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE2B27282B5800F53EAB /* CameraController.swift */; };
+		2710BE2E27282BBB00F53EAB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE2D27282BBB00F53EAB /* CameraViewController.swift */; };
+		2710BE3027282BF500F53EAB /* ActionCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE2F27282BF500F53EAB /* ActionCameraController.swift */; };
+		2710BE3227282C9E00F53EAB /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3127282C9E00F53EAB /* BoundingBoxView.swift */; };
+		2710BE3427282CD200F53EAB /* JointSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3327282CD200F53EAB /* JointSegmentView.swift */; };
+		2710BE3627282D0E00F53EAB /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3527282D0E00F53EAB /* AnimatedTransitioning.swift */; };
+		2710BE3827282DB400F53EAB /* VideoOutputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3727282DB400F53EAB /* VideoOutputViews.swift */; };
 		271676DE2727290C00BF4C6D /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271676DD2727290C00BF4C6D /* CreditsView.swift */; };
 		27302CAE2726DDA4004DA9A4 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302CAD2726DDA4004DA9A4 /* Audio.swift */; };
 		27302CB22726E06C004DA9A4 /* ToggleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27302CB02726E06C004DA9A4 /* ToggleSound.wav */; };
@@ -67,6 +74,13 @@
 		0EEA39D42721CCEC006D59BF /* GameRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesView.swift; sourceTree = "<group>"; };
 		2710BE272728241B00F53EAB /* ErrorSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ErrorSound.mp3; sourceTree = "<group>"; };
 		2710BE292728259D00F53EAB /* 515823-matrixxx-select-granted-0-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "515823-matrixxx-select-granted-0-3.mp3"; sourceTree = "<group>"; };
+		2710BE2B27282B5800F53EAB /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		2710BE2D27282BBB00F53EAB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		2710BE2F27282BF500F53EAB /* ActionCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCameraController.swift; sourceTree = "<group>"; };
+		2710BE3127282C9E00F53EAB /* BoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxView.swift; sourceTree = "<group>"; };
+		2710BE3327282CD200F53EAB /* JointSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JointSegmentView.swift; sourceTree = "<group>"; };
+		2710BE3527282D0E00F53EAB /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
+		2710BE3727282DB400F53EAB /* VideoOutputViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoOutputViews.swift; sourceTree = "<group>"; };
 		271676DD2727290C00BF4C6D /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		27302CAD2726DDA4004DA9A4 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		27302CB02726E06C004DA9A4 /* ToggleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ToggleSound.wav; sourceTree = "<group>"; };
@@ -156,7 +170,14 @@
 				0E0AA1892721999B00225C45 /* HomePageView.swift */,
 				27302CAD2726DDA4004DA9A4 /* Audio.swift */,
 				27B6EECF27246F8600CD0FCD /* GameActivityView.swift */,
+				2710BE2B27282B5800F53EAB /* CameraController.swift */,
 				27FA344027241FA0001E866C /* PlayView.swift */,
+				2710BE2D27282BBB00F53EAB /* CameraViewController.swift */,
+				2710BE2F27282BF500F53EAB /* ActionCameraController.swift */,
+				2710BE3727282DB400F53EAB /* VideoOutputViews.swift */,
+				2710BE3127282C9E00F53EAB /* BoundingBoxView.swift */,
+				2710BE3527282D0E00F53EAB /* AnimatedTransitioning.swift */,
+				2710BE3327282CD200F53EAB /* JointSegmentView.swift */,
 				27FA3442272428C3001E866C /* NickNameView.swift */,
 				0E234FCA27230B670058D376 /* MyTrophiesView.swift */,
 				0E234FC82722F29C0058D376 /* SettingsView.swift */,
@@ -265,10 +286,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2710BE3027282BF500F53EAB /* ActionCameraController.swift in Sources */,
 				0EEA39D52721CCEC006D59BF /* GameRulesView.swift in Sources */,
+				2710BE3227282C9E00F53EAB /* BoundingBoxView.swift in Sources */,
+				2710BE2C27282B5800F53EAB /* CameraController.swift in Sources */,
 				271676DE2727290C00BF4C6D /* CreditsView.swift in Sources */,
 				8884606D27231F9A00A00B4E /* Exercise.swift in Sources */,
+				2710BE3627282D0E00F53EAB /* AnimatedTransitioning.swift in Sources */,
 				889722DF2721977100856B41 /* Word.swift in Sources */,
+				2710BE2E27282BBB00F53EAB /* CameraViewController.swift in Sources */,
 				27B6EED027246F8600CD0FCD /* GameActivityView.swift in Sources */,
 				88ECB77A2721ABFB0013E35D /* WordList.swift in Sources */,
 				0EEA39D12721ADD8006D59BF /* RankingView.swift in Sources */,
@@ -280,9 +306,11 @@
 				88AD64C72720851600AC0602 /* Trophy.swift in Sources */,
 				8884606F2723200000A00B4E /* GameSession.swift in Sources */,
 				888460512722C59200A00B4E /* Decoder.swift in Sources */,
+				2710BE3827282DB400F53EAB /* VideoOutputViews.swift in Sources */,
 				888460552722F9DD00A00B4E /* Initializer.swift in Sources */,
 				88436EF82720579C003DDB78 /* WordFitApp.swift in Sources */,
 				0E234FCB27230B670058D376 /* MyTrophiesView.swift in Sources */,
+				2710BE3427282CD200F53EAB /* JointSegmentView.swift in Sources */,
 				0E234FC92722F29C0058D376 /* SettingsView.swift in Sources */,
 				88AD64C327207B8200AC0602 /* User.swift in Sources */,
 				27FA3443272428C3001E866C /* NickNameView.swift in Sources */,
