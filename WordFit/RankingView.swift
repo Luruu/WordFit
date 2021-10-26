@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct RankingView: View {
-    @State var kit = DictParthKit.getIstance()
+/*    @State var kit = DictParthKit.getIstance()
     func showRanking() -> Bool {
         //let res = kit.read(key_: "1").count
         let res = kit.ExistsKey(key: "1")
         print(res)
         return true
     }
-    
+ */
     
     var body: some View {
         VStack{
@@ -67,7 +67,7 @@ struct RankingView: View {
            
         }
         }.onAppear{
-            showRanking()
+//            showRanking()
         }
 }
 }

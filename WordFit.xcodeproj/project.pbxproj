@@ -23,6 +23,9 @@
 		2710BE3427282CD200F53EAB /* JointSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3327282CD200F53EAB /* JointSegmentView.swift */; };
 		2710BE3627282D0E00F53EAB /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3527282D0E00F53EAB /* AnimatedTransitioning.swift */; };
 		2710BE3827282DB400F53EAB /* VideoOutputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3727282DB400F53EAB /* VideoOutputViews.swift */; };
+		2710BE3A272831B600F53EAB /* ModelJJ.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE39272831B600F53EAB /* ModelJJ.mlmodel */; };
+		2710BE3C2728320500F53EAB /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3B2728320500F53EAB /* Common.swift */; };
+		2710BE3E2728329F00F53EAB /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BE3D2728329F00F53EAB /* VisionObjectRecognitionViewController.swift */; };
 		271676DE2727290C00BF4C6D /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271676DD2727290C00BF4C6D /* CreditsView.swift */; };
 		27302CAE2726DDA4004DA9A4 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302CAD2726DDA4004DA9A4 /* Audio.swift */; };
 		27302CB22726E06C004DA9A4 /* ToggleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27302CB02726E06C004DA9A4 /* ToggleSound.wav */; };
@@ -81,6 +84,9 @@
 		2710BE3327282CD200F53EAB /* JointSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JointSegmentView.swift; sourceTree = "<group>"; };
 		2710BE3527282D0E00F53EAB /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
 		2710BE3727282DB400F53EAB /* VideoOutputViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoOutputViews.swift; sourceTree = "<group>"; };
+		2710BE39272831B600F53EAB /* ModelJJ.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ModelJJ.mlmodel; sourceTree = "<group>"; };
+		2710BE3B2728320500F53EAB /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2710BE3D2728329F00F53EAB /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
 		271676DD2727290C00BF4C6D /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		27302CAD2726DDA4004DA9A4 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		27302CB02726E06C004DA9A4 /* ToggleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ToggleSound.wav; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 		88436EF62720579C003DDB78 /* WordFit */ = {
 			isa = PBXGroup;
 			children = (
+				2710BE39272831B600F53EAB /* ModelJJ.mlmodel */,
+				2710BE3B2728320500F53EAB /* Common.swift */,
 				888460562723018900A00B4E /* AppPreferences.swift */,
 				8884606C27231F9A00A00B4E /* Exercise.swift */,
 				27302CAF2726E049004DA9A4 /* Audio Folder */,
@@ -174,6 +182,7 @@
 				27FA344027241FA0001E866C /* PlayView.swift */,
 				2710BE2D27282BBB00F53EAB /* CameraViewController.swift */,
 				2710BE2F27282BF500F53EAB /* ActionCameraController.swift */,
+				2710BE3D2728329F00F53EAB /* VisionObjectRecognitionViewController.swift */,
 				2710BE3727282DB400F53EAB /* VideoOutputViews.swift */,
 				2710BE3127282C9E00F53EAB /* BoundingBoxView.swift */,
 				2710BE3527282D0E00F53EAB /* AnimatedTransitioning.swift */,
@@ -286,9 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2710BE3C2728320500F53EAB /* Common.swift in Sources */,
+				2710BE3A272831B600F53EAB /* ModelJJ.mlmodel in Sources */,
 				2710BE3027282BF500F53EAB /* ActionCameraController.swift in Sources */,
 				0EEA39D52721CCEC006D59BF /* GameRulesView.swift in Sources */,
 				2710BE3227282C9E00F53EAB /* BoundingBoxView.swift in Sources */,
+				2710BE3E2728329F00F53EAB /* VisionObjectRecognitionViewController.swift in Sources */,
 				2710BE2C27282B5800F53EAB /* CameraController.swift in Sources */,
 				271676DE2727290C00BF4C6D /* CreditsView.swift in Sources */,
 				8884606D27231F9A00A00B4E /* Exercise.swift in Sources */,
@@ -445,8 +457,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WordFit/Preview Content\"";
+				DEVELOPMENT_TEAM = K638Q82J3G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fammi usare la camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -475,8 +489,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WordFit/Preview Content\"";
+				DEVELOPMENT_TEAM = K638Q82J3G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fammi usare la camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
