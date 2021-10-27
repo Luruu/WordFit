@@ -1,5 +1,5 @@
 <p align="center"><img src="../main/WordFit/Images/ProgettoIcon.png" width="128" height="128"></p>
-<h1>WordFit</h1>
+<h1><p align="center">WordFit</p></h1>
 App for the <b>iOS Foundation Parthenope (S1 -2021/2022): One week challenge</b>
 
 WordFit's Marvel (initial): https://marvelapp.com/prototype/8d783h8/screen/82801074
