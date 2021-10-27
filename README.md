@@ -1,6 +1,6 @@
 <p align="center"><img src="../main/WordFit/Images/ProgettoIcon.png" width="128" height="128"></p>
 <h1>WordFit</h1>
-App for the iOS Foundation 2021/2022 (one week challenge)
+App for the <b>iOS Foundation 2021/2022 (one week challenge)</b>
 
 WordFit's Marvel (initial): https://marvelapp.com/prototype/8d783h8/screen/82801074
 
