@@ -13,7 +13,7 @@ WordFit's Marvel (initial): https://marvelapp.com/prototype/8d783h8/screen/82801
 <li>Each guessed word gives points.</li> 
 <li>At each word guessed it is then necessary to do some jumping jacks in order to move on to the next word to guess.</li>
  <br></br>  
-<i>You can find <b>slides</b> <a href="https://github.com/RenatoEsposito1999/WordFitApp/tree/main/Slide">by clicking here</a>
+<i>You can find <b>slides</b> <a href="https://github.com/RenatoEsposito1999/WordFitApp/tree/main/Slide">by clicking here</a></i>
   <h2> Video Example </h2>
   <h3>Game and Jumping Jacks</h3>
   
