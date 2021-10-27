@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct PlayView: View {
-    @State var timeRemaningMin = 2
-    @State var timeRemaningSec = 60
+    @AppStorage("timeRemaningMin") var timeRemaningMin = 2
+    @AppStorage("timeRemaningSec") var timeRemaningSec = 60
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var goActivity = false
     @State var repeats : Bool = true
     @State var timerExpired : Bool = false
     @State var wordProposed : Word
     @State var user_solution :  String = ""
-    @State var session_point : Int = 0
+    @AppStorage("session_point") var session_point : Int = 0
     @State var session : gameSession?
     @State var borderColor : Color = Color.white
     @State var wrong : Bool = false
@@ -27,8 +27,9 @@ struct PlayView: View {
     @State var isSet : Bool = false
     @State var notPoints : Bool = false
     @State var malusAnswer : Int = 0
+    @State var back : Bool = false
     @State var quit : Bool = false
-    @State var nFind : Int = 0
+    @AppStorage("nFind") var nFind : Int = 0
     @State var win : Bool = false
     @State var msgString : String = ""
     @State var haveWin : Bool = false//flag to see the nav link to come back to home
@@ -42,11 +43,11 @@ struct PlayView: View {
     }
 
     func calculateMalus(){
-        if session_point - malus >= 0{
-            session_point = session_point - malus
+        if self.session_point - malus >= 0{
+            self.session_point = self.session_point - malus
         }
         else{
-            session_point = 0
+            self.session_point = 0
         }
     }
     
@@ -64,15 +65,20 @@ struct PlayView: View {
     //Return true when user has find 2 word soo the game end
     //return false when not have completed the game but has just find a word.
     func hasWin()->Bool{
-        if nFind == 2{
-            session?.endGame(score: session_point, quit: false)
+        if self.nFind == 2{
+            goActivity = false
+            session?.endGame(score: self.session_point, quit: false)
             appPreferences.setIntPreferences(forKey: "nFind", value: 0)
             haveWin = true
             let kit = DictParthKit.getIstance()
             noNick = kit.updateRanking(key: appPreferences.getStringPreferences(forKey: "NickName")!)
+            UserDefaults.standard.setValue(0, forKey: "session_point")
             if(noNick){
                 msgColor = Color.red
-                msgString = "You don't have a nick name, go to setting -> change nick name to save your score"
+                msgString = "You don't have a nick name.\n Go to setting -> change nick name to\nsave your score in the ranking"
+                _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
+                    quit = true
+                })
             }
             return true
         }
@@ -91,26 +97,31 @@ struct PlayView: View {
     func submit_answer() -> Bool{
         var retval : Bool = false
         if (session?.checkSolution(word1: user_solution, word2: wordProposed.getValue()))!{
-            session_point += wordProposed.getScore()
+            self.session_point += wordProposed.getScore()
             correctMsg = true
             user_solution = ""
-            msgString = (nFind==1) ? "You won, your new score is \(appPreferences.getIntPreferences(forKey: "Score") + session_point)" :
+            msgString = (self.nFind==1) ? "You won, your new score is \(appPreferences.getIntPreferences(forKey: "Score") + self.session_point)" :
            "Correct answer: +\(wordProposed.getScore()) points"
+            if self.nFind == 1 {
+                _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
+                    quit = true
+              })
+             }
             borderColor = Color.green
             msgColor = Color.green
             _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                 correctMsg = false
-                nFind+=1
+                self.nFind+=1
                 retval = !hasWin()
             })
-            appPreferences.setIntPreferences(forKey: "nFind", value: nFind)
+            appPreferences.setIntPreferences(forKey: "nFind", value: self.nFind)
             return retval
         }else{
             user_solution = ""
             borderColor = Color.red
-            if(session_point > 0){
+            if(self.session_point > 0){
                 malusAnswer = 1
-                session_point = session_point - malusAnswer
+                self.session_point = self.session_point - malusAnswer
             }
             wrongMsg = true
             msgString = "Wrong answer -\(malusAnswer) points"
@@ -136,15 +147,15 @@ struct PlayView: View {
                 .frame(width: 90, height: 90)
             
             
-            Text("   \(timeRemaningMin) : \(timeRemaningSec)")
+                Text("   \(self.timeRemaningMin) : \(self.timeRemaningSec)")
                 .onReceive(timer){ _ in
-                    if timeRemaningMin >= 0 && timeRemaningSec != 0 {
-                        timeRemaningSec -= 1
-                        if timeRemaningSec == 0 && timeRemaningMin != 0{
-                            timeRemaningMin -= 1
-                            timeRemaningSec = 60
+                    if self.timeRemaningMin >= 0 && self.timeRemaningSec != 0 {
+                        self.timeRemaningSec -= 1
+                        if self.timeRemaningSec == 0 && self.timeRemaningMin != 0{
+                            self.timeRemaningMin -= 1
+                            self.timeRemaningSec = 60
                         }
-                        else if timeRemaningMin == 0 && timeRemaningSec == 0{
+                        else if self.timeRemaningMin == 0 && self.timeRemaningSec == 0{
                             msgString = "Timer expired, Game Over"
                             msgColor = Color.red
 //                            timerExpired = true
@@ -174,9 +185,11 @@ struct PlayView: View {
                     .foregroundColor(msgColor)
                     .lineSpacing(0.68)
                     .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.5)
             }
             
-                NavigationLink("",destination: GameActivityView(), isActive: $goActivity )
+                
+                NavigationLink("",destination: GameActivityView(), isActive: $goActivity)
             VStack{
             TextField("Solution",text: $user_solution, onEditingChanged: {edit in
             },onCommit: {
@@ -201,7 +214,7 @@ struct PlayView: View {
             
             VStack{
                 //isActive = navigation per risposta esatta.
-                NavigationLink("", destination: GameActivityView(), isActive: $isSet)
+               
             Button(action: {
                       isSet = submit_answer()
                   }){
@@ -216,7 +229,7 @@ struct PlayView: View {
                   }
                   
                 
-               
+                NavigationLink("",destination : HomePageView(), isActive: $quit)
                 HStack{
                     Button(action: {
                         SoundMangager.instance.PlaySoundButton()
@@ -233,7 +246,7 @@ struct PlayView: View {
                     }
 
                     Button(action: {
-                        if session_point==0{
+                        if self.session_point==0{
                             notPoints = true
                             msgString = "You can't go next. \nAt least 1 point is required"
                             msgColor = Color.orange
@@ -258,7 +271,7 @@ struct PlayView: View {
                 }
                 
                 
-                Text("Actual Points : \(session_point)")
+                Text("Actual Points : \(self.session_point)")
                     .font(Font.custom("Lato",size: 20))
                     .foregroundColor(Color.init(red: 0.28, green: 0.32, blue: 0.37))
                     .lineSpacing(1.13)
@@ -279,7 +292,7 @@ struct PlayView: View {
             if ShowPopUp{
                PlayView().blur(radius: 5)
                 VStack{
-                    NavigationLink("",destination : HomePageView(), isActive: $quit)
+                    NavigationLink("",destination : HomePageView(), isActive: $back)
                 Text("Are you sure?")
                         .font(Font.custom("Lato",size: 49))
                         .lineSpacing(0.5)
@@ -296,7 +309,7 @@ struct PlayView: View {
              HStack{
                  Button(action: {
                      SoundMangager.instance.PlaySoundButton()
-                     quit = true
+                     back = true
                      session?.endGame(score: 0, quit: true)
                  }){
                          Text("YES")

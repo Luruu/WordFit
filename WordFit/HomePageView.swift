@@ -9,7 +9,6 @@ import SwiftUI
 
 
 struct HomePageView: View {
-    
    
     @State var ShowPopUp : Bool = false
     var testo = SoundMangager()
@@ -27,6 +26,10 @@ struct HomePageView: View {
                 .padding(60)
                 .onAppear{
                     UserDefaults.standard.setValue(0, forKey: "rep")
+                    UserDefaults.standard.setValue(2, forKey: "timeRemaningMin")
+                    UserDefaults.standard.setValue(60, forKey: "timeRemaningSec")
+                    UserDefaults.standard.setValue(0, forKey: "session_point")
+                    UserDefaults.standard.setValue(0, forKey: "nFind")
                 }
             VStack{
             ZStack{
