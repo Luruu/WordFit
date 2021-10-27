@@ -84,7 +84,6 @@ final class ActionCameraController: UIViewController, AVCaptureVideoDataOutputSa
                             
                         }
                         else{
-                            self.rep += 1
                             
                         }
                         

@@ -47,7 +47,7 @@ struct SettingsView: View {
 //               }
             }
                 HStack{
-                Text("Audio")
+   /*             Text("Audio")
                     .frame(width: 180, height: 32,alignment: .leading)
                     .foregroundColor(Color.init(red: 0.51, green: 0.56, blue: 0.65))
                     .font(Font.custom("Lato",size: 27))
@@ -58,7 +58,9 @@ struct SettingsView: View {
                             .frame(width: 150, height: 32)
                         if !showAudio {
 //                            qui va l'azione
+    
                         }
+    */
            }
         }
             Text("")
