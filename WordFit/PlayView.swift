@@ -33,6 +33,7 @@ struct PlayView: View {
     @State var msgString : String = ""
     @State var haveWin : Bool = false//flag to see the nav link to come back to home
     @State var msgColor : Color = Color.red
+    @State var noNick : Bool = false
     let malus : Int = 5
     @State var trofeo_count : Int = 0
     init(){
@@ -52,16 +53,6 @@ struct PlayView: View {
      func goNext(){
         wordProposed = (session?.getWord())!
         user_solution=""
-        /*trofeo_count += 1
-         if (trofeo_count == 1){
-             let gia_ottenuto = appPreferences.getIntPreferences(forKey: "Tropies")
-             
-             print("gia: ",gia_ottenuto)
-             if gia_ottenuto == 0 {
-                 print("CONGRATULATIONS! YOU RECEVEID A TROPHY!")
-                 appPreferences.setIntPreferences(forKey: "Tropies", value: 1)
-             }
-         }*/
     }
     
     func start_Game(){
@@ -78,7 +69,11 @@ struct PlayView: View {
             appPreferences.setIntPreferences(forKey: "nFind", value: 0)
             haveWin = true
             let kit = DictParthKit.getIstance()
-            kit.updateRanking(key: appPreferences.getStringPreferences(forKey: "NickName")!)
+            noNick = kit.updateRanking(key: appPreferences.getStringPreferences(forKey: "NickName")!)
+            if(noNick){
+                msgColor = Color.red
+                msgString = "You don't have a nick name, go to setting -> change nick name to save your score"
+            }
             return true
         }
         else{
@@ -140,8 +135,6 @@ struct PlayView: View {
                 .resizable()
                 .frame(width: 90, height: 90)
             
-//            Text("")
-//                .frame(width: 30, height: 10, alignment: .center)
             
             Text("   \(timeRemaningMin) : \(timeRemaningSec)")
                 .onReceive(timer){ _ in
@@ -175,7 +168,7 @@ struct PlayView: View {
                     NavigationLink("",destination: HomePageView())
                 }
             
-            if notPoints || correctMsg || wrongMsg || timerExpired{
+            if notPoints || correctMsg || wrongMsg || timerExpired || noNick{
                 Text(msgString)
                     .font(Font.custom("Lato", size: 25))
                     .foregroundColor(msgColor)

@@ -13,7 +13,6 @@ class DictParthKit{
     var kit : ParthenoKit = ParthenoKit.init()
     var arrScore : [Int] = Array.init()
     var arrName : [String] = Array.init()
-    
     static func getIstance() -> DictParthKit {
         return .istance
     }
@@ -37,11 +36,20 @@ class DictParthKit{
     }
     
     func updateRanking(key : String) -> Bool{
-        if appPreferences.getStringPreferences(forKey: "NickName") != "No nickname"{
+        var count : Int = 0
+        if key != "No nickname"{ //if user has nickname score will stored.
+            if(ExistsKey(key: key)){ // user have just a score, i have to increase it
+                let tmp = read(key_: key)
+                count = Int(appPreferences.getStringPreferences(forKey: "Score")!)! + Int(tmp.first!.value)!
+                write(key_: key, value_: String(count))
+                print("\(count) registrato a utente : \(key)")
+            }
+            else{
+                write(key_: key, value_: appPreferences.getStringPreferences(forKey: "Score")!)
+            }
             return false
         }
         else{
-            write(key_: key, value_: appPreferences.getStringPreferences(forKey: "Score")!)
             return true
         }
     }
