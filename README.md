@@ -1,10 +1,10 @@
 <p align="center"><img src="../main/WordFit/Images/ProgettoIcon.png" width="128" height="128"></p>
-<h1>WordFit</h1>
+<h1><p align="center">WordFit</p></h1>
 App for the <b>iOS Foundation Parthenope (S1 -2021/2022): One week challenge</b>
 
 WordFit's Marvel (initial): https://marvelapp.com/prototype/8d783h8/screen/82801074
 <br></br>
-<b>N.B: This iOS application is currently only a prototype, therefore it can be considered that it is in an alpha version. <b>
+<b>N.B: This iOS application is currently only a prototype, it can be considered as an alpha version. <b>
   <br></br>  
 <h3>The goal of the app is to make a gamification that includes sport through play</h3>
 
@@ -13,7 +13,7 @@ WordFit's Marvel (initial): https://marvelapp.com/prototype/8d783h8/screen/82801
 <li>Each guessed word gives points.</li> 
 <li>At each word guessed it is then necessary to do some jumping jacks in order to move on to the next word to guess.</li>
  <br></br>  
-<i>You can find <b>slides</b> <a href="https://github.com/RenatoEsposito1999/WordFitApp/tree/main/Slide">by clicking here</a>
+<i>You can find <b>slides</b> <a href="https://github.com/RenatoEsposito1999/WordFitApp/tree/main/Slide">by clicking here</a></i>
   <h2> Video Example </h2>
   <h3>Game and Jumping Jacks</h3>
   
